@@ -10,6 +10,7 @@ public class test {
 		System.out.println("이");
 		System.out.println("준");
 		System.out.println("혁");
+		System.out.println("내가 마지막");
 
 	}
 
