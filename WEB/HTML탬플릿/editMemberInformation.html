@@ -7,51 +7,72 @@
 <html>
 
 <head>
-	<title>Photon by HTML5 UP</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    <title>Photon by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" />
+    </noscript>
 </head>
+
 <body>
-	<!-- 상단바 시작 -->
-	<header id="header">
-		<h1><a href="index.html"><img src="images/여순광.png" alt="logo" class="logo"></a></h1>
-		<nav class="links">
-			<ul>
-				<li><a href="#">HOME</a></li> <!-- 홈화면 -->
-				<li><a href="#">포인트 교환</a></li> <!-- 포인트 교환 -->
-				<li><a href="#">마이 페이지</a></li> <!-- 마이 페이지 -->
-			</ul>
-		</nav>
-		<nav class="main">
-			<ul>
-				<li><a href="#">로 그 아 웃</a></li>
-			</ul>
-		</nav>
-	</header>
+    <!-- 상단바 시작 -->
+    <header id="header">
+        <h1><a href="index.html"><img src="images/여순광.png" alt="logo" class="logo"></a></h1>
+        <nav class="links">
+            <ul>
+                <li><a href="#">HOME</a></li> <!-- 홈화면 -->
+                <li><a href="#">포인트 교환</a></li> <!-- 포인트 교환 -->
+                <li><a href="#">마이 페이지</a></li> <!-- 마이 페이지 -->
+            </ul>
+        </nav>
+        <nav class="main">
+            <ul>
+                <li><a href="#">로 그 아 웃</a></li>
+            </ul>
+        </nav>
+    </header>
     <!-- 상단바 끝  -->
 
-    <div id="wrapper">
-        <!-- Menu -->
-            <nav>	
+    <section>
+        <div style="border: 1px solid gold; float: left; width: 50%;">
+            <nav>
                 <ul>
-                    <li><h5>회원정보수정</h5></li>
-                        <form action="UpdateCon" method="post">
-                            <li>광양 대부호 정상민 님 환영합니다.</li>
-                            <li><input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-                            <li><input type="text" name="tel" value="" style="width: 500px; margin: 0 auto;"></li>
-                            <li><input type="text" name="address" value="${loginMember.address}" style="width: 500px; margin: 0 auto;"></li>
-                            <li><input type="submit" value="회원정보수정" class="button fit" style="width: 500px; margin: 0 auto;"></li>
-                        </form>
+                    <li>
+                        <h5>회원정보수정</h5>
+                    </li>
+                    <form>
+                        <a style="width: 500px; margin: 0 auto;">광양 대부호 정상민님 환영합니다.</a>
+                        <a><input type="text" name="name" placeholder="이름을 입력하세요."
+                                style="width: 500px; margin: 0 auto;"></a>
+                        <a><input type="text" name="name" placeholder="아이디를 입력해주세요."
+                                style="width: 500px; margin: 0 auto;"></a>
+                        <a><input type="text" name="name" placeholder="변경할 닉네임을 입력해 주세요."
+                                style="width: 500px; margin: 0 auto;"></a>
+                    </form>
                 </ul>
-            </nav>			
-    </div>
+            </nav>
+        </div>
 
+        <div style="border: 1px solid gold; float: left; width: 50%;">
+            <nav>
+                <ul>
+                    <li>
+                        <h5>회원정보수정</h5>
+                    </li>
+                    <form>
+                        <a style="width: 500px; margin: 0 auto;">광양 대부호 정상민님 환영합니다.</a>
+                        <a><input type="text" name="name" placeholder="이름을 입력하세요."
+                                style="width: 500px; margin: 0 auto;"></a>
+                        <a><input type="text" name="name" placeholder="아이디를 입력해주세요."
+                                style="width: 500px; margin: 0 auto;"></a>
+                        <a><input type="text" name="name" placeholder="변경할 닉네임을 입력해 주세요."
+                                style="width: 500px; margin: 0 auto;"></a>
+                    </form>
+                </ul>
+            </nav>
+        </div>
 
-
-
-
+    </section>
 </body>
