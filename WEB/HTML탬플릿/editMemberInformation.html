@@ -15,7 +15,8 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head>
-	<!-- Header -->
+<body>
+	<!-- 상단바 시작 -->
 	<header id="header">
 		<h1><a href="index.html"><img src="images/여순광.png" alt="logo" class="logo"></a></h1>
 		<nav class="links">
@@ -27,8 +28,30 @@
 		</nav>
 		<nav class="main">
 			<ul>
-				<li><a href="#">회원가입</a></li>
-				<li><a href="#">로그인</a></li>
+				<li><a href="#">로 그 아 웃</a></li>
 			</ul>
 		</nav>
 	</header>
+    <!-- 상단바 끝  -->
+
+    <div id="wrapper">
+        <!-- Menu -->
+            <nav>	
+                <ul>
+                    <li><h5>회원정보수정</h5></li>
+                        <form action="UpdateCon" method="post">
+                            <li>광양 대부호 정상민 님 환영합니다.</li>
+                            <li><input type="password" name="pw" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
+                            <li><input type="text" name="tel" value="" style="width: 500px; margin: 0 auto;"></li>
+                            <li><input type="text" name="address" value="${loginMember.address}" style="width: 500px; margin: 0 auto;"></li>
+                            <li><input type="submit" value="회원정보수정" class="button fit" style="width: 500px; margin: 0 auto;"></li>
+                        </form>
+                </ul>
+            </nav>			
+    </div>
+
+
+
+
+
+</body>
