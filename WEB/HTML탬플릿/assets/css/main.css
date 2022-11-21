@@ -2570,6 +2570,21 @@ input, select, textarea {
 
 /* Posts */
 
+	#three > div > div > div:nth-child(1) > span > img{
+		width: 440px;
+		height: 500px;
+	}
+
+	#three > div > div > div:nth-child(2) > span > img{
+		width: 440px;
+		height: 500px;
+	}
+
+	#three > div > div > div:nth-child(3) > span > img{
+		width: 440px;
+		height: 500px;
+	}
+
 	ul.posts {
 		list-style: none;
 		padding: 0;
