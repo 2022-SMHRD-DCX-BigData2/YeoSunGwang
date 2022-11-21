@@ -12,6 +12,7 @@ public class test {
 		System.out.println("혁");
 		System.out.println("내가 마지막");
 		System.out.println("정상민 돌발행동 하지마세요 ㅡㅡ");
+		System.out.println("VSCODE에서 테스트")
 
 		
 	}
