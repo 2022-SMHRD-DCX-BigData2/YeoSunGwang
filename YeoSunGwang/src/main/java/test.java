@@ -12,6 +12,7 @@ public class test {
 		System.out.println("혁");
 		System.out.println("내가 마지막");
 
+		
 	}
 
 }
