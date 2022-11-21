@@ -2541,7 +2541,7 @@ input, select, textarea {
 	}
 
 		ul.icons li {
-			display: inline-block;
+			display: inline-block;container
 			padding: 0 1em 0 0;
 		}
 
@@ -3623,4 +3623,12 @@ input, select, textarea {
 				padding: 1.5em;
 			}
 
+		}
+
+		.updateinfo{
+			width: 50%;
+		}
+		
+		.updateinfo2{
+			width: 50%;
 		}
