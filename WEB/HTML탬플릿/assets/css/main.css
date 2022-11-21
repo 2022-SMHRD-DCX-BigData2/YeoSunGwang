@@ -37,7 +37,6 @@ ol, ul {
 	list-style: none;
 }
 
-
 blockquote, q {
 	quotes: none;
 }
@@ -2925,7 +2924,8 @@ input, select, textarea {
 							border-left: 0;
 							margin-left: 0;
 							padding-left: 0;
-				
+						}
+
 						.post > header .meta .published {
 							margin-bottom: 0;
 							margin-top: 0;
@@ -2945,10 +2945,6 @@ input, select, textarea {
 
 							.post > header .meta .author img {
 								width: 3.5em;
-							}
-
-							#header > nav.links{
-								height: 100px;
 							}
 
 		}
