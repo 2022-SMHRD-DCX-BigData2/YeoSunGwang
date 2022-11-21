@@ -3147,24 +3147,19 @@ input, select, textarea {
 	}
 
 	#header {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
 		display: flex;
-		-moz-justify-content: space-between;
-		-webkit-justify-content: space-between;
-		-ms-justify-content: space-between;
 		justify-content: space-between;
 		background-color: #ffffff;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
-		height: 3.5em;
+		height: 100px;
 		left: 0;
 		line-height: 3.5em;
 		position: fixed;
 		top: 0;
 		width: 100%;
-		z-index: 10000;
 	}
+
+	
 
 		#header a {
 			color: inherit;
@@ -3194,12 +3189,11 @@ input, select, textarea {
 			}
 
 		#header .links {
-			border-left: solid 1px rgba(160, 160, 160, 0.3);
+			
 			height: inherit;
 			line-height: inherit;
 			overflow: hidden;
 		}
-
 			#header .links ul li {
 				border-left: solid 1px rgba(160, 160, 160, 0.3);
 				line-height: 1;
@@ -3220,6 +3214,20 @@ input, select, textarea {
 					font-weight: 400;
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
+				}
+
+				#header > nav.links {
+					align-content: center;
+				}
+
+				#header > h1 > a > img {
+					margin-left: 20px;
+					height: 100px;
+					width: 100px;
+				}
+
+				#header > nav.main > ul {
+					color: #000;
 				}
 
 		#header .main {
@@ -3248,7 +3256,7 @@ input, select, textarea {
 					#header .main ul li > a {
 						text-decoration: none;
 						border-bottom: 0;
-						color: #aaaaaa;
+						color: #000;
 						overflow: hidden;
 						position: relative;
 						text-indent: 4em;
