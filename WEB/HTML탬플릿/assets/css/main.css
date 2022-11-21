@@ -3138,7 +3138,7 @@ input, select, textarea {
 	#header {
 		display: flex;
 		justify-content: space-between;
-		background-color: #ffffff;
+		background-color: whitesmoke;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
 		height: 100px;
 		left: 0;
@@ -3318,7 +3318,7 @@ input, select, textarea {
 		min-height: 100vh;
 		position: static;
 		width: 100%;
-		background-color: #f2f2f2;
+		background-color: whitesmoke;
 	}
 
 	footer{
