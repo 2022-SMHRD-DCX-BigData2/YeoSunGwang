@@ -3370,12 +3370,14 @@ input, select, textarea {
 	footer{
 		width: 100%;
 		height: 110px;
-		position: absolute;
+		position: fixed;
 		border-top: solid 1px rgba(160, 160, 160, 0.3);
 		padding-top: 15px;
 		color: #808080;
 		font-size: 11px;
 		background-color: #ffffff;
+		bottom: 0;
+		
 	}
 
 		footer a {
@@ -3383,6 +3385,7 @@ input, select, textarea {
 			margin: 0 20px 10px 20px;
 			color: #808080;
 			font-size: 11px;
+			bottom: 0;
 		}
 	
 		footer a:visited {
