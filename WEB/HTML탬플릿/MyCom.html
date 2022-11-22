@@ -36,7 +36,7 @@
     <!-- 상단바 끝  -->
 
     <body>
-        <div id="wrap">
+        <div id="wrap" class="My1">
             <section>
                 <div id="wrap1">
                     <button onclick="location.href='editMemInfo.html'" ;>회원 정보 수정</button>
@@ -55,9 +55,19 @@
             </section>
 
             <div id="My">
-                <br />
-                <br />
-                <h1>여기는 내가 쓴 댓글</h1>
+                <table>
+                    <caption>
+                        <span class="blind">게시물 목록</span>
+                    </caption>
+                    <thead>
+                        <tr id="normalTableTitle">
+                            <th></th>
+                            <th scope="col" style="width: 80%;"><span class="article_title">제목</span></th>
+                            <th scope="col" style="width: 10%;">작성자</th>
+                            <th scope="col" style="width: 10%;">작성일</th>
+                        </tr>
+                    </thead>
+                </table>
             </div>
 
             <footer id="mainfooter">

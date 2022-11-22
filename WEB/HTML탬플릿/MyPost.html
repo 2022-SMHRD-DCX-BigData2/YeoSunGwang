@@ -36,7 +36,7 @@
     <!-- 상단바 끝  -->
 
     <body>
-        <div id="wrap">
+        <div id="wrap" class="My1">
             <section>
                 <div id="wrap1">
                     <button onclick="location.href='editMemInfo.html'" ;>회원 정보 수정</button>
@@ -56,12 +56,40 @@
 
             <div id="My">
                 <table>
-                    <th>
-                        <td></td>
-                        <td></td>
-                        <td>제 목</td>
-                        <td>작성일</td>
-                    </th>
+                    <caption>
+                        <span class="blind">게시물 목록</span>
+                    </caption>
+                    <thead>
+                        <tr id="normalTableTitle">
+                            <th></th>
+                            <th scope="col" style="width: 80%;"><span class="article_title">제목</span></th>
+                            <th scope="col" style="width: 10%;">작성자</th>
+                            <th scope="col" style="width: 10%;">작성일</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+
+            <div id="board">
+                <caption>
+                    <span class="blind">게시물 목록</span>
+                </caption>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>01</td>
+                            <td style="width: 80%;"><a href="#">여기 진짜 좋아요</a></td>
+                            <td style="width: 10%;"><a href="#">정상민</a></td>
+                            <td style="width: 10%;"><span>2022-11-20</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>02</td>
+                            <td style="width: 80%;"><a>여긴 쓰레기입니다</a></td>
+                            <td style="width: 10%;"><a>정상민</a></td>
+                            <td style="width: 10%;"><span>2022-11-22</span></td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
