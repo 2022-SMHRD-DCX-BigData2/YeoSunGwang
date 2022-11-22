@@ -1863,6 +1863,7 @@ input, select, textarea {
 	input[type="reset"],
 	input[type="button"],
 	button,
+	
 	.button {
 		-moz-appearance: none;
 		-webkit-appearance: none;
@@ -3159,7 +3160,6 @@ input, select, textarea {
 				font-family: "Raleway", Helvetica, sans-serif;
 				font-size: 1em;
 				font-weight: 400;
-				letter-spacing: 0.25em;
 				text-transform: uppercase;
 				display: block;
 				text-align: center;
