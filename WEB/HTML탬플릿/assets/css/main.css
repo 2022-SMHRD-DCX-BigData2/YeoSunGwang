@@ -26,10 +26,11 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 .logo{
-	position: absolute;
-	margin-left: -20px;
-	width: 100px;
-	height: 60px;
+	display: flex;
+	align-items: flex-start;
+	position: relative;
+	width: 100%;
+	height: 100%;
 	z-index: 10;
 }
 
@@ -2560,17 +2561,17 @@ input, select, textarea {
 /* Posts */
 
 	#three > div > div > div:nth-child(1) > span > img{
-		width: 460px;
+		width: 95%;
 		height: 500px;
 	}
 
 	#three > div > div > div:nth-child(2) > span > img{
-		width: 460px;
+		width: 100%;
 		height: 500px;
 	}
 
 	#three > div > div > div:nth-child(3) > span > img{
-		width: 460px;
+		width: 95%;
 		height: 500px;
 	}
 
@@ -3178,6 +3179,8 @@ input, select, textarea {
 			}
 
 		#header .links {
+			display: flex;
+			align-items: center;
 			height: inherit;
 			line-height: inherit;
 			overflow: hidden;
@@ -3198,14 +3201,16 @@ input, select, textarea {
 				#header .links ul li a {
 					border-bottom: 0;
 					font-family: "Raleway", Helvetica, sans-serif;
-					font-size: 0.7em;
+					font-size: 1em;
 					font-weight: 400;
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
 				}
 
 				#header > nav.links {
+					display: flex;
 					align-content: center;
+					justify-content: center;
 				}
 
 				#header > nav:nth-child(2) > ul{
@@ -3216,6 +3221,8 @@ input, select, textarea {
 				}
 
 				#header .links2 {
+					display: flex;
+					align-items: center;
 					height: inherit;
 					line-height: inherit;
 					overflow: hidden;
@@ -3236,7 +3243,7 @@ input, select, textarea {
 						#header .links2 ul li a {
 							border-bottom: 0;
 							font-family: "Raleway", Helvetica, sans-serif;
-							font-size: 0.7em;
+							font-size: 1em;
 							font-weight: 400;
 							letter-spacing: 0.25em;
 							text-transform: uppercase;
@@ -3246,11 +3253,7 @@ input, select, textarea {
 							align-content: center;
 						}
 
-				#header > h1 > a > img {
-					margin-left: 20px;
-					height: 100px;
-					width: 100px;
-				}
+
 
 		#header form {
 			margin: 0;
@@ -3532,6 +3535,13 @@ input, select, textarea {
 	}
 
 /* Footer */
+	#mainfooter > nav{
+		display: flex;
+		align-content: flex-end;
+	}
+	#mainfooter > p{
+		font-family: "Raleway", Helvetica, sans-serif;
+	}
 
 	#footer .icons {
 		color: #aaaaaa;
@@ -3656,4 +3666,15 @@ input, select, textarea {
 		
 		.updateinfo2{
 			width: 50%;
+		}
+
+
+
+
+		#wrap > section > div{
+			font-family: "Raleway", Helvetica, sans-serif;
+		}
+
+		#wrap > section > div:nth-child(1) > button{
+			font-size: 0.85em;
 		}
