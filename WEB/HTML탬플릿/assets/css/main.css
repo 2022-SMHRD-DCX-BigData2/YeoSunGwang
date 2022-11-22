@@ -2575,27 +2575,49 @@ gtr
 	#three>div>div>div:nth-child(1)>a {
 		padding: 5px 10px;
 		text-align: center;
+		color: white;
 		position: absolute;
 		top: 40%;
-		left: 11%;
+		left: 13%;
+		display: block;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.6em;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		
 	}
 
 	#three>div>div>div:nth-child(2)>a {
 		padding: 5px 10px;
 		text-align: center;
+		color: white;
 		position: absolute;
 		top: 40%;
 		left: 46%;
+		display: block;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.6em;
+		font-weight: 400;
+		letter-spacing: 0.25em;
 	}
 
 	#three>div>div>div:nth-child(3)>a {
 		padding: 5px 10px;
 		text-align: center;
+		color: white;
 		position: absolute;
 		top: 40%;
 		left: 80%;
+		display: block;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.6em;
+		font-weight: 400;
+		letter-spacing: 0.25em;
 	}
 
+	
+
+	
 	ul.posts {
 		list-style: none;
 		padding: 0;
