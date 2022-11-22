@@ -1939,7 +1939,7 @@ input, select, textarea {
 			left: 1em;
 			padding: 0 0.75em 0 0;
 		}
-
+gtr
 		input[type="submit"].fit,
 		input[type="reset"].fit,
 		input[type="button"].fit,
@@ -2558,17 +2558,17 @@ input, select, textarea {
 /* Posts */
 
 	#three > div > div > div:nth-child(1) > span > img{
-		width: 95%;
+		width: 105%;
 		height: 500px;
 	}
 
 	#three > div > div > div:nth-child(2) > span > img{
-		width: 100%;
+		width: 105%;
 		height: 500px;
 	}
 
 	#three > div > div > div:nth-child(3) > span > img{
-		width: 95%;
+		width: 105%;
 		height: 500px;
 	}
 
@@ -3209,7 +3209,7 @@ input, select, textarea {
 		#header h1 {
 			height: inherit;
 			line-height: inherit;
-			padding: 0 0 0 1.5em;
+			padding: 0 0 0 1.0em;
 			white-space: nowrap;
 		}
 
@@ -3354,6 +3354,19 @@ input, select, textarea {
 		}
 
 /* Wrapper */
+
+#wrap2{
+	margin-top: 44px;
+	min-height: 100vh;
+	position: static;
+	width: 100%;
+	background-color: whitesmoke;
+	border-bottom: 0;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: 400;
+	text-transform: uppercase;
+}
 
 	#wrap{
 		margin-top: 100px;
