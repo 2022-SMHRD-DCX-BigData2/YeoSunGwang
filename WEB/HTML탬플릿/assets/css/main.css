@@ -60,6 +60,13 @@ table {
 	border-spacing: 0;
 }
 
+#My > table {
+  }
+  th, td {
+    border-top: 1px solid #444444;
+    padding: 10px;
+}
+
 body {
 	-webkit-text-size-adjust: none;
 }
