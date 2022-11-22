@@ -3370,8 +3370,7 @@ input, select, textarea {
 	footer{
 		width: 100%;
 		height: 110px;
-		bottom: 0px;
-		position: fixed;
+		position: absolute;
 		border-top: solid 1px rgba(160, 160, 160, 0.3);
 		padding-top: 15px;
 		color: #808080;
