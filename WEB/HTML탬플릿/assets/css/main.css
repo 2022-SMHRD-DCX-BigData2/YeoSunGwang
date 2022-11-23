@@ -2613,7 +2613,7 @@ gtr
 
 		.image.fit {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 0 0 0;
 			width: 100%;
 		}
 
@@ -3324,7 +3324,7 @@ gtr
 
 		}
 
-/* MAIN11 posts11 */
+/* MAIN11 posts11 여행 게시판 */
 
 #MAIN11 > .posts11 {
 	display : flex;
@@ -3346,7 +3346,7 @@ gtr
 
 	#MAIN11 > .posts11 > * {
 	margin: auto;
-	padding:4rem;
+	padding:2em;
 	width: 33.3333%;
 	}
 
@@ -3367,14 +3367,155 @@ gtr
 		height: 100%;
 	}
 
+	#img11{
+		width: 100%;
+		height: 100%;
+	}
+
 	#MAIN11 > section > article{
 		background-color: #F3F1EA;
-		border: 1px double;
 		margin-top: 1em;
 		margin-bottom: 1em;
 		margin-left: 1em;
 		margin-right: 1em;
 	}
+
+	#post_in{
+		background-color: white;
+		height: 9em;
+	}
+
+	#post_in > header{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-content: space-between;
+		justify-content: center;
+		align-items: flex-start;
+		margin-bottom: -1em;
+	}
+
+	#post_in > p > a{
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		font-family: "Raleway", Helvetica, sans-serif;
+		text-decoration-line: none;
+		font-weight: bold;
+		padding: 0;
+		margin: auto;
+		margin-left: -0.1em;
+	}
+
+	/* #com_like > ul {
+		list-style: none;
+		margin-top: -2em;
+		margin-left: -1.8em;
+	} */
+
+	#com_like > ul {
+		list-style: none;
+		display: flex;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 0.8em;
+		padding: 0;
+		margin-top: -2em;
+		margin-left: -0.1em;
+	}
+
+	#com_like > ul > li {
+		float: left;
+		padding: 0;
+		margin: 0;
+		margin-left: 1em;
+		font-size: 1em;
+	}
+
+	
+
+	/* high네비 */
+	
+	#High_nav {
+		background-color: #DDBFB0;
+		padding-top: 2em;
+		padding-bottom: 0.5em;
+	}
+	
+	#High_nav>h1 {
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-weight: bold;
+		font-size: 3em;
+		text-align: center;
+	}
+
+	/* Middle 네비 */
+
+	#Middle_nav {
+		padding-left: 2em;
+		border-left: solid 1px rgba(160, 160, 160, 0.3);
+	}
+
+	#Middle_nav > ul {
+		list-style: none;
+		
+	}
+
+	#Middle_nav > ul > li {
+		float: left;
+		margin: 0px 0px 0px 2em;
+	}
+
+	#Middle_nav > ul > li > a{
+		text-decoration-line: none;
+	}
+
+	/* 상품권 교환 페이지 */
+
+		#Exchange >.Exchange_post {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+			text-align: center;
+			width: 100%
+		}
+	
+		#Exchange >.Exchange_post >* {
+			flex-shrink: 1;
+			flex-grow: 0;
+		}
+	
+		#Exchange >.Exchange_post>* {
+			width: 50%;
+		}
+	
+		#Exchange >.Exchange_post>* {
+			margin: auto;
+			padding: 4rem;
+			width: 33.3333%;
+		}
+	
+		#Exchange >* {
+			padding: 2em;
+		}
+/* 	
+		#Exchange >.Exchange_post>article:nth-child(-n+2) {
+			border-top-width: 0;
+		}
+	
+		#Exchange >.Exchange_post>article:nth-child(2n-1) {
+			border-left-width: 0;
+		} */
+	
+		#Exchange >a>img {
+			width: 100%;
+			height: 100%;
+		}
+	
+		#Exchange >section>article {
+			background-color: #F3F1EA;
+
+			border: whitesmoke 5px groove;
+		}
 
 /* Section/Article */
 
