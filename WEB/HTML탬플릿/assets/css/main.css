@@ -3345,12 +3345,12 @@ gtr
 	}
 
 	#MAIN11 > .posts11 > * {
+	margin: auto;
 	padding:4rem;
-	width: 33%;
+	width: 33.3333%;
 	}
 
 	#MAIN11 > * {
-	border-top : solid 2px #3c3b3b;
 	margin:0;
 	}
 	
@@ -3367,6 +3367,14 @@ gtr
 		height: 100%;
 	}
 
+	#MAIN11 > section > article{
+		background-color: #F3F1EA;
+		border: 1px double;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		margin-left: 1em;
+		margin-right: 1em;
+	}
 
 /* Section/Article */
 
@@ -3574,12 +3582,13 @@ gtr
 		padding-top: 3.5em;
 	}
 
+	/* 상단바 */
 	#header {
 		display: flex;
 		justify-content: space-between;
 		background-color: whitesmoke;
 		border-bottom: solid 1px rgba(160, 160, 160, 0.3);
-		height: 100px;
+		height: 6.25em;
 		left: 0;
 		line-height: 3.5em;
 		position: fixed;
@@ -3774,7 +3783,9 @@ gtr
 		margin-left: auto;
 		margin-right: auto;
 		border: #f4f4f4 2px solid;
+		cursor:pointer;
 		color: white; !important;
+
 	}
 
 	#wrap2 > div > figure > figcaption > div > h2{
@@ -3788,11 +3799,11 @@ gtr
 	}
 
 	#wrap{
-		margin-top: 100px;
+		margin-top: 2.8em;
 		min-height: 100vh;
 		position: static;
 		width: 100%;
-		background-color: whitesmoke;
+		background-color: #F3F1EA;
 		border-bottom: 0;
 		font-family: "Raleway", Helvetica, sans-serif;
 		font-size: 1em;
