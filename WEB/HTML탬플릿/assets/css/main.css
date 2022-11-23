@@ -2713,20 +2713,25 @@ gtr
 
 /* Posts */
 
-	#three > div > div > div:nth-child(1) > span > img{
+	/* #three > div > div > div:nth-child(1) > span > img{
+		width: 105%;
+		height: 500px;
+	} */
+
+	/* #three > div > figure:nth-child(1) > figcaption{
 		width: 105%;
 		height: 500px;
 	}
 
-	#three > div > div > div:nth-child(2) > span > img{
+	#three > div > figure:nth-child(2) > figcaption{
 		width: 105%;
 		height: 500px;
 	}
 
-	#three > div > div > div:nth-child(3) > span > img{
+	#three > div > figure:nth-child(3) > figcaption{
 		width: 105%;
 		height: 500px;
-	}
+	} */
 
 	#three>div>div>div:nth-child(1)>a {
 		padding: 5px 10px;
