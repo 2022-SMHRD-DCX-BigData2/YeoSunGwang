@@ -3780,6 +3780,12 @@ gtr
 		text-transform: uppercase;
 	}
 
+	#hoverbutton{
+		display: block;
+		margin: auto;
+		background-color: #ffffff;
+	}
+
 
 	#wrap2 > div:nth-child(1) > figure > figcaption > a{
 		display: block;
