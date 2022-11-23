@@ -2713,25 +2713,20 @@ gtr
 
 /* Posts */
 
-	/* #three > div > div > div:nth-child(1) > span > img{
-		width: 105%;
-		height: 500px;
-	} */
-
-	/* #three > div > figure:nth-child(1) > figcaption{
+	#three > div > div > div:nth-child(1) > span > img{
 		width: 105%;
 		height: 500px;
 	}
 
-	#three > div > figure:nth-child(2) > figcaption{
+	#three > div > div > div:nth-child(2) > span > img{
 		width: 105%;
 		height: 500px;
 	}
 
-	#three > div > figure:nth-child(3) > figcaption{
+	#three > div > div > div:nth-child(3) > span > img{
 		width: 105%;
 		height: 500px;
-	} */
+	}
 
 	#three>div>div>div:nth-child(1)>a {
 		padding: 5px 10px;
@@ -3420,13 +3415,18 @@ gtr
 				font-family: "Raleway", Helvetica, sans-serif;
 				background-color: #ffffff;
 				margin: auto;
-				width: 50%;
+				width: 40%;
 			}
 
 			#jointable > tbody{
 				background-color: #ffffff;
 				margin: auto;
-				width: 30%;
+				width: 5%;
+			}
+
+			#jointable > tbody > tr, 
+			#jointable > tbody > tr > td{
+				padding: 1em 3em;
 			}
 
 			#jointable > tbody > tr{
@@ -3446,6 +3446,44 @@ gtr
 				vertical-align: bottom;
 				width: 0.5%;
 			}
+
+			#logintable{
+				font-family: "Raleway", Helvetica, sans-serif;
+				background-color: #ffffff;
+				margin: auto;
+				width: 40%;
+			}
+
+			#logintable > tbody{
+				background-color: #ffffff;
+				margin: auto;
+				width: 5%;
+			}
+
+			#logintable > tbody > tr, 
+			#logintable > tbody > tr > td{
+				padding: 1em 3em;
+			}
+
+			#logintable > tbody > tr{
+				background-color: #ffffff;
+				margin: auto;
+				width: 20%;
+			}
+
+			#logintable > tbody > tr > td{
+				background-color: #ffffff;
+				margin: auto;
+				width: 20%;
+			}
+
+			#logintable > tbody > tr:nth-child(1) > td.overlap,
+			#logintable > tbody > tr:nth-child(5) > td.overlap{
+				vertical-align: bottom;
+				width: 0.5%;
+			}
+
+
 
 
 
