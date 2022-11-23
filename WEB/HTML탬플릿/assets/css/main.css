@@ -56,10 +56,6 @@ blockquote, q {
 	}
 
 
-body {
-	-webkit-text-size-adjust: none;
-}
-
 mark {
 	background-color: transparent;
 	color: inherit;
@@ -79,12 +75,13 @@ input, select, textarea {
 
 /* Basic */
 
+
 	@-ms-viewport {
 		width: device-width;
 	}
 
 	body {
-		-ms-overflow-style: scrollbar;
+		width: 100%;
 	}
 
 	@media screen and (max-width: 480px) {
@@ -1846,11 +1843,6 @@ figure.snip1382 {
 	font-family: 'Source Sans Pro', Arial, sans-serif;
 	position: relative;
 	overflow: hidden;
-	margin: 10px;
-	min-width: 230px;
-	max-width: 315px;
-	max-height: 220px;
-	width: 100%;
 	color: #ffffff;
 	text-align: center;
 	font-size: 16px;
@@ -2713,67 +2705,6 @@ gtr
 
 /* Posts */
 
-	#three > div > div > div:nth-child(1) > span > img{
-		width: 105%;
-		height: 500px;
-	}
-
-	#three > div > div > div:nth-child(2) > span > img{
-		width: 105%;
-		height: 500px;
-	}
-
-	#three > div > div > div:nth-child(3) > span > img{
-		width: 105%;
-		height: 500px;
-	}
-
-	#three>div>div>div:nth-child(1)>a {
-		padding: 5px 10px;
-		text-align: center;
-		color: white;
-		position: absolute;
-		top: 40%;
-		left: 13%;
-		display: block;
-		font-family: "Raleway", Helvetica, sans-serif;
-		font-size: 0.6em;
-		font-weight: 400;
-		letter-spacing: 0.25em;
-		
-	}
-
-	#three>div>div>div:nth-child(2)>a {
-		padding: 5px 10px;
-		text-align: center;
-		color: white;
-		position: absolute;
-		top: 40%;
-		left: 46%;
-		display: block;
-		font-family: "Raleway", Helvetica, sans-serif;
-		font-size: 0.6em;
-		font-weight: 400;
-		letter-spacing: 0.25em;
-	}
-
-	#three>div>div>div:nth-child(3)>a {
-		padding: 5px 10px;
-		text-align: center;
-		color: white;
-		position: absolute;
-		top: 40%;
-		left: 80%;
-		display: block;
-		font-family: "Raleway", Helvetica, sans-serif;
-		font-size: 0.6em;
-		font-weight: 400;
-		letter-spacing: 0.25em;
-	}
-
-	
-
-	
 	ul.posts {
 		list-style: none;
 		padding: 0;
@@ -2843,6 +2774,10 @@ gtr
 				ul.posts article header > :last-child {
 					margin-bottom: 0;
 				}
+
+/* Main */
+
+
 
 /* Mini Post */
 
@@ -3676,18 +3611,35 @@ gtr
 
 /* Wrapper */
 
-#wrap2{
-	margin-top: 44px;
-	min-height: 100vh;
-	position: static;
-	width: 100%;
-	background-color: whitesmoke;
-	border-bottom: 0;
-	font-family: "Raleway", Helvetica, sans-serif;
-	font-size: 1em;
-	font-weight: 400;
-	text-transform: uppercase;
-}
+	#wrap2 {
+		margin-top: 44px;
+		min-height: 100vh;
+		position: static;
+		width: 100%;
+		background-color: whitesmoke;
+		border-bottom: 0;
+		font-family: "Raleway", Helvetica, sans-serif;
+		font-size: 1em;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+
+
+
+	#wrap2>div:nth-child(1)>figure>a>img {
+		width: 100%;
+		height: 100%;
+	}
+
+	#wrap2>div:nth-child(1)>figure>a>img {
+		width: 100%;
+		height: 100%;
+	}
+
+	#wrap2>div:nth-child(1)>figure>a>img {
+		width: 100%;
+		height: 100%;
+	}
 
 	#wrap{
 		margin-top: 100px;
