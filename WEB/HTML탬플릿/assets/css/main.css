@@ -2400,7 +2400,6 @@ gtr
 			color: rgba(160, 160, 160, 0.3);
 			content: '\f078';
 			display: block;
-			height: 2.75em;
 			line-height: 2.75em;
 			pointer-events: none;
 			position: absolute;
@@ -2419,7 +2418,6 @@ gtr
 		background-size: 1.25rem;
 		background-repeat: no-repeat;
 		background-position: calc(100% - 1rem) center;
-		height: 2.75em;
 		padding-right: 2.75em;
 		text-overflow: ellipsis;
 	}
@@ -2440,9 +2438,6 @@ gtr
 	input[type="text"],
 	input[type="password"],
 	input[type="email"],
-	select {
-		height: 2.75em;
-	}
 
 	textarea {
 		padding: 0.75em 1em;
@@ -3370,14 +3365,11 @@ gtr
 	#img11{
 		width: 100%;
 		height: 100%;
+		background-color: white;
 	}
 
 	#MAIN11 > section > article{
 		background-color: #F3F1EA;
-		margin-top: 1em;
-		margin-bottom: 1em;
-		margin-left: 1em;
-		margin-right: 1em;
 	}
 
 	#post_in{
@@ -3455,9 +3447,13 @@ gtr
 		border-left: solid 1px rgba(160, 160, 160, 0.3);
 	}
 
+	#Middle_nav > ul > li:nth-child(5){
+		float: right;
+		margin-right: 1.8em;
+	}
+
 	#Middle_nav > ul {
 		list-style: none;
-		
 	}
 
 	#Middle_nav > ul > li {
@@ -3470,6 +3466,15 @@ gtr
 	}
 
 	/* 상품권 교환 페이지 */
+
+		#img11 > img {
+			width: 100%;
+			height: 100%;
+		}
+
+		#Exchange_div{
+			background-color: white;
+		}
 
 		#Exchange >.Exchange_post {
 			display: flex;
