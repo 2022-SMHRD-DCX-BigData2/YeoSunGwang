@@ -3211,6 +3211,37 @@ gtr
 				text-align: center;
 			}
 
+			#jointable{
+				font-family: "Raleway", Helvetica, sans-serif;
+				background-color: #ffffff;
+				margin: auto;
+				width: 50%;
+			}
+
+			#jointable > tbody{
+				background-color: #ffffff;
+				margin: auto;
+				width: 30%;
+			}
+
+			#jointable > tbody > tr{
+				background-color: #ffffff;
+				margin: auto;
+				width: 20%;
+			}
+
+			#jointable > tbody > tr > td{
+				background-color: #ffffff;
+				margin: auto;
+				width: 20%;
+			}
+
+			#jointable > tbody > tr:nth-child(1) > td.overlap,
+			#jointable > tbody > tr:nth-child(5) > td.overlap{
+				vertical-align: bottom;
+				width: 0.5%;
+			}
+
 
 
 			

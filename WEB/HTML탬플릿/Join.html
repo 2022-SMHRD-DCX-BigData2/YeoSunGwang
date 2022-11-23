@@ -1,41 +1,59 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <title>여기가 여순광?</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
 </head>
-
 <body>
     <header style="display: flex; justify-content: center;">
         <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
     </header>
 
-    <div>
-        <span style="display: flex; justify-content: center;">
-            <p>아이디<input type="text" name="id"></p>
-            <p>비밀번호<input type="password" name="pw"></p>
-            <p>비밀번호 확인<input type="password" name="pw"></p>
-        </span>
-        </br></br>
-        <span style="width: 50%;">
-            <p>이름<input type="text" name="name"></p>
-            <p>닉네임<input type="text" name="nick"></p>
-            <br>생년월일</br><input type="date" name="birth"></p>
-        </span>
+<!-- 사용자에게 데이터를 넘길 공간 -->
+    <form action="#" method="get">
+        <!-- 표 -->
+        <table id="jointable">
+            <tr>
+                <td><span>아이디</span><input type="text" name="id"></td>
+                <td class="overlap"><input type="button" value="중복확인"></td>
+            </tr>
+
+            <tr>
+                <td>비밀번호<input type="password" name="pw" maxlength="20"></td>
+            </tr>
+
+            <tr>
+                <td>비밀번호 확인<input type="password" maxlength="20"></td>
+            </tr>
+
+            <tr>
+                <td>이름<input type="text" name="name"></td>
+            </tr>
+
+            <tr>
+                <td><span>닉네임</span><input type="text" name="nick"></td>
+                <td class="overlap"><input type="button" value="중복확인"></td>
+            </tr>
+
+            <tr>
+                <td>생일<br><input type="date" name="birth"></td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="가입하기">
+                </td>
+            </tr>
+            
         
-   
-    </div>
+        </table>
+                
+    </form>
 
 </body>
 </html>
