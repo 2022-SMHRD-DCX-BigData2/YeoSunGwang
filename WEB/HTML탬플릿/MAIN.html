@@ -14,6 +14,11 @@
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
 </head>
 
 <body>
@@ -37,27 +42,45 @@
 	</header>
 	<!-- 상단바 끝 -->
 
-	
+
 
 	<!-- 메인-->
 	<div id="wrap2">
 		<section id="three" class="main style1 special">
 			<div class="container">
 				<div class="row gtr-150">
+					
 					<div class="col-4 col-12-medium">
 						<span class="mainimages"><img src="images/Main_Yeo.png" alt="" /></span>
 						<a class="main_image_text" style="font-size:50px">여수</a>
 					</div>
+
+
 					<div class="col-4 col-12-medium">
 						<span class="mainimages"><img src="images/Main_Sun.png" alt="" /></span>
 						<a class="main_image_text" style="font-size:50px">순천</a>
 					</div>
+
+
 					<div class="col-4 col-12-medium">
 						<span class="mainimages"><img src="images/Main_Gwang.png" alt="" /></span>
 						<a class="main_image_text" style="font-size:50px">광양</a>
 					</div>
+
 				</div>
 			</div>
 		</section>
 	</div>
+
+	<script>
+		$(".hover").mouseleave(
+			function () {
+				$(this).removeClass("hover");
+			}
+		);
+
+	</script>
+
+
+
 </body>
