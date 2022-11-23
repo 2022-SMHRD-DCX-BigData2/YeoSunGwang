@@ -1935,7 +1935,7 @@ figure.snip1200 a {
 	top: 0;
 	bottom: 0;
 	position: absolute;
-	z-index: 1;
+	z-index: 11;
 }
 
 figure.snip1200:hover img,
@@ -1956,7 +1956,41 @@ figure.snip1200.hover p {
 	opacity: 1;
 	-webkit-transition-delay: 0.35s;
 	transition-delay: 0.35s;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	color: skyblue;
 }
+
+figure.snip1200:hover a,
+figure.snip1200.hover a {
+	opacity: 1;
+	-webkit-transition-delay: 0.35s;
+	transition-delay: 0.35s;
+	font-family: "Raleway", Helvetica, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	color: skyblue;
+}
+
+figure .read-more {
+	border: 1px solid #ffffff;
+	margin-top: 6.25em;
+	margin-bottom: 9.4em;
+	margin-left: 15em;
+	margin-right: 15em;
+	padding-top: 2.5em;
+	font-size: 0.8em;
+	text-decoration: none;
+	color: #ffffff;
+	display: inline-block;
+} 
+
+figure .read-more:hover {
+	background-color: #ffffff;
+	color: #000000;
+}
+
 
 /* @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);
 @import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
