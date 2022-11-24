@@ -1,5 +1,6 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Raleway:400,800,900");
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css");
 
 /*
 	Future Imperfect by HTML5 UP
@@ -112,7 +113,7 @@ input::-moz-focus-inner {
 
 	body, input, select, textarea {
 		color: #646464;
-		font-family: "Source Sans Pro", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 14pt;
 		font-weight: 400;
 		line-height: 1.75;
@@ -199,7 +200,7 @@ input::-moz-focus-inner {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: #3c3b3b;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-weight: 800;
 		letter-spacing: 0.25em;
 		line-height: 1.65;
@@ -254,7 +255,7 @@ input::-moz-focus-inner {
 	code {
 		background: rgba(160, 160, 160, 0.075);
 		border: solid 1px rgba(160, 160, 160, 0.3);
-		font-family: "Courier New", monospace;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 0.9em;
 		margin: 0 0.25em;
 		padding: 0.25em 0.65em;
@@ -262,7 +263,7 @@ input::-moz-focus-inner {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "Courier New", monospace;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 0.9em;
 		margin: 0 0 2em 0;
 	}
@@ -1784,7 +1785,7 @@ input::-moz-focus-inner {
 		-ms-justify-content: -ms-flex-end;
 		justify-content: flex-end;
 		border-bottom: 0;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 0.6em;
 		font-weight: 400;
 		letter-spacing: 0.25em;
@@ -1832,7 +1833,7 @@ input::-moz-focus-inner {
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
 
 figure.snip1200 {
-	font-family: 'Raleway', Arial, sans-serif;
+	font-family: "NanumSquareRoundExtraBold";
 	position: relative;
 	overflow: hidden;
 	width: 100%;
@@ -1949,7 +1950,7 @@ figure.snip1200.hover p {
 	opacity: 1;
 	-webkit-transition-delay: 0.35s;
 	transition-delay: 0.35s;
-	font-family: "Raleway", Helvetica, sans-serif;
+	font-family: "NanumSquareRoundExtraBold";
 	font-size: 1em;
 	font-weight: bold;
 	color: skyblue;
@@ -1960,7 +1961,7 @@ figure.snip1200.hover a {
 	opacity: 1;
 	-webkit-transition-delay: 0.35s;
 	transition-delay: 0.35s;
-	font-family: "Raleway", Helvetica, sans-serif;
+	font-family: "NanumSquareRoundExtraBold";
 	font-size: 1em;
 	font-weight: bold;
 	color: skyblue;
@@ -2176,7 +2177,7 @@ figure.snip1382.hover figcaption p {
 		color: #3c3b3b
 		cursor: pointer;
 		display: inline-block;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 0.6em;
 		font-weight: 800;
 		height: 4.8125em;
@@ -2307,7 +2308,7 @@ gtr
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: "NanumSquareRoundExtraBold";
 				font-weight: 900;
 			}
 
@@ -2392,7 +2393,7 @@ gtr
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: "NanumSquareRoundExtraBold";
 			font-weight: 900;
 		}
 
@@ -2480,7 +2481,7 @@ gtr
 				text-rendering: auto;
 				line-height: 1;
 				text-transform: none !important;
-				font-family: 'Font Awesome 5 Free';
+				font-family: "NanumSquareRoundExtraBold";
 				font-weight: 900;
 			}
 
@@ -2555,7 +2556,7 @@ gtr
 			text-rendering: auto;
 			line-height: 1;
 			text-transform: none !important;
-			font-family: 'Font Awesome 5 Free';
+			font-family: "NanumSquareRoundExtraBold";
 			font-weight: 400;
 		}
 
@@ -2572,7 +2573,7 @@ gtr
 		}
 
 		.icon.brands:before {
-			font-family: 'Font Awesome 5 Brands';
+			font-family: "NanumSquareRoundExtraBold";
 		}
 
 		.icon.suffix:before {
@@ -2907,7 +2908,7 @@ gtr
 
 				ul.posts article header .published {
 					display: block;
-					font-family: "Raleway", Helvetica, sans-serif;
+					font-family: "NanumSquareRoundExtraBold";
 					font-size: 0.6em;
 					font-weight: 400;
 					letter-spacing: 0.25em;
@@ -2975,7 +2976,7 @@ gtr
 
 			.mini-post header .published {
 				display: block;
-				font-family: "Raleway", Helvetica, sans-serif;
+				font-family: "NanumSquareRoundExtraBold";
 				font-size: 0.6em;
 				font-weight: 400;
 				letter-spacing: 0.25em;
@@ -3091,7 +3092,7 @@ gtr
 				.post > header .meta .published {
 					color: #3c3b3b;
 					display: block;
-					font-family: "Raleway", Helvetica, sans-serif;
+					font-family: "NanumSquareRoundExtraBold";
 					font-size: 0.7em;
 					font-weight: 800;
 					letter-spacing: 0.25em;
@@ -3145,7 +3146,7 @@ gtr
 				.post > footer .stats li {
 					border-left: solid 1px rgba(160, 160, 160, 0.3);
 					display: inline-block;
-					font-family: "Raleway", Helvetica, sans-serif;
+					font-family: "NanumSquareRoundExtraBold";
 					font-size: 0.6em;
 					font-weight: 400;
 					letter-spacing: 0.25em;
@@ -3375,7 +3376,7 @@ gtr
 	}
 
 	header p {
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 0.7em;
 		font-weight: 400;
 		letter-spacing: 0.25em;
@@ -3482,7 +3483,7 @@ gtr
 
 			#board>table>tbody>tr>td>a {
 				border-bottom: 0;
-				font-family: "Raleway", Helvetica, sans-serif;
+				font-family: "NanumSquareRoundExtraBold";
 				font-size: 1em;
 				font-weight: 400;
 				text-transform: uppercase;
@@ -3491,7 +3492,7 @@ gtr
 			}
 
 			#jointable{
-				font-family: "Raleway", Helvetica, sans-serif;
+				font-family: "NanumSquareRoundExtraBold";
 				background-color: #ffffff;
 				margin: auto;
 				width: 40%;
@@ -3527,7 +3528,7 @@ gtr
 			}
 
 			#logintable{
-				font-family: "Raleway", Helvetica, sans-serif;
+				font-family: "NanumSquareRoundExtraBold";
 				background-color: #ffffff;
 				margin: auto;
 				width: 40%;
@@ -3639,7 +3640,7 @@ gtr
 
 				#header .links ul li a {
 					border-bottom: 0;
-					font-family: "Raleway", Helvetica, sans-serif;
+					font-family: "NanumSquareRoundExtraBold"
 					font-size: 1em;
 					font-weight: 400;
 					letter-spacing: 0.25em;
@@ -3681,7 +3682,7 @@ gtr
 		
 						#header .links2 ul li a {
 							border-bottom: 0;
-							font-family: "Raleway", Helvetica, sans-serif;
+							font-family: "NanumSquareRoundExtraBold";
 							font-size: 1em;
 							font-weight: 400;
 							letter-spacing: 0.25em;
@@ -3762,7 +3763,7 @@ gtr
 		width: 100%;
 		background-color: whitesmoke;
 		border-bottom: 0;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 1em;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -3794,7 +3795,7 @@ gtr
 		width: 100%;
 		background-color: whitesmoke;
 		border-bottom: 0;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 1em;
 		font-weight: 400;
 		text-transform: uppercase;
@@ -3840,7 +3841,7 @@ gtr
 
 	#wrap>section>nav>ul>li>a {
 		border-bottom: 0;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 1em;
 		font-weight: 400;
 		letter-spacing: 0.25em;
@@ -3905,7 +3906,7 @@ gtr
 			transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 			border: solid 2px;
 			display: inline-block;
-			font-family: "Raleway", Helvetica, sans-serif;
+			font-family: "NanumSquareRoundExtraBold";
 			font-size: 0.8rem;
 			font-weight: 900;
 			height: 3rem;
@@ -4154,7 +4155,7 @@ gtr
 		align-content: flex-end;
 	}
 	#mainfooter > p{
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 	}
 
 	#footer .icons {
@@ -4163,7 +4164,7 @@ gtr
 
 	#footer .copyright {
 		color: #aaaaaa;
-		font-family: "Raleway", Helvetica, sans-serif;
+		font-family: "NanumSquareRoundExtraBold";
 		font-size: 0.5em;
 		font-weight: 400;
 		letter-spacing: 0.25em;
@@ -4239,7 +4240,7 @@ gtr
 					}
 
 					#menu .links > li a p {
-						font-family: "Raleway", Helvetica, sans-serif;
+						font-family: "NanumSquareRoundExtraBold";
 						font-size: 0.6em;
 						font-weight: 400;
 						letter-spacing: 0.25em;
@@ -4286,7 +4287,7 @@ gtr
 
 
 		#wrap > section > div{
-			font-family: "Raleway", Helvetica, sans-serif;
+			font-family: "NanumSquareRoundExtraBold";
 		}
 
 		#wrap > section > div:nth-child(1) > button{
