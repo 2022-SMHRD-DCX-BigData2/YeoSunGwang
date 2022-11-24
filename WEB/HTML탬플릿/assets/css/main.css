@@ -3463,6 +3463,31 @@ gtr
 		color: red !important;
 	}
 
+	/* 지도 툴팁 */
+
+	.tooltip {
+		display: inline-block;
+		font-family: 'NanumSquareRound';
+		font-weight: bold;
+	}
+
+	.tooltip-text {
+		display: none;
+		font-family: 'NanumSquareRound';
+		position: absolute;
+		max-width: 200px;
+		/* border-radius: 10px; */
+		padding: 5px;
+		font-size: 0.6em;
+		font-weight: 500;
+		color: whitesmoke;
+		background:#3E474F;
+	}
+
+	.tooltip:hover .tooltip-text {
+		display: block;
+	}
+
 	
 
 	/* high네비 */
@@ -3489,7 +3514,7 @@ gtr
 
 	#Middle_nav > ul > li:nth-child(5){
 		float: right;
-		margin-right: 1.8em;
+		margin-right: 0.5em;
 	}
 
 	#Middle_nav > ul {
@@ -3498,7 +3523,8 @@ gtr
 
 	#Middle_nav > ul > li {
 		float: left;
-		margin: 0px 0px 0px 2em;
+		margin: 0px 0px 0px 0px;
+		padding-right: 1.5em;
 	}
 
 	#Middle_nav > ul > li > a{
