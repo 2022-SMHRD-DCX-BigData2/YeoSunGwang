@@ -4234,6 +4234,13 @@ gtr
 		text-align: center;
 	}
 
+	#wrap3{
+		display: flex;
+		justify-content: center;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
 	#wrap{
 		margin-top: 2.8em;
 		min-height: 100vh;
