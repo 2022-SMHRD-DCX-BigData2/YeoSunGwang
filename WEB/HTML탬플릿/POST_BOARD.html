@@ -6,16 +6,21 @@
 -->
 <html>
 
-<head>
-    <title>여기가 여순광?</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
+    <head>
+        <title>여기가 여순광?</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-</head>
-
+        </noscript>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="https://kit.fontawesome.com/7208daee16.js" crossorigin="anonymous"></script>
+    </head>
 <body>
     <!-- 상단바 시작 -->
     <header id="header">
@@ -55,6 +60,7 @@
                 </li>
             </ul>
         </div>
+        
         <!-- 게시글(POST) -->
         <div id="MAIN11">
             <section class="posts11">
@@ -62,25 +68,23 @@
                     <div id="img11">
                         <a href="#" class="image fit"><img src="images/Yeo_모이핀.png"></a>
                     </div>
-
+                    
                     <div id="post_in">
-                        <header>
-                            <p><br>&nbsp; &nbsp; &nbsp; Admin <br>
-                                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3days ago</p>
-                        </header>
-
-                        <p><a href="#"> &nbsp; &nbsp; 여수 돌산 이쁜카페 MOI FIN</a></p>
-
+                        
                         <div id="com_like">
+                            <p><a href="#" style="text-decoration: none;">여수 돌산 이쁜카페 MOI FIN</a></p>
                             <ul>
-                                <li>COMMENTS - 12</li>
-                                <li>❤ 12</li>
+                                <li><i class="fa-solid fa-comment"></i> 12 </li>
+                                <li><a href=""><i class="fa-regular fa-heart"></i></a> 12 </li>
                             </ul>
                         </div>
 
-                        <ul class="actions special">
-                            <li><a></a></li>
-                        </ul>
+                        <div id="com_like1">
+                            <ul style="font-size: 1.3em">
+                                <li><i class="fa-solid fa-camera"></i></li> <!-- 사진스팟 표시 -->
+                                <li><i class="fa-solid fa-map-location-dot"></i></li> <!-- 지도로고 -->
+                            </ul>
+                        </div>
                     </div>
                 </article>
 
