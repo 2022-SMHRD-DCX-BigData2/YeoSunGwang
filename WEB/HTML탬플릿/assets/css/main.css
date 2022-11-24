@@ -2353,7 +2353,7 @@ gtr
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 100%;
+		width: 85%;
 	}
 
 		input[type="text"]:invalid,
@@ -3783,8 +3783,6 @@ gtr
 			}
 
 			#logintable .links2 {
-				display: flex;
-				align-items: center;
 				height: inherit;
 				line-height: inherit;
 				overflow: hidden;
@@ -3809,10 +3807,6 @@ gtr
 						font-weight: 400;
 						letter-spacing: 0.25em;
 						text-transform: uppercase;
-					}
-	
-					#logintable > nav.links2 {
-						align-content: center;
 					}
 
 
@@ -4545,4 +4539,8 @@ gtr
 
 		#wrap > section > div:nth-child(1) > button{
 			font-size: 0.85em;
+		}
+
+		#jointable > tbody .input{
+			width: 115% !important
 		}
