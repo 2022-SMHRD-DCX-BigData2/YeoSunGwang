@@ -72,28 +72,47 @@
             </div>
 
             <div class="info_icon">
-                <ul style="font-size: 0.8em">
-                    <li><a href="#"><span class="tooltip"><i class="fa-solid fa-comment"></i><span class="tooltip-text">댓글 쓰기</span></span></a></li>
-                    <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                    <li><a href="#"><span class="tooltip"><i class="fa-solid fa-map-location-dot"></i>
-                                <span class="tooltip-text">지도로 이동</span></span></a></li> <!-- 지도로고 -->
+                <ul style="font-size: 0.5em">
+                    <div>
+                        <li><a href="#"><span class="tooltip"><i class="fa-solid fa-comment"> 11</i><span
+                                        class="tooltip-text">댓글 쓰기</span></span></a></li>
+
+                        <li><a href="#"><i class="fa-regular fa-heart"> 11</i></a></li>
+                    </div>
+
+                    <div>
+                        <li><a href="#"><span class="tooltip"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span class="tooltip-text">링크 복사</span></span></a></li>
+                        <li><a href="#"><span class="tooltip"><i class="fa-solid fa-map-location-dot"></i>
+                                    <span class="tooltip-text">지도로 이동</span></span></a></li> <!-- 지도로고 -->
+                    </div>
                 </ul>
             </div>
 
-            <div class="info_text">
-                <table>
-                    <tr>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>123</td>
-                    </tr>
-                    <tr>
-                        <td>123</td>
-                    </tr>  
-                </table>
+            <div class="info_text" style="list-style: none;">
+                <li>&nbsp;<br></li>
             </div>
         </div>
+
+        <div id="COMMENTS">
+
+        </div>
+
+
+        <script>
+
+            async function fetchHtmlAsText(url) {
+                return await (await fetch(url)).text();
+            }
+
+            async function importPage(target) {
+                document.querySelector('#' + target).innerHTML = await fetchHtmlAsText(target + '.html');
+            }
+
+            importPage('COMMENTS')
+
+        </script>
+
 
     </div>
 </body>

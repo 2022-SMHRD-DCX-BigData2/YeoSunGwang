@@ -3395,6 +3395,18 @@ gtr
 	display: flex;
 }
 
+
+#post_info > div.info_icon > ul > div:nth-child(1){
+	margin-right: 18em;
+	display: flex;
+}
+
+#post_info > div.info_icon > ul > div:nth-child(2){
+	margin-left: 12em;
+	display: flex;
+
+}
+
 /* MAIN11 posts11 여행 게시판 */
 
 #MAIN11 > .posts11 {
@@ -3544,6 +3556,10 @@ gtr
 	#post_info > div.info_icon > ul > li:nth-child(2) > a:hover{
 		color: red !important;
 	}
+
+	/* 댓글 */
+
+
 
 	/* 지도 툴팁 */
 
