@@ -3317,6 +3317,84 @@ gtr
 
 		}
 
+/* 게시글 */
+
+#post_info{
+	margin-top: 10em;
+    margin-left: 15em;
+    margin-right: 15em;
+    background-color: white;
+}
+
+#post_info > div {
+    display: flex;
+    font-weight: bold;
+    font-size: 3em;
+    color: black;
+    margin-top: 0.5em;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#post_info > div.info_title {
+    display: flex;
+    font-weight: bold;
+    font-size: 2.5em;
+    color: black;
+    margin-top: 0.5em;
+    margin-left: -10em;
+    padding-top: 1em;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+
+#info_image > img {
+	width: 90%;
+	height: auto;
+}
+
+#post_info > div.info_text {
+	display: flex;
+    font-size: 1em;
+    font-weight: 100;
+    flex-direction: column;
+    align-items: flex-start;
+	margin-left: 3.2em;
+}
+
+#post_info > div.info_icon > ul {
+	display: flex;
+	list-style: none;
+}
+
+#post_info > div.info_icon > ul > li {
+	float: left;
+	padding: 0;
+	margin: 0;
+	margin-left: 1em;
+	font-size: 1em;
+}
+
+
+#post_info > div.info_icon{
+	border-top: gray 2px solid;
+	border-bottom: gray 1px solid	;
+	width: 90%;
+	margin-left: 1em;
+	display: flex;
+    font-weight: bold;
+    font-size: 3em;
+    color: black;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#post_info > div.info_title > span:nth-child(1){
+	display: flex;
+}
+
 /* MAIN11 posts11 여행 게시판 */
 
 #MAIN11 > .posts11 {
@@ -3463,6 +3541,10 @@ gtr
 		color: red !important;
 	}
 
+	#post_info > div.info_icon > ul > li:nth-child(2) > a:hover{
+		color: red !important;
+	}
+
 	/* 지도 툴팁 */
 
 	.tooltip {
@@ -3478,7 +3560,7 @@ gtr
 		max-width: 200px;
 		/* border-radius: 10px; */
 		padding: 5px;
-		font-size: 0.6em;
+		font-size: 0.4em;
 		font-weight: 500;
 		color: whitesmoke;
 		background:#3E474F;
