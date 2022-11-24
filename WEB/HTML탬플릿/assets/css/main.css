@@ -1,10 +1,40 @@
-@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css");
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css");figure
 
 /*
 	Future Imperfect by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+
+
+
 
 /* html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1838,7 +1868,7 @@ figure.snip1200 {
 	color: #ffffff;
 	text-align: center;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
-	font-size: 16px;
+	font-size: 1em;
 }
 
 figure.snip1200 * {
@@ -1964,172 +1994,6 @@ figure.snip1200.hover a {
 	color: skyblue;
 }
 
-figure .read-more {
-	border: 1px solid #ffffff;
-	margin-top: 6.25em;
-	margin-bottom: 9.4em;
-	margin-left: 15em;
-	margin-right: 15em;
-	padding-top: 2.5em;
-	font-size: 0.8em;
-	text-decoration: none;
-	color: #ffffff;
-	display: inline-block;
-} 
-
-figure .read-more:hover {
-	background-color: #ffffff;
-	color: #000000;
-}
-
-
-/* @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,500,900);
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-
-figure.snip1382 {
-	font-family: 'Source Sans Pro', Arial, sans-serif;
-	position: relative;
-	overflow: hidden;
-	color: #ffffff;
-	text-align: center;
-	font-size: 16px;
-}
-
-figure.snip1382 * {
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	-webkit-transition: all 0.35s ease;
-	transition: all 0.35s ease;
-}
-
-figure.snip1382 img {
-	max-width: 100%;
-}
-
-figure.snip1382:after,
-figure.snip1382:before,
-figure.snip1382 figcaption:after,
-figure.snip1382 figcaption:before {
-	background: #0a0a0a;
-	height: 25%;
-	position: absolute;
-	content: '';
-	opacity: 0;
-	-webkit-transition: all 0.35s steps(4);
-	transition: all 0.35s steps(4);
-	z-index: 1;
-	left: 50%;
-	right: 50%;
-}
-
-figure.snip1382:before {
-	top: 0;
-	-webkit-transition-delay: 0;
-	transition-delay: 0;
-}
-
-figure.snip1382:after {
-	top: 25%;
-	-webkit-transition-delay: 0.1s;
-	transition-delay: 0.1s;
-}
-
-figure.snip1382 figcaption:before {
-	top: 50%;
-	-webkit-transition-delay: 0.2s;
-	transition-delay: 0.2s;
-	z-index: -1;
-}
-
-figure.snip1382 figcaption:after {
-	top: 75%;
-	-webkit-transition-delay: 0.3s;
-	transition-delay: 0.3s;
-	z-index: -1;
-}
-
-figure.snip1382 figcaption {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	padding: 30px;
-}
-
-figure.snip1382 h2,
-figure.snip1382 p,
-figure.snip1382 .icons {
-	margin: 0;
-	width: 100%;
-	opacity: 0;
-}
-
-figure.snip1382 h2 {
-	font-weight: 900;
-	text-transform: uppercase;
-}
-
-figure.snip1382 p {
-	font-weight: 300;
-}
-
-figure.snip1382 .icons {
-	position: absolute;
-	bottom: 30px;
-	left: 0;
-	width: 100%;
-}
-
-figure.snip1382 i {
-	padding: 0px 10px;
-	display: inline-block;
-	font-size: 24px;
-	color: #ffffff;
-	text-align: center;
-	opacity: 0.8;
-	text-decoration: none;
-}
-
-figure.snip1382 i:hover {
-	opacity: 1;
-}
-
-figure.snip1382:hover:after,
-figure.snip1382.hover:after,
-figure.snip1382:hover:before,
-figure.snip1382.hover:before,
-figure.snip1382:hover figcaption:after,
-figure.snip1382.hover figcaption:after,
-figure.snip1382:hover figcaption:before,
-figure.snip1382.hover figcaption:before {
-	left: 0;
-	right: 0;
-	opacity: 0.8;
-}
-
-figure.snip1382:hover figcaption h2,
-figure.snip1382.hover figcaption h2,
-figure.snip1382:hover figcaption p,
-figure.snip1382.hover figcaption p,
-figure.snip1382:hover figcaption .icons,
-figure.snip1382.hover figcaption .icons {
-	-webkit-transition-delay: 0.25s;
-	transition-delay: 0.25s;
-}
-
-figure.snip1382:hover figcaption h2,
-figure.snip1382.hover figcaption h2,
-figure.snip1382:hover figcaption .icons,
-figure.snip1382.hover figcaption .icons {
-	opacity: 1;
-}
-
-figure.snip1382:hover figcaption p,
-figure.snip1382.hover figcaption p {
-	opacity: 0.7;
-} */
 
 
 /* Box */
@@ -2721,6 +2585,7 @@ gtr
 
 			ul.actions.special li:first-child {
 				padding-left: 0;
+				margin-bottom: 1em;
 			}
 
 		ul.actions.stacked {
@@ -3336,6 +3201,13 @@ gtr
 	height: 70%;
 }
 
+.fa-regular fa-heart{
+	color: #EA2027;
+}
+
+#post_info > div.info_icon > div.like_com > ul > li > a > i:hover{
+	color: #EA2027;
+}
 
 #post_info > div.info_title {
     display: flex;
@@ -3371,7 +3243,7 @@ gtr
     display: flex;
     border-top: gray 2px solid;
     border-bottom: gray 1px solid;
-    width: 90%;
+    width: 93.8%;
     margin-left: 1em;
     font-size: 3em;
     color: black;
@@ -3417,13 +3289,13 @@ gtr
 
 
 #COMMENTS > div > form > ul > li {
-	padding-left: 0;
+	padding-left: 2em;
 	float: left;
 }
 
 #COMMENTS > table { 
 	table-layout: fixed;
-	width: 90%;
+	width: 93.8%;
 	margin-left: 3.2em;
 	margin-bottom: 0;
 }
@@ -3436,7 +3308,7 @@ gtr
 
 #COMMENTS > div > form > ul > li:nth-child(1) {
 	list-style: none;
-	width: 88%;
+	width: 89%;
 }
 
 #COMMENTS > div > form > ul > li:nth-child(1) > input[type=text]{
@@ -3560,8 +3432,8 @@ gtr
 	#com_like > p {
 		display: flex;
 		border-bottom: rgba(0, 0, 0, 0.227) 0.8px solid;
-		width: 90%;
-		margin-left: 1em;
+		width: 97%;
+		margin-left: 0.5em;
 	}
 
 	#com_like > p > a {
@@ -4092,7 +3964,7 @@ gtr
 
 				#header .links ul li a {
 					border-bottom: 0;
-					font-family: 'NanumSquareRoundExtraBold';
+					font-family: 'NanumSquareRound';
 					font-size: 1em;
 					font-weight: 400;
 					letter-spacing: 0.25em;
@@ -4240,6 +4112,7 @@ gtr
 		text-align: center;
 	}
 
+
 	#wrap3{
 		display: flex;
 		justify-content: center;
@@ -4248,7 +4121,7 @@ gtr
 	}
 
 	#wrap{
-		margin-top: 2.8em;
+		margin-top: 2.3em;
 		min-height: 100vh;
 		position: static;
 		width: 100%;
