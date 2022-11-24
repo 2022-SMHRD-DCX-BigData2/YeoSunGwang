@@ -2353,7 +2353,6 @@ gtr
 		outline: 0;
 		padding: 0 1em;
 		text-decoration: none;
-		width: 85%;
 	}
 
 		input[type="text"]:invalid,
@@ -3326,6 +3325,7 @@ gtr
     background-color: white;
 }
 
+
 #post_info > div {
     display: flex;
     font-weight: bold;
@@ -3406,6 +3406,10 @@ gtr
 	display: flex;
 
 }
+
+/* #post_info1 > div > form > ul {
+	float: left;
+} */
 
 /* MAIN11 posts11 여행 게시판 */
 
@@ -3559,7 +3563,69 @@ gtr
 
 	/* 댓글 */
 
+	#post_info > div > form > ul {
+		display: flex;
+	}
 
+	#post_info > div > form > ul > li:nth-child(1) > input {
+		overflow: auto;
+		width: 50em;
+		height: 100%;
+		float: left;
+	}
+
+	#post_info > div > form > ul > li:nth-child(2) > input {
+		width: 100% !important;
+		height: 100% !important;
+		float: left;
+		
+	}
+
+	#post_info > div > form > ul > li:nth-child(1){
+		padding-left: 0;
+	}
+
+	#post_info > div > form > ul > li:nth-child(2){
+		padding-left: 0;
+	}
+
+	/*  */
+
+	#post_info1{
+		margin-top: 10em;
+		margin-left: 15em;
+		margin-right: 15em;
+		background-color: white;
+		width: 64.95em;
+		padding-bottom: 0.6em;
+		
+	}
+
+	#post_info1 > div > form > ul {
+		display: flex;
+	}
+
+	#post_info1 > div > form > ul > li:nth-child(1) > input {
+		overflow: auto;
+		width: 50em;
+		height: 100%;
+		float: left;
+	}
+
+	#post_info1 > div > form > ul > li:nth-child(2) > input {
+		width: 100% !important;
+		height: 100% !important;
+		float: left;
+		
+	}
+
+	#post_info1 > div > form > ul > li:nth-child(1){
+		padding-left: 0;
+	}
+
+	#post_info1 > div > form > ul > li:nth-child(2){
+		padding-left: 0;
+	}
 
 	/* 지도 툴팁 */
 
