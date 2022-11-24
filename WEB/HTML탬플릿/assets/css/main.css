@@ -3891,6 +3891,41 @@ gtr
 						text-transform: uppercase;
 					}
 
+					#FindIdtable, #FindPwtable{
+						font-family: 'NanumSquareRound';
+						background-color: #ffffff;
+						margin: auto;
+						width: 40%;
+					}
+		
+					#FindIdtable > tbody,
+					#FindPwtable > tbody{
+						background-color: #ffffff;
+						margin: auto;
+						width: 5%;
+					}
+					
+					#FindIdtable > tbody > tr,
+					#FindPwtable > tbody > tr{
+						background-color: #ffffff;
+						margin: auto;
+						width: 20%;
+					}
+					
+					#FindIdtable > tbody > tr, 
+					#FindIdtable > tbody > tr > td,
+					#FindPwtable > tbody > tr,
+					#FindPwtable > tbody > tr > td{
+						padding: 1em 3em;
+					}
+		
+					#FindIdtable > tbody > tr > td,
+					#FindPwtable > tbody > tr > td{
+						background-color: #ffffff;
+						margin: auto;
+						width: 20%;
+					}
+
 
 
 
