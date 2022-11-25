@@ -35,57 +35,49 @@
     </header>
     <!-- 상단바 끝  -->
 
-    <div id="wrap">
+    <div id="wrap" style="display: flex; flex-direction: column;">
 
         <div id="High_nav">
             <h1 id="High_nav_1">My page</h1>
         </div>
 
-            <div id="wrap1">
-                <br>
-                <button onclick="location.href='editMemInfo.html'";>회원 정보 수정</button>
-                <button onclick="location.href='POINT.html'";>포인트 내역</button>
-                <button onclick="location.href='VOUCHER.html'";>상품권 발급 내역</button>
-                <button onclick="location.href='MyPost.html'";>나의 활동</button>
-            </div>
+        <div id="wrap1" style="margin-bottom: 4em;">
+            <br>
+            <button onclick="location.href='editMemInfo.html'" ;>회원 정보 수정</button>
+            <button onclick="location.href='POINT.html'" ;>포인트 내역</button>
+            <button onclick="location.href='VOUCHER.html'" ;>상품권 발급 내역</button>
+            <button onclick="location.href='MyPost.html'" ;>나의 활동</button>
+        </div>
 
-            <div style="float: left; width: 50%;">
-                <nav>
-                    <ul>
-                        <h1 style="width: 500px; margin-left: 10px;">닉네임 수정</h1>
-                        <form>
-                            <a style="width: 500px; margin-left: 10px;">광양 대부호 정상민님 환영합니다.(추후 닉네임넣을자리)</a>
-                            <a><input type="text" name="name" placeholder="이름을 입력하세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <a><input type="text" name="name" placeholder="아이디를 입력해주세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <a><input type="text" name="name" placeholder="변경할 닉네임을 입력해 주세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <button id="editinfo" style="width: 500px; margin-left: 10px;"><input type="submit" value="수정"></button>
-                        </form>
-                    </ul>
-                </nav>
-            </div>
+        <div style="display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;">
+            <form>
+                <p style="margin-left: 10px; font-weight: bold;">닉네임 변경</p>
+                <a><input type="text" name="name" placeholder="이름을 입력하세요." style="width: 500px; margin-left: 10px;"></a>
+                <a><input type="text" name="name" placeholder="아이디를 입력해주세요."
+                        style="width: 500px; margin-left: 10px;"></a>
+                <a><input type="text" name="name" placeholder="변경할 닉네임을 입력해 주세요."
+                        style="width: 500px; margin-left: 10px;"></a>
+                <button id="editinfo" style="width: 500px; margin-left: 10px;"><input type="submit" value="수정"></button>
+            </form>
 
-            <div style="float: left; width: 50%;">
-                <nav>
-                    <ul>
-                        <h1 style="width: 500px; margin-left: 10px;">비밀번호 변경</h1>
-                        <form>
-                            <a style="width: 500px; margin-left: 10px;">광양 대부호 정상민님 환영합니다.(추후 닉네임넣을자리)</a>
-                            <a><input type="text" name="name" placeholder="이름을 입력하세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <a><input type="text" name="name" placeholder="아이디를 입력해주세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <a><input type="password" name="pw" placeholder="변경할 비밀번호를 입력해 주세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <a><input type="password" name="pw" placeholder="변경할 비밀번호를 한 번 더 입력해 주세요."
-                                    style="width: 500px; margin-left: 10px;"></a>
-                            <button style="width: 500px; margin-left: 10px;"><input type="submit" value="변경"></button>
-                        </form>
-                    </ul>
-                </nav>
-            </div>
+            <form>
+                <p style="margin-left: 10px; font-weight: bold;">비밀번호 변경</p>
+                <a><input type="text" name="name" placeholder="이름을 입력하세요." style="width: 500px; margin-left: 10px;"></a>
+                <a><input type="text" name="name" placeholder="아이디를 입력해주세요."
+                        style="width: 500px; margin-left: 10px;"></a>
+                <a><input type="password" name="pw" placeholder="변경할 비밀번호를 입력해 주세요."
+                        style="width: 500px; margin-left: 10px;"></a>
+                <a><input type="password" name="pw" placeholder="변경할 비밀번호를 한 번 더 입력해 주세요."
+                        style="width: 500px; margin-left: 10px;"></a>
+                <button style="width: 500px; margin-left: 10px;"><input type="submit" value="변경"></button>
+            </form>
+        </div>
+
+
+    </div>
     </div>
 
     <div class="ourfooter" style="margin-top:-2em">
@@ -95,8 +87,8 @@
                 <a href='#' target='_blank'>Github</a>
             </nav>
             <p>
-                <span>팀장 : 이준혁</span><br/>
-                <span>팀원 : 정지명 정상민 윤 열</span><br/>
+                <span>팀장 : 이준혁</span><br />
+                <span>팀원 : 정지명 정상민 윤 열</span><br />
                 <span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
             </p>
         </footer>
