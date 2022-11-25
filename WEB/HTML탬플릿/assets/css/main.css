@@ -4664,7 +4664,7 @@ gtr
 			font-family: 'NanumSquareRound';
 		}
 
-		#wrap > section > div:nth-child(1) > button{
+		#wrap > div:nth-child(1) > button{
 			font-size: 0.85em;
 		}
 
