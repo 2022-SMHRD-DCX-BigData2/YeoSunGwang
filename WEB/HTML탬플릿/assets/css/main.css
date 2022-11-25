@@ -3795,7 +3795,53 @@ gtr
 				text-align: center;
 			}
 
-			#jointable{
+
+			/* 회원가입 */
+
+			#wrap .join_div {
+				display: flex;
+				font-family: 'NanumSquareRound';
+				font-size: auto;
+			}
+
+			#wrap .join_div > ul {
+				display: flex;
+				list-style: none;
+			} 
+			
+			#wrap .join_div>ul .join_input {
+				display: flex;
+				padding: 2em;
+				background-color: white;
+				align-items: flex-start;
+				flex-direction: column;
+				margin-bottom: 6em;
+			}
+
+			#wrap .join_div > ul .join_input > li{
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			#wrap .join_div > ul .join_input > li > button {
+				font-size: 0.7em;
+			}
+
+			#wrap .join_div > ul .join_input> li > input[type=text]{
+				width: 40em;
+				
+			}
+
+			#wrap > div > ul > div > li:nth-child(14) > input[type=submit]{
+				margin-left: 22em;
+				font-size: 1em;
+			}
+			
+
+
+			/* #jointable{
 				font-family: 'NanumSquareRound';
 				background-color: #ffffff;
 				margin: auto;
@@ -3829,7 +3875,7 @@ gtr
 			#jointable > tbody > tr:nth-child(5) > td.overlap{
 				vertical-align: bottom;
 				width: 0.5%;
-			}
+			} */
 
 			#logintable{
 				font-family: 'NanumSquareRound';
@@ -4673,9 +4719,6 @@ gtr
 			font-size: 0.85em;
 		}
 
-		#jointable > tbody .input{
-			width: 100% !important
-		}
 
 		/* 게시판 CSS */
 		
