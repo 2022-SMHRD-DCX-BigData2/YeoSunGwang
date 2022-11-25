@@ -2039,7 +2039,7 @@ figure.snip1200.hover a {
 		cursor: pointer;
 		display: inline-block;
 		font-family: 'NanumSquareRound';
-		font-size: 0.6em;
+		font-size: 0.8em;
 		font-weight: 800;
 		height: 4.8125em;
 		letter-spacing: 0.25em;
@@ -4143,6 +4143,7 @@ gtr
 		border: #f4f4f4 2px solid;
 		cursor:pointer;
 		color: white; 
+		font-size: 0.6em;
 	}
 
 	#wrap2 > div > figure > figcaption > div > h2{
