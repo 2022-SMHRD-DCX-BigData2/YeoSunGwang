@@ -3243,7 +3243,7 @@ gtr
     display: flex;
     border-top: gray 2px solid;
     border-bottom: gray 1px solid;
-    width: 93.8%;
+    width: 90%;
     margin-left: 1em;
     font-size: 3em;
     color: black;
@@ -3287,28 +3287,28 @@ gtr
 }
 
 
+/* 댓글 */
 
-#COMMENTS > div > form > ul > li {
-	padding-left: 2em;
-	float: left;
+#COMMENTS > div > form > ul {
+	list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+
 }
 
 #COMMENTS > table { 
 	table-layout: fixed;
-	width: 93.8%;
+	width: 90%;
 	margin-left: 3.2em;
 	margin-bottom: 0;
 }
 
-
-
-#COMMENTS > div > form > ul {
-	margin-left: 1em;
-}
-
 #COMMENTS > div > form > ul > li:nth-child(1) {
 	list-style: none;
-	width: 89%;
+	width: 83%;
 }
 
 #COMMENTS > div > form > ul > li:nth-child(1) > input[type=text]{
@@ -3317,8 +3317,13 @@ gtr
 }
 
 #COMMENTS > div > form > ul > li:nth-child(2) {
-	list-style: none;
-	width: 10%;
+	padding: 0;
+}
+
+.inputCOM {
+	display: flex;
+    flex-direction: column;
+    align-items: stretch
 }
 
 /* #post_info1 > div > form > ul {
@@ -3475,8 +3480,6 @@ gtr
 		color: red !important;
 	}
 
-	/* 댓글 */
-
 	#post_info > div > form > ul {
 		display: flex;
 	}
@@ -3572,6 +3575,46 @@ gtr
 	#Middle_nav > ul > li > a{
 		text-decoration-line: none;
 	}
+
+	/* 푸터 ourfooter */
+
+	.ourfooter {
+		font-family: 'NanumSquareRound';
+		position: relative;
+		width: 100%;
+		background-color: white;
+	}
+
+	body>div.ourfooter>footer>p {
+		background-color: white;
+	}
+
+	body>div.ourfooter>footer {
+		margin-top: 2em;
+		width: 100%;
+		height: 6em;
+		/* 내용물에 따라 알맞는 값 설정 */
+		bottom: 0px;
+	}
+
+	body>div.ourfooter>footer>a {
+		display: inline-block;
+		margin: 0 20px 10px 20px;
+		color: #808080;
+		font-size: 11px;
+	}
+
+	body>div.ourfooter>footer>p {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	body>div.ourfooter>footer>p>span {
+		display: inline-block;
+		margin-left: 20px;
+	}
+
+
 
 	/* 상품권 교환 페이지 */
 
@@ -4186,7 +4229,6 @@ gtr
 		font: inherit;
 		display: block;
 		padding: 2rem 2rem 0.1rem 2rem;
-		border-top: solid 2px #eeeeee;
 		margin: 0;
 		text-align: center;
 	}
