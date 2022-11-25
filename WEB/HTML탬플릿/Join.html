@@ -18,29 +18,30 @@
         <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
     </header>
 
-    <div id="wrap" class="My1" style="background-color:#F4F4F4;">
-        <div class="join_div">
-            <ul>
-                <div class="join_input">
-                    <h1 style="font-size:3em">회원가입</h1>
-                    <li>아이디 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="id"><button>중복확인</button></li>
-                    <br>
-                    <li>비밀번호 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="pw"></li>
-                    <br>
-                    <li>비밀번호 확인 &nbsp;<input type="text" name="pw"></li>
-                    <br>
-                    <li>이름 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="name"></li>
-                    <br>
-                    <li>이메일 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email"><button>중복확인</button></li>
-                    <br>
-                    <li>닉네임 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="nick"><button>중복확인</button></li>
-                    <br>
-                    <li><input type="submit" value="로그인"></li>
-                </div>
-
-            </ul>
+    <form action="#">
+        <div id="wrap" class="My1" style="background-color:#F4F4F4;">
+            <div class="join_div">
+                <ul>
+                    <div class="join_input">
+                        <h1 style="font-size:3em">회원가입</h1>
+                        <li>아이디 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="id"><button type="button" onclick="idCheck()">중복확인</button></li>
+                        <br>
+                        <li>비밀번호 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="pw"></li>
+                        <br>
+                        <li>비밀번호 확인 &nbsp;<input type="text" name="pw"></li>
+                        <br>
+                        <li>이름 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="name"></li>
+                        <br>
+                        <li>이메일 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="email"><button type="button" onclick="emailCheck()">중복확인</button></li>
+                        <br>
+                        <li>닉네임 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="nick"><button type="button" onclick="nickCheck()">중복확인</button></li>
+                        <br>
+                        <button type="button" id="join-info" onclick="joinSuccess()" style="margin-left: 43%;">회원가입</button>
+                    </div>
+                </ul>
+            </div>
         </div>
-    </div>
+    </form>
 
     </script>
     <script type="text/javascript">
@@ -59,6 +60,23 @@
             Swal.fire({
                 icon: 'succes',
                 title: '사용가능한 아이디입니다!',
+            })
+        }
+
+        function emailCheck() {
+            // 아이디 중복확인
+            Swal.fire({
+                icon: 'error',
+                title: '중복된 이메일입니다!',
+                text: '이메일을 확인해주세요!',
+            })
+        }
+
+        function emailCheckSuccess() {
+            // 사용가능한 아이디
+            Swal.fire({
+                icon: 'succes',
+                title: '사용가능한 이메일입니다!',
             })
         }
 
@@ -89,7 +107,11 @@
                 if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
                     location.href = "MAIN.html";
                 }
-            });
+            }).then(result => {
+                if(result.isConfirmed){
+                    document.getElementById('join-info').submit();
+                }
+            })
         }
 
         function joinFail() {
