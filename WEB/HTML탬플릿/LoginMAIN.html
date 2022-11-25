@@ -35,10 +35,24 @@
 			</ul>
         </nav>
         <nav class="links2">
-            <ul>
-                <li><a href="MAIN.html">LOGOUT</a></li>
-            </ul>
-        </nav>
+			<ul>
+
+				<!-- 비로그인 상태
+				{{^sessionedUser}}
+				<li><a href="Join.html">SIGN UP</a></li>
+				<li><a href="Login.html">SIGN IN</a></li>
+				{{/sessionedUser}}
+
+				로그인 상태
+				{{#sessionedUser}}
+				<li><a href="MAIN.html">LOGOUT</a></li>
+				{{/sessionedUser}} -->
+
+				<li><a href="Join.html">SIGN UP</a></li>
+				<li><a href="Login.html">SIGN IN</a></li>
+
+			</ul>
+		</nav>
 	</header>
 	<!-- 상단바 끝 -->
 

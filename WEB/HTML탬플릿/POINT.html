@@ -30,7 +30,21 @@
 		</nav>
 		<nav class="links2">
 			<ul>
+
+				<!-- 비로그인 상태
+				{{^sessionedUser}}
+				<li><a href="Join.html">SIGN UP</a></li>
+				<li><a href="Login.html">SIGN IN</a></li>
+				{{/sessionedUser}}
+
+				로그인 상태
+				{{#sessionedUser}}
 				<li><a href="MAIN.html">LOGOUT</a></li>
+				{{/sessionedUser}} -->
+
+				<li><a href="Join.html">SIGN UP</a></li>
+				<li><a href="Login.html">SIGN IN</a></li>
+
 			</ul>
 		</nav>
     </header>
