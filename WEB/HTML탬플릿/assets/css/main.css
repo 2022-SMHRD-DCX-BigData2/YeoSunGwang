@@ -3258,6 +3258,9 @@ gtr
     justify-content: center;
 }
 
+#wrap2 > div > figure > img {
+	height: 35em;
+}
 
 
 
