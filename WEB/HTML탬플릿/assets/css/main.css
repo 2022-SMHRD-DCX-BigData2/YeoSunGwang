@@ -3239,11 +3239,6 @@ gtr
 }
 
 #post_info > div.info_icon{
-	display: flex;
-    font-size: 1em;
-    font-weight: 100;
-    flex-direction: column;
-    align-items: flex-start;
 	margin-right: 3.2em;
 	margin-left: 3.2em;
     border-top: gray 2px solid;
@@ -3271,21 +3266,9 @@ gtr
 #post_info > div.info_icon > div.like_com > ul {
 	display: flex;
 	list-style: none;
+	margin-left: 0;
 }
 
-
-#post_info > div.info_icon > div.link_map > ul {
-	display: contents;
-	list-style: none;
-}
-
-#post_info > div.info_icon > div.like_map > ul > li {
-	float: left;
-	padding: 0;
-	margin: 0;
-	margin-left: 1em;
-	font-size: 1em;
-}
 
 #post_info > div.info_icon > div > div > span {
     display: flex;
@@ -3293,6 +3276,14 @@ gtr
     align-items: center;
 }
 
+#post_info>div.info_icon>div .link_map {
+	display: flex;
+	list-style: none;
+}
+
+#post_info>div.info_icon>div .link_map > li{
+	padding-left: 0.5em;
+}
 
 /* 댓글 */
 
@@ -3739,21 +3730,24 @@ gtr
 	table {
 		margin: 0 0 2em 0;
 		width: 100%;
+		border-collapse: collapse;
 	}
 
 		table tbody tr {
 			border: solid 1px rgba(160, 160, 160, 0.3);
+			/* 
 			border-left: 10px solid;
 			border-right: 10px solid;
+			 */
 		}
 
-			table tbody tr:nth-child(2n + 1) {
+			table tbody tr:nth-child(2n+1) {
 				background-color: rgba(160, 160, 160, 0.075);
 			}
 
-			table tbody tr:nth-child(2n) {
-				background-color: rgba(160, 160, 160, 0.103);
-			}
+			/* table tbody tr:nth-child(2n) {
+				background-color: rgba(160, 160, 160, 0.25);
+			} */
 
 			/* rgba(160, 160, 160, 0.172); */
 			
@@ -3832,6 +3826,13 @@ gtr
 				display: block;
 				text-align: center;
 			}
+
+			#boardtable > tbody > tr:nth-child(1) > td {
+				font-weight: 600;
+				font-size: 1.3em;
+				background-color: #ffffff;
+			}
+
 
 
 			/* 회원가입 */
@@ -4009,7 +4010,17 @@ gtr
 					#join > p:hover{
 						color: white;
 					}
-		
+
+					#wrap > div > ul > div .find {
+						display: flex;
+						list-style: none;
+						justify-content: center;
+						margin-top: 2em;
+					}
+
+					#wrap > div > ul > div .find > li {
+						padding: 2em;
+					}
 
 
 		/* 아이디칮기, 비밀번호 찾기 */

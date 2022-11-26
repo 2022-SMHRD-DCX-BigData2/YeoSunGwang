@@ -1,110 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>여기가 여순광?</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+    </noscript>
+    <link rel="stylesheet" href="/WEB/HTML탬플릿/assets/css/sweetalert2.min.css">
+    <script src="/WEB/HTML탬플릿/assets/js/sweetalert2.min.js"></script>
 </head>
+
 <body>
     <header style="display: flex; justify-content: center;">
         <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
     </header>
 
-<!-- 사용자에게 데이터를 넘길 공간 -->
     <form action="#" method="get">
-        <!-- 표 -->
-        <table id="logintable">
-            <tr>
-                <td>아이디<input type="text" name="id" style="width: 100%;"></td>
-            </tr>
+        <div id="wrap" class="My1" style="background-color:#F4F4F4;">
+            <div class="join_div"> <!-- 회원가입에 있던거 그대로 가져왔음! 변수명때문에 헷갈리지않기 -->
+                <ul>
+                    <div class="join_input"> <!-- 회원가입에 있던거 그대로 가져왔음! 변수명때문에 헷갈리지않기 -->
+                        <li>아이디</li>
+                        <li><input type="text" name="id"></li>
+                        <br>
+                        <li>비밀번호</li>
+                        <li><input type="text" name="pw"></li>
+                        <br>
+                        <li style="margin-bottom: 2em; flex-direction: column;">
+                            <p style="margin: 0;">
+                                <input type="checkbox" name="login" value="keeplogin" class="login"
+                                    onclick="keepLogin()">로그인 유지
+                            </p>
+                            <p style="margin: 0;">
+                                <input type="checkbox" name="login" value="autologin" class="login"
+                                    onclick="autoLogin()">자동 로그인
+                            </p>
+                        </li>
+                        <button type="button" id="login" onclick="loginSuccess()">
+                            <p>로그인</p>
+                        </button>
 
-            <tr>
-                <td>비밀번호<input type="password" name="pw" maxlength="20" style="width: 100%;"></td>
-            </tr>
-
-            <tr>
-                <td>
-                    <p style="margin: 0;">
-                        <input type="checkbox" name="login" value="keeplogin" class="login" onclick="keepLogin()">로그인 유지
-                    </p>
-                    <p style="margin: 0;">
-                        <input type="checkbox" name="login" value="autologin" class="login" onclick="autoLogin()">자동 로그인
-                    </p>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="2" align="center">
-                    <button type="button" id="login" onclick="loginSuccess()"><p>로그인</p></button>
-                </td>
-                
-                <tr>
-                    <td>
-                        <nav class="links2">
-                            <ul style="display: flex; justify-content: center; margin-left: 30px; margin-right: 50px; margin-bottom: 5%;">
-                                <ul><a href="FindPw.html"><button>비밀번호 찾기</button></a></ul> 
-                                <ul><a href="FindId.html"><button>아이디 찾기</button></a></ul>
-                                <ul><a href="Join.html"><button>회 원 가 입</button></a></ul>
-                            </ul>
-                        </nav>
-                    </td>
-                </tr>
-            </tr>
+                        <ul class="find">
+                            <li><a href="Join.html"><button>회 원 가 입</button></a></li>
+                            <li><a href="FindId.html"><button>아이디 찾기</button></a></li>
+                            <li><a href="FindPw.html"><button>비밀번호 찾기</button></a></li>
+                        </ul>
 
 
-        </table> 
+                    </div>
+                </ul>
+            </div>
+
+        </div>
     </form>
 
-
     </script>
-
-    <link rel="stylesheet" href="/WEB/HTML탬플릿/assets/css/sweetalert2.min.css">
-    <script src="/WEB/HTML탬플릿/assets/js/sweetalert2.min.js"></script> 
-    
     <script type="text/javascript">
 
-        function loginSuccess(){
+        function loginSuccess() {
             Swal.fire({
                 icon: 'success',
                 title: '로그인 성공!',
                 confirmButtonText: '홈페이지로 이동',
-                }).then(result => {
-                        if (result.isConfirmed) {
-                            location.href="LoginMAIN.html";
-                        }
-                    }).then(result => {
-                        if(result.isConfirmed){
-                            document.getElementById('nick-change').submit();
-                        }
-                    });
+            }).then(result => {
+                if (result.isConfirmed) {
+                    location.href = "LoginMAIN.html";
+                }
+            }).then(result => {
+                if (result.isConfirmed) {
+                    document.getElementById('nick-change').submit();
+                }
+            });
         }
 
-        function loginFail(){
+        function loginFail() {
             Swal.fire({
                 icon: 'error',
                 title: '로그인 실패!',
                 text: '아이디 혹은 비밀번호를 잘못 입력하셨습니다. \n 아이디를 확인해주세요.',
-                })
+            })
         }
 
-        function autoLogin(){
+        function autoLogin() {
             Swal.fire({
                 icon: 'warning',
                 title: '자동 로그인 사용시 보안상 문제가 발생할 수 있습니다!',
                 text: '개인 PC에서만 사용할 것을 권장드립니다.',
-                })
+            })
         }
 
-        function keepLogin(){
+        function keepLogin() {
             Swal.fire({
                 icon: 'warning',
                 title: '로그인 상태 유지시 보안상 문제가 발생할 수 있습니다!',
                 text: '개인 PC에서만 사용할 것을 권장드립니다.',
-                })
+            })
         }
     </script>
 </body>
