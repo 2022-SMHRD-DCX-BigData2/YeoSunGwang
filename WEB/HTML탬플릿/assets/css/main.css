@@ -3258,7 +3258,7 @@ gtr
     justify-content: center;
 }
 
-#wrap2 > div > figure > img {
+#MAIN_Wrap > div > figure > img {
 	height: 35em;
 }
 
@@ -4278,8 +4278,8 @@ gtr
 
 /* Wrapper */
 
-	#wrap2 {
-		margin-top: 44px;
+	#MAIN_Wrap {
+		margin-top: 5em;
 		min-height: 100vh;
 		position: static;
 		width: 100%;
@@ -4302,12 +4302,12 @@ gtr
 		font-size: 0.6em;
 	}
 
-	#wrap2 > div > figure > figcaption > div > h2{
+	#MAIN_Wrap > div > figure > figcaption > div > h2{
 		color: white;
 	}
 
 
-	#wrap2 > div:nth-child(1) > figure > figcaption > a{
+	#MAIN_Wrap > div:nth-child(1) > figure > figcaption > a{
 		display: block;
 		text-align: center;
 	}
