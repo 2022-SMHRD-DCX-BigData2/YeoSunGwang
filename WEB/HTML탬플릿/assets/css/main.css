@@ -2047,6 +2047,7 @@ figure.snip1200.hover a {
 		text-decoration: none;
 		text-transform: uppercase;
 		white-space: nowrap;
+		border-radius: 0.35em;
 	}
 
 		input[type="submit"]:hover,
@@ -3524,12 +3525,12 @@ gtr
 
 	#post_info > div > form > ul > li:nth-child(1){
 		padding-left: 0;
-		width: 95%;
+		width: 92%;
 	}
 
 	#post_info > div > form > ul > li:nth-child(2){
 		padding-left: 0;
-		width: 5%;
+		width: 8%;
 	}
 
 	#COMMENTS > form > ul > li:nth-child(1) > input[type=text] {
@@ -3914,17 +3915,35 @@ gtr
 				width: 0.5%;
 			} */
 
+			/* 로그인 회원가입*/
+
 			#logintable{
 				font-family: 'NanumSquareRound';
 				background-color: #ffffff;
 				margin: auto;
 				width: 40%;
+				border: gray 1px solid;
 			}
 
 			#logintable > tbody{
+				
 				background-color: #ffffff;
 				margin: auto;
 				width: 5%;
+			}
+
+			#login{
+				width: 100%;
+				background-color: #2ebaaeb3;
+			}
+
+			#login > p {
+				color: black;
+				font-weight: 900;
+			}
+
+			#login > p:hover{
+				color: white;
 			}
 
 			#logintable > tbody > tr, 
@@ -3977,6 +3996,24 @@ gtr
 						text-transform: uppercase;
 					}
 
+					#join{
+						width: 100%;
+						background-color: #2ebaaeb3;
+					}
+		
+					#join > p {
+						color: black;
+						font-weight: 900;
+					}
+		
+					#join > p:hover{
+						color: white;
+					}
+		
+
+
+		/* 아이디칮기, 비밀번호 찾기 */
+		
 					#FindIdtable, #FindPwtable{
 						font-family: 'NanumSquareRound';
 						background-color: #ffffff;
