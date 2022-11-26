@@ -4859,10 +4859,10 @@ gtr
 			align-items: center;
 		}
 		
-		.board_wrap {
+		/* .board_wrap {
 			width: 1000px;
 			margin: 100px auto;
-		}
+		} */
 		
 		.board_title {
 			margin-bottom: 30px;
