@@ -75,45 +75,46 @@
                 </nav>
             </section>
 
-            <div id="My">
-                <table>
-                    <caption>
-                        <span class="blind">게시물 목록</span>
-                    </caption>
-                    <thead>
-                        <tr id="normalTableTitle">
-                            <th></th>
-                            <th scope="col" style="width: 80%;"><span class="article_title">제목</span></th>
-                            <th scope="col" style="width: 10%;">작성자</th>
-                            <th scope="col" style="width: 10%;">작성일</th>
-                        </tr>
-                    </thead>
-                </table>
-            </div>
+            <table style="border: 1px solid whitesmoke;" id="boardtable">
+                <tr align="center">
+                    <td>NO.</td>
+                    <td>말머리</td>
+                    <td align="left" style="width: 60%; text-align: center;">제목</td>
+                    <td>글쓴이</td>
+                    <td>등록일</td>
+                    <td>좋아요❤️</td>
+                </tr>
 
-            <div id="board">
-                <caption>
-                    <span class="blind">게시물 목록</span>
-                </caption>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>01</td>
-                            <td style="width: 80%;"><a href="#">ㅋㅋㅋ 여기 가보심?</a></td>
-                            <td style="width: 10%;"><a href="#">이준혁</a></td>
-                            <td style="width: 10%;"><a>2022-11-20</a></td>
-                        </tr>
+                <tr align="center">
+                    <td>001</td>
+                    <td>여수</td>
+                    <td align="left"><a href="view.html">여기 맛있어요</a></td>
+                    <td>광양대부호 정상민</td>
+                    <td>2022-11-24</td>
+                    <td>2<i class="fa-solid fa-heart" style="color: red;"></i></td>
+                </tr>
 
-                        <tr>
-                            <td>02</td>
-                            <td style="width: 80%;"><a href="#">악플 쓴 정상민씨 보세요!!</a></td>
-                            <td style="width: 10%;"><a href="#">윤 열</a></td>
-                            <td style="width: 10%;"><a>2022-11-22</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <tr align="center">
+                    <td>002</td>
+                    <td>광양</td>
+                    <td align="left"><a href="view.html">광양 대부호가 정상민씨라구요?</a></td>
+                    <td>순대 죽돌이 윤 열</td>
+                    <td>2022-11-26</td>
+                    <td>6<i class="fa-solid fa-heart" style="color: red;"></i></td>
+                </tr> 
+            </table>
         </div>
+
+        <footer style="display: flex; flex-direction: column; align-items: center; background-color: #F3F1EA;">
+            <div class="pagination" style="border-color: black;">
+                <a href="#" class="page active">1</a>
+                <a href="#" class="page active">2</a>
+                <a href="#" class="page active">3</a>
+                <a href="#" class="page active">4</a>
+                <a href="#" class="page active">5</a>
+                <a href="#" class="next">Next</a>
+            </div>
+        </footer>
 
         <div class="ourfooter" style="margin-top:-2em">
             <footer>

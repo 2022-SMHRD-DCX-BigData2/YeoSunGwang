@@ -3615,8 +3615,7 @@ gtr
 		margin-top: 2em;
 		width: 100%;
 		height: 6em;
-		/* 내용물에 따라 알맞는 값 설정 */
-		bottom: 0px;
+		bottom: 0;
 	}
 
 	body>div.ourfooter>footer>a {
@@ -3829,8 +3828,7 @@ gtr
 
 			#boardtable > tbody > tr:nth-child(1) > td {
 				font-weight: 600;
-				font-size: 1.3em;
-				background-color: #ffffff;
+				background-color: whitesmoke;
 			}
 
 
@@ -3878,6 +3876,17 @@ gtr
 				font-size: 1em;
 			}
 			
+			#nick-change {
+				padding: 4em;
+				background-color: whitesmoke;
+				border-radius: 1.9em;
+			}
+
+			#pw-change {
+				padding: 4em;
+				background-color: whitesmoke;
+				border-radius: 1.9em;
+			}
 
 
 			/* #jointable{
