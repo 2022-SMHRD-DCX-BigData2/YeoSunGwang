@@ -1,4 +1,4 @@
-@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css");figure
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css");
 
 /*
 	Future Imperfect by HTML5 UP
@@ -30,8 +30,6 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-
-
 
 
 
@@ -3240,38 +3238,40 @@ gtr
 }
 
 #post_info > div.info_icon{
-    display: flex;
+	display: flex;
+    font-size: 1em;
+    font-weight: 100;
+    flex-direction: column;
+    align-items: flex-start;
+	margin-right: 3.2em;
+	margin-left: 3.2em;
     border-top: gray 2px solid;
     border-bottom: gray 1px solid;
-    width: 90%;
-    margin-left: 1em;
-    font-size: 3em;
-    color: black;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
 }
 
-#post_info > div.info_icon > div.like_com {
-	display: flex;
+#COMMENTS {
+    font-size: 1em;
+    font-weight: 100;
+    flex-direction: column;
+    margin-right: 3.2em;
+    margin-left: 3.2em;
+    justify-content: center;
 }
 
-#post_info > div.info_icon > div.link_map {
+
+
+
+#post_info > div.info_icon > div {
 	display: flex;
+	font-size: 1.5em;
 }
+
 
 #post_info > div.info_icon > div.like_com > ul {
 	display: contents;
 	list-style: none;
 }
 
-#post_info > div.info_icon > div.like_com > ul > li {
-	float: left;
-	padding: 0;
-	margin: 0;
-	margin-left: 1em;
-	font-size: 1em;
-}
 
 #post_info > div.info_icon > div.link_map > ul {
 	display: contents;
@@ -3286,17 +3286,31 @@ gtr
 	font-size: 1em;
 }
 
+#post_info > div.info_icon > div > div > span {
+    display: flex;
+    font-size: 0.6em;
+    align-items: center;
+}
+
 
 /* 댓글 */
 
-#COMMENTS > div > form > ul {
+#COMMENTS > table {
+	width: 100%;
+}
+
+#COMMENTS > div > form > ul > li > input[type=text]:nth-child(1){
+	width: 100%;
+}
+
+
+/* #COMMENTS > div > form > ul {
 	list-style: none;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
-
+	margin-left: 3.2em;
 }
 
 #COMMENTS > table { 
@@ -3307,24 +3321,28 @@ gtr
 }
 
 #COMMENTS > div > form > ul > li:nth-child(1) {
+	display: flex;
 	list-style: none;
-	width: 83%;
+	width: 93%;
 }
 
 #COMMENTS > div > form > ul > li:nth-child(1) > input[type=text]{
-	width: 100%;
+	width: 105%;
 	height: 3.1em;
 }
 
 #COMMENTS > div > form > ul > li:nth-child(2) {
 	padding: 0;
-}
+	margin-left: 4.2em;
+} */
 
-.inputCOM {
-	display: flex;
-    flex-direction: column;
-    align-items: stretch
-}
+
+
+
+
+
+
+
 
 /* #post_info1 > div > form > ul {
 	float: left;
@@ -3482,14 +3500,20 @@ gtr
 
 	#post_info > div > form > ul {
 		display: flex;
+		list-style: none;
 	}
 
-	#post_info > div > form > ul > li:nth-child(1) > input {
+	/* #post_info > div > form > ul > li:nth-child(1) > input {
 		overflow: auto;
-		width: 50em;
+		width: 90%;
 		height: 100%;
-		float: left;
 	}
+
+	#post_info > div > form > ul > li:nth-child(2) > input {
+		overflow: auto;
+		width: 10%;
+		height: 100%;
+	} */
 
 	#post_info > div > form > ul > li:nth-child(2) > input {
 		width: 100% !important;
@@ -3500,10 +3524,16 @@ gtr
 
 	#post_info > div > form > ul > li:nth-child(1){
 		padding-left: 0;
+		width: 95%;
 	}
 
 	#post_info > div > form > ul > li:nth-child(2){
 		padding-left: 0;
+		width: 5%;
+	}
+
+	#COMMENTS > form > ul > li:nth-child(1) > input[type=text] {
+		width: 100%;
 	}
 
 	/*  */
@@ -3719,6 +3749,13 @@ gtr
 			table tbody tr:nth-child(2n + 1) {
 				background-color: rgba(160, 160, 160, 0.075);
 			}
+
+			table tbody tr:nth-child(2n) {
+				background-color: rgba(160, 160, 160, 0.103);
+			}
+
+			/* rgba(160, 160, 160, 0.172); */
+			
 
 		table td {
 			padding: 0.75em 0.75em;

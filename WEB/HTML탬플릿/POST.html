@@ -29,17 +29,17 @@
     <header id="header">
         <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo" class="logo"></a></h1>
         <nav class="links">
-			<ul>
-				<li><a href="MAIN.html">HOME</a></li> <!-- 홈화면 -->
+            <ul>
+                <li><a href="MAIN.html">HOME</a></li> <!-- 홈화면 -->
                 <li><a href="Board.html">COMMUNITY</a></li> <!-- 게시판 -->
-				<li><a href="Exchange_Yeosu.html">VOUCHER</a></li> <!-- 포인트 교환 -->
-				<li><a href="editMemInfo.html">MY PAGE</a></li> <!-- 마이 페이지 -->
-			</ul>
-		</nav>
-		<nav class="links2">
-			<ul>
+                <li><a href="Exchange_Yeosu.html">VOUCHER</a></li> <!-- 포인트 교환 -->
+                <li><a href="editMemInfo.html">MY PAGE</a></li> <!-- 마이 페이지 -->
+            </ul>
+        </nav>
+        <nav class="links2">
+            <ul>
 
-				<!-- 비로그인 상태
+                <!-- 비로그인 상태
 				{{^sessionedUser}}
 				<li><a href="Join.html">SIGN UP</a></li>
 				<li><a href="Login.html">SIGN IN</a></li>
@@ -50,11 +50,11 @@
 				<li><a href="MAIN.html">LOGOUT</a></li>
 				{{/sessionedUser}} -->
 
-				<li><a href="Join.html">SIGN UP</a></li>
-				<li><a href="Login.html">SIGN IN</a></li>
+                <li><a href="Join.html">SIGN UP</a></li>
+                <li><a href="Login.html">SIGN IN</a></li>
 
-			</ul>
-		</nav>
+            </ul>
+        </nav>
     </header>
     <!-- 상단바 끝  -->
 
@@ -104,55 +104,64 @@
 
             <div class="info_icon">
                 <div class="like_com">
-                    <ul style="font-size: 0.5em">
+                    <ul>
                         <li><a onclick="clickCOM()" style="cursor: pointer;"><span class="tooltip"><i
                                         class="fa-solid fa-comment"> 11</i><span class="tooltip-text">댓글
                                         쓰기</span></span></a></li>
                         <li><a href="#"><i class="fa-regular fa-heart"> 11</i></a></li>
-                    </ul>
-                </div>
-
-                <div class="link_map">
-                    <ul style="font-size: 0.5em">
-                        <li><a href="#" onclick="copy()"><span class="tooltip"><i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <li><a href="#" onclick="copy()"><span class="tooltip"><i
+                                        class="fa-solid fa-arrow-up-right-from-square"></i>
                                     <span class="tooltip-text">링크 복사</span></span></a></li>
                         <li><a href="#"><span class="tooltip"><i class="fa-solid fa-map-location-dot"></i>
-                                    <span class="tooltip-text">지도로 이동</span></span></a></li> <!-- 지도로고 -->
+                                    <span class="tooltip-text">지도로 이동</span></span></a></li>
                     </ul>
+                    <div style="display: flex;">
+                        <span><a href="POST_BOARD.html">category</a></span>
+                    </div>
+                    
+
                 </div>
+
             </div>
             <br>
 
             <div id="COMMENTS" style="display: none;">
 
+
+                <form action="" style="margin: 0 0 0 0;">
+                    <ul>
+                        <li><input type="text" placeholder="  댓글을 입력하세요."></li>
+                        <li><input type="submit" value="등록" style="font-size: 0.699em;"></li>
+                    </ul>
+                    <br>
+                </form>
+
+
                 <table>
-                    <tr>
-                        <td>댓글</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>댓글</td>
+                        </tr>
 
-                    <tr>
-                        <td>댓글</td>
-                    </tr>
+                        <tr>
+                            <td>댓글</td>
+                        </tr>
 
-                    <tr>
-                        <td>댓글</td>
-                    </tr>
+                        <tr>
+                            <td>댓글</td>
+                        </tr>
 
-                    <tr>
-                        <td>댓글</td>
-                    </tr>
+                        <tr>
+                            <td>댓글</td>
+                        </tr>
+
+
+                    </tbody>
 
                 </table>
 
-                <div class="inputCOM">
-                    <form action="">
-                        <ul>
-                            <li><input type="text" placeholder="  댓글을 입력하세요."></li>
-                            <li><input type="submit" value="등록" style="font-size: 0.645em;"></li>
-                        </ul>
-                        <br><br>
-                    </form>
-                </div>
+
+
 
             </div>
 
@@ -171,8 +180,8 @@
                 <a href='#' target='_blank'>Github</a>
             </nav>
             <p>
-                <span>팀장 : 이준혁</span><br/>
-                <span>팀원 : 정지명 정상민 윤 열</span><br/>
+                <span>팀장 : 이준혁</span><br />
+                <span>팀원 : 정지명 정상민 윤 열</span><br />
                 <span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
             </p>
         </footer>
@@ -181,18 +190,18 @@
     <script>
         function clickCOM() {
             if ($("#COMMENTS").css("display") == "none") {
-                $("#COMMENTS").css("display", "grid")
+                $("#COMMENTS").css("display", "flex")
             } else {
                 $("#COMMENTS").css("display", "none")
             }
         }
 
-        function copy(){  
+        function copy() {
             // 링크 복사 완료
             Swal.fire({
                 icon: 'success',
                 title: '링크를 복사했습니다!'
-                })
+            })
         }
 
     </script>
