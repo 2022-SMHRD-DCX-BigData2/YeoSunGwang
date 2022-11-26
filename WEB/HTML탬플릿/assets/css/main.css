@@ -3606,7 +3606,7 @@ gtr
 
 	.ourfooter {
 		font-family: 'NanumSquareRound';
-		position: absolute;
+		position: relative;
 		width: 100%;
 		background-color: white;
 	}
@@ -3618,7 +3618,6 @@ gtr
 
 
 	body>div.ourfooter>footer {
-		margin-top: 2em;
 		width: 100%;
 		height: 96px;
 		bottom: 0;
