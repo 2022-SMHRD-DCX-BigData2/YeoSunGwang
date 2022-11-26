@@ -3733,6 +3733,13 @@ gtr
 		margin: 0 0 2em 0;
 		width: 100%;
 		border-collapse: collapse;
+		table-layout: fixed;
+	}
+
+	th,td{
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
 	}
 
 		table tbody tr {
