@@ -3258,12 +3258,6 @@ gtr
     justify-content: center;
 }
 
-#MAIN_Wrap > div > figure > img {
-	height: 35em;
-}
-
-
-
 #post_info > div.info_icon > div {
 	display: flex;
 	font-size: 1.5em;
@@ -4280,7 +4274,7 @@ gtr
 
 	#MAIN_Wrap {
 		margin-top: 5em;
-		min-height: 100vh;
+		min-height: 87vh;
 		position: static;
 		width: 100%;
 		background-color: whitesmoke;
@@ -4289,6 +4283,20 @@ gtr
 		font-size: 1em;
 		font-weight: 400;
 		text-transform: uppercase;
+	}
+
+	#MAIN_Wrap > div > figure > figcaption > div > h2{
+		color: white;
+	}
+
+
+	#MAIN_Wrap > div:nth-child(1) > figure > figcaption > a{
+		display: block;
+		text-align: center;
+	}
+
+	#MAIN_Wrap > div > figure > img {
+		height: 35em;
 	}
 
 	#hoverbutton{
@@ -4302,15 +4310,7 @@ gtr
 		font-size: 0.6em;
 	}
 
-	#MAIN_Wrap > div > figure > figcaption > div > h2{
-		color: white;
-	}
 
-
-	#MAIN_Wrap > div:nth-child(1) > figure > figcaption > a{
-		display: block;
-		text-align: center;
-	}
 
 
 	#wrap3{
