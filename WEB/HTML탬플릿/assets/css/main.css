@@ -3269,7 +3269,7 @@ gtr
 
 
 #post_info > div.info_icon > div.like_com > ul {
-	display: contents;
+	display: flex;
 	list-style: none;
 }
 
@@ -5050,7 +5050,7 @@ gtr
 		}
 		
 		.board_write .cont {
-			border-bottom: 1px solid #000;
+			border: 1px solid #000;
 		}
 		
 		.board_write .cont textarea {
