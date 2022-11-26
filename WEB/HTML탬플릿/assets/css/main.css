@@ -4867,6 +4867,16 @@ gtr
 		.board_title {
 			margin-bottom: 30px;
 		}
+
+		#wrap > div.board_view_wrap > div.board_view {
+			margin-left: 10em;
+			margin-right: 10em;
+		}
+
+		#wrap > div.board_write_wrap > div.board_write {
+			margin-left: 10em;
+			margin-right: 10em;
+		}
 		
 		.board_title strong {
 			font-size: 3rem;
@@ -4995,7 +5005,6 @@ gtr
 		}
 		
 		.board_view {
-			width: 100%;
 			border-top: 2px solid #000;
 		}
 		
