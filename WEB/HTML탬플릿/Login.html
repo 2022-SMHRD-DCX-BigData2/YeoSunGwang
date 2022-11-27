@@ -20,9 +20,9 @@
 
     <form action="#" method="get">
         <div id="wrap" class="My1" style="background-color:#F4F4F4;">
-            <div class="join_div"> <!-- 회원가입에 있던거 그대로 가져왔음! 변수명때문에 헷갈리지않기 -->
+            <div class="join_div"> <!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
                 <ul>
-                    <div class="join_input"> <!-- 회원가입에 있던거 그대로 가져왔음! 변수명때문에 헷갈리지않기 -->
+                    <div class="join_input"> <!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
                         <li>아이디</li>
                         <li><input type="text" name="id"></li>
                         <br>
@@ -39,14 +39,14 @@
                                     onclick="autoLogin()">자동 로그인
                             </p>
                         </li>
-                        <button type="button" id="login" onclick="loginSuccess()">
+                        <button type="button" id="login" name="login" onclick="loginSuccess()">
                             <p>로그인</p>
                         </button>
 
                         <ul class="find">
-                            <li><a href="Join.html"><button>회 원 가 입</button></a></li>
-                            <li><a href="FindId.html"><button>아이디 찾기</button></a></li>
-                            <li><a href="FindPw.html"><button>비밀번호 찾기</button></a></li>
+                            <li><button><a href="Join.html">회 원 가 입</a></button></li>
+                            <li><button><a href="FindId.html">아이디 찾기</a></button></li>
+                            <li><button><a href="FindPw.html">비밀번호 찾기</a></button></li>
                         </ul>
 
 
