@@ -1870,7 +1870,7 @@ figure.snip1200 {
 	text-align: center;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 	font-size: 1em;
-	height: 30em;
+	height: 560px;
 }
 
 figure.snip1200 * {
@@ -1918,6 +1918,7 @@ figure.snip1200 h2 {
 
 figure.snip1200 h2 span {
 	font-weight: 800;
+	color: white;
 }
 
 figure.snip1200 h2:before,
@@ -4273,6 +4274,11 @@ gtr
 
 /* Wrapper */
 
+	#wrap > div > figure > img {
+		height: 560px;
+		width: 100%;
+	}
+
 	#MAIN_Wrap {
 		margin-top: 5em;
 		min-height: 87vh;
@@ -4309,7 +4315,7 @@ gtr
 		border: #f4f4f4 2px solid;
 		cursor:pointer;
 		color: white; 
-		font-size: 0.6em;
+		font-size: 0.5em;
 	}
 
 
