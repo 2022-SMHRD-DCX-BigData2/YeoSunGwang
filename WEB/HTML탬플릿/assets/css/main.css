@@ -3355,15 +3355,6 @@ gtr
 	}
 	
 	#MAIN11 > .posts11 > * {
-	flex-shrink : 1;
-	flex-grow : 0;
-	}
-
-	#MAIN11 > .posts11 > * {
-		width: 50%;
-	}
-
-	#MAIN11 > .posts11 > * {
 	margin: auto;
 	padding:2em;
 	width: 33.3333%;
