@@ -82,6 +82,9 @@ public class Member {
 		this.name = name;
 		this.memnum = memnum;
 	}
-
+	@Override
+	public String toString() {
+		return "Member [id=" + id + ", pw=" + pw + ", nick=" + nick + ", name=" + name + ", email=" + email +"]";
+	}
 	
 }
