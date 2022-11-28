@@ -57,22 +57,23 @@
 
     <div id="wrap" class="My1">
         <div id="High_nav">
-            <h1 id="Exchange_nav_1">Yeosu</h1>
+            <h1 id="Exchange_nav_1">Suncheon</h1>
         </div>
 
         <div id="Middle_nav">
             <ul>
                 <br>
-                <li><a href="#">RESTAURANT</a></li>
-                <li><a href="#">CAFE</a></li>
-                <li><a href="#">TOURIST SPOT</a></li>
+                <li><a href="POST_Sun_ALL.html" style="font-weight: bold; color: #2EBAAE; text-decoration: underline; text-underline-position: under;">all</a></li>
+                <li><a href="POST_Sun_REST.html">RESTAURANT</a></li>
+                <li><a href="POST_Sun_CAFE.html">CAFE</a></li>
                 <li>
-                    <select name="local" id="local">
-                        <option value="Y">여수</option>
-                        <option value="S">순천</option>
-                        <option value="G">광양</option>
+                    <select name="local" id="local" onchange="if(this.value) location.href=(this.value);">
+                        <option value="POST_Sun_ALL.html">순천</option>
+                        <option value="POST_Yeo_ALL.html">여수</option>
+                        <option value="POST_Gwang_ALL.html">광양</option>
                     </select>
                 </li>
+                <li><a href="POST_Sun_TOUR.html">tour Spot</a></li>
             </ul>
         </div>
         
@@ -107,13 +108,13 @@
 
                 <article>
                     <div id="img11">
-                        <a href="POST.html" class="image fit"><img src="images/Yeo_모이핀.png"></a>
+                        <a href="POST.html" class="image fit"><img src="images/Winter_Sun.png"></a>
                     </div>
                     
                     <div id="post_in">
                         
                         <div id="com_like">
-                            <p><a href="POST.html" style="text-decoration: none;"> &nbsp; 여수 돌산 이쁜카페 MOI FIN</a></p>
+                            <p><a href="POST.html" style="text-decoration: none;"> &nbsp; 순천 송광사</a></p>
                             <ul>
                                 <li><i class="fa-solid fa-comment"></i> 12 </li>
                                 <li><a href=""><i class="fa-regular fa-heart"></i></a> 12 </li>
