@@ -3450,7 +3450,7 @@ gtr
 		margin-left: -0.2em;
 		margin-bottom: 0.5em;
 		text-decoration-line: none;
-		text-decoration: none; !important;
+		text-decoration: none !important;
 	}
 
 	#com_like{
@@ -4480,7 +4480,7 @@ gtr
 			background-color: white;
 			border-color: gray;
 		}
-		}
+		
 	
 		@media screen and (max-width: 980px) {
 	
