@@ -18,7 +18,7 @@
         <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
     </header>
 
-    <form action="#" method="get" id="login">
+    <form action="#" method="get" id="login-info">
         <div id="wrap" class="My1" style="background-color:#F4F4F4;">
             <div class="join_div"> <!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
                 <ul>
@@ -39,7 +39,7 @@
                                     onclick="autoLogin()">자동 로그인
                             </p>
                         </li>
-                        <button type="button" name="login" onclick="loginSuccess()">
+                        <button type="button" id="login" name="login" onclick="loginSuccess()">
                             <p>로그인</p>
                         </button>
 
@@ -70,7 +70,7 @@
                 }
             }).then(result => {
                 if (result.isConfirmed) {
-                    document.getElementById('login').submit();
+                    document.getElementById('login-info').submit();
                 }
             });
         }
