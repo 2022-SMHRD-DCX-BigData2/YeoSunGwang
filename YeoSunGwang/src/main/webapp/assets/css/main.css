@@ -3874,6 +3874,11 @@ gtr
 				
 			}
 
+			#wrap .join_div > ul .join_input> li > input[type=password]{
+				width: 40em;
+				
+			}
+
 			#wrap > div > ul > div > li:nth-child(14) > input[type=submit]{
 				margin-left: 22em;
 				font-size: 1em;
