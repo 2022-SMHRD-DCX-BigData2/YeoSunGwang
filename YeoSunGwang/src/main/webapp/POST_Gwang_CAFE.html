@@ -57,20 +57,20 @@
 
     <div id="wrap" class="My1">
         <div id="High_nav">
-            <h1 id="Exchange_nav_1">Yeosu</h1>
+            <h1 id="Exchange_nav_1">Gwangyang</h1>
         </div>
 
         <div id="Middle_nav">
             <ul>
                 <br>
-                <li><a href="#">RESTAURANT</a></li>
-                <li><a href="#">CAFE</a></li>
-                <li><a href="#">TOURIST SPOT</a></li>
+                <li><a href="POST_Gwang_ALL.html">all</a></li>
+                <li><a href="POST_Gwang_REST.html">RESTAURANT</a></li>
+                <li><a href="POST_Gwang_CAFE.html" style="font-weight: bold; color: #2EBAAE; text-decoration: underline; text-underline-position: under;">CAFE</a></li>
                 <li>
-                    <select name="local" id="local">
-                        <option value="Y">여수</option>
-                        <option value="S">순천</option>
-                        <option value="G">광양</option>
+                    <select name="local" id="local" onchange="if(this.value) location.href=(this.value);">
+                        <option value="POST_Gwang_ALL.html">광양</option>
+                        <option value="POST_Sun_ALL.html">순천</option>
+                        <option value="POST_Yeo_ALL.html">여수</option>
                     </select>
                 </li>
             </ul>
