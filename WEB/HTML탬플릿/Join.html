@@ -18,7 +18,7 @@
         <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
     </header>
 
-    <form action="#">
+    <form action="#" id="join">
         <div id="wrap" class="My1" style="background-color:#F4F4F4;">
             <div class="join_div">
                 <ul>
@@ -42,7 +42,7 @@
                         <li>닉네임</li>
                         <li><input type="text" name="nick"><button type="button" onclick="nickCheck()">중복확인</button></li>
                         <br>
-                        <button type="button" id="join" name="join" onclick="joinSuccess()"><p>회원가입</p></button>
+                        <button type="button"  name="join" onclick="joinSuccess()"><p>회원가입</p></button>
                     </div>
                 </ul>
             </div>
@@ -115,7 +115,7 @@
                 }
             }).then(result => {
                 if(result.isConfirmed){
-                    document.getElementById('join-info').submit();
+                    document.getElementById('join').submit();
                 }
             })
         }
