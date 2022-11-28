@@ -4,7 +4,6 @@ public class Member {
 
 	// 필드명 = 속성(property)
 	private String id;
-
 	private String pw;
 	private String nick;
 	private String name;
@@ -59,13 +58,14 @@ public class Member {
 		this.memnum = memnum;
 	}
 
-	public Member(String id, String pw, String nick, String name, String email) {
+	public Member(String id, String pw, String nick, String name, String email, Number memnum) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.nick = nick;
 		this.name = name;
 		this.email = email;
+		this.memnum = memnum;
 	}
 
 	public Member(String id, String pw) {

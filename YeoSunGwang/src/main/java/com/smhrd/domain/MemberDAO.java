@@ -28,6 +28,7 @@ public class MemberDAO {
 				sqlSession.commit();
 			} else {
 				// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+				System.out.println("DAO : 회원가입 실패!");
 				sqlSession.rollback();
 			}
 

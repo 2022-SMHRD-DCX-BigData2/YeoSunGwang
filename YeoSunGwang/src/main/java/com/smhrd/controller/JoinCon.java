@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.domain.Member;
 import com.smhrd.domain.MemberDAO;
 
+import oracle.sql.NUMBER;
+
 public class JoinCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -27,9 +29,11 @@ public class JoinCon extends HttpServlet {
 		String nick = request.getParameter("nick");
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
+		String memnum = request.getParameter("memnum");
+		
 		
 		// 2. 받아온 값을 Member객체에 담아주기
-		Member joinMember = new Member(id, pw, nick, name, email);
+		Member joinMember = new Member(id, pw, nick, name, email, memnum);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(joinMember.toString());
 		
