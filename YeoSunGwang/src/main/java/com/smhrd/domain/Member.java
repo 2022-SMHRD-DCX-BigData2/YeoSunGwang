@@ -3,34 +3,20 @@ package com.smhrd.domain;
 public class Member {
 
 	// 필드명 = 속성(property)
-	private String email;
+	private String id;
+
 	private String pw;
-	private String tel;
-	private String address;
+	private String nick;
+	private String name;
+	private String email;
+	private Number memnum;
 
-	// 생성자
-	public Member(String email, String pw, String tel, String address) {
-		super();
-		this.email = email;
-		this.pw = pw;
-		this.tel = tel;
-		this.address = address;
+	public String getId() {
+		return id;
 	}
 
-	// 생성자 - email,pw
-	public Member(String email, String pw) {
-		super();
-		this.email = email;
-		this.pw = pw;
-	}
-
-	// getter, setter
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
+	public void setId(String id) {
+		this.id = id;
 	}
 
 	public String getPw() {
@@ -41,27 +27,61 @@ public class Member {
 		this.pw = pw;
 	}
 
-	public String getTel() {
-		return tel;
+	public String getNick() {
+		return nick;
 	}
 
-	public void setTel(String tel) {
-		this.tel = tel;
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 
-	public String getAddress() {
-		return address;
+	public String getName() {
+		return name;
 	}
 
-	public void setAddress(String address) {
-		this.address = address;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	// 객체에 담긴 정보를 출력해볼 수 있는 메소드
-	// toString
-	@Override
-	public String toString() {
-		return "Member [email=" + email + ", pw=" + pw + ", tel=" + tel + ", address=" + address + "]";
+	public String getEmail() {
+		return email;
 	}
 
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public Number getMemnum() {
+		return memnum;
+	}
+
+	public void setMemnum(Number memnum) {
+		this.memnum = memnum;
+	}
+
+	public Member(String id, String pw, String nick, String name, String email) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.nick = nick;
+		this.name = name;
+		this.email = email;
+	}
+
+	public Member(String id, String pw) {
+		super();
+		this.id = id;
+		this.pw = pw;
+	}
+
+	public Member(String id, String pw, String nick, String name, Number memnum) {
+		super();
+		this.id = id;
+		this.pw = pw;
+		this.nick = nick;
+		this.name = name;
+		this.memnum = memnum;
+	}
+
+	
 }

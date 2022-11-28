@@ -19,12 +19,12 @@ public class LoginCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// 1. email,pw 파라미터 수집
-		String email = request.getParameter("email");
+		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
 		
 		
 		// 2. 받아온 값을 Member객체에 담아주기
-		Member login = new Member(email, pw);
+		Member login = new Member(id, pw);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(login.toString());
 		

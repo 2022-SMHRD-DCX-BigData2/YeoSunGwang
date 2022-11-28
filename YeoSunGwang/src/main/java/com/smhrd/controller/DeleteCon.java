@@ -17,10 +17,10 @@ public class DeleteCon extends HttpServlet {
 		
 		System.out.println("[DeleteCon]");
 		//email 파라미터수집
-		String email = request.getParameter("email");
+		String memnum = request.getParameter("memnum");
 		//DAO에 일할 메소드 만들기
 		MemberDAO dao = new MemberDAO();
-		int cnt = dao.deleteMember(email);
+		int cnt = dao.deleteMember(memnum);
 		if(cnt>0) {
 			System.out.println("회원정보삭제 성공!");
 			response.sendRedirect("select.jsp");

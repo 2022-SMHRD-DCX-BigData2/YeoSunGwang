@@ -24,15 +24,16 @@ public class UpdateCon extends HttpServlet {
 		// 세션에서 가져오기
 		HttpSession session = request.getSession();
 		Member loginMember = (Member) session.getAttribute("loginMember");
-		String email = loginMember.getEmail();
+		Number memnum = loginMember.getMemnum();
 		// 파라미터 수집
 		// pw,tel,address
+		String id = request.getParameter("id");
+		String name = request.getParameter("name");
+		String nick = request.getParameter("nick");
 		String pw = request.getParameter("pw");
-		String tel = request.getParameter("tel");
-		String address = request.getParameter("address");
 
 		// 받아온 데이터를 Member객체에 담아주기
-		Member update = new Member(email, pw, tel, address);
+		Member update = new Member(id,pw, nick, name, memnum);
 
 		// DAO에 일할 메소드 만들기
 		MemberDAO dao = new MemberDAO();
