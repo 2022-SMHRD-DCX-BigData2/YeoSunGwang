@@ -2,6 +2,7 @@ package com.smhrd.domain;
 
 import java.util.List;
 
+import org.apache.ibatis.reflection.SystemMetaObject;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
@@ -55,14 +56,14 @@ public class MemberDAO {
            } else {
               cnt = 0;
            }
-           
+           System.out.println("아이디 중복체크결과 : " + cnt);
         } catch (Exception e) {
            e.printStackTrace();
         } finally {
            sqlSession.close();
         }
         
-        return   cnt;
+        return cnt;
      } // 아이디 중복체크 끝
 	
 

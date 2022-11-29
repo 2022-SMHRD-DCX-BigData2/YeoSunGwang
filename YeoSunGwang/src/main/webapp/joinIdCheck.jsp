@@ -13,7 +13,6 @@
 	<script src="assets/js/browser.min.js"></script>
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
-	<script src="https://kit.fontawesome.com/7208daee16.js" crossorigin="anonymous"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
@@ -46,9 +45,9 @@
 		<fieldset>
 			<!-- <form action="" method="post">
 			action속성에 값이 없으면 기본적으로 자기자신을 불러오지만 중복확인 버튼을 클릭했을때 변경되지않는다.-->	
-			<form action="joinIdCheck.jsp" method="post" name="wfr">
+			<form action="joinIdCheck.jsp" method="post" name="joinCheck">
 				<div style="display: flex; align-items: center;">
-					<span>ID</span>
+					<div style="margin-left: 1em; margin-right: 1em;">ID</div>
 					<input type="text" name="userid" value="<%=id%>">
 					<input type="submit" value="중복 확인" style="height: 4.2em;">	 
 				</div>
@@ -62,11 +61,10 @@
 		    	//팝업창은 기존창과 종속관계를 가지고 있으므로 opener를 이용하면 된다.
 		    	//alert("팝업창의 id값"+document.wfr.userid.value + ", 회원가입창의 id값 : " +opener.document.fr.id.value)
 		    	//6-1. 회원가입페이지의 id값에 아이디중복으로 선택된 id값을 대입.
-		    	opener.document.fr.id.value = document.wfr.userid.value;
+		    	opener.document.join.id.value = document.joinCheck.userid.value;
 		    	
 		    	//6-3. 회원가입창 제어
-		    	//readonly 속성제어(커멜표기가 아닐때는 제어가 안됨 신기하네 ㅋㅋㅋ)
-		    	opener.document.fr.id.readOnly=true;
+		    	opener.document.join.id.readOnly=true;
 		    	
 		    	//6-2. 창닫기
 		    	window.close();

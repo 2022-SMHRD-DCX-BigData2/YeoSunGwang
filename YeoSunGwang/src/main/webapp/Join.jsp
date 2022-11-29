@@ -20,10 +20,10 @@
 
 <body>
     <header style="display: flex; justify-content: center;">
-        <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
+        <h1><a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"></a></h1>
     </header>
 
-    <form action="JoinCon" method="POST" id="join-info">
+    <form action="JoinCon" method="POST" id="join-info" name="join">
         <div id="wrap" class="My1" style="background-color:#F4F4F4;">
             <div class="join_div">
                 <ul>
