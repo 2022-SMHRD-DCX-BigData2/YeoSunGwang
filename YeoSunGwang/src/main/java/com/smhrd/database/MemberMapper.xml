@@ -20,6 +20,10 @@
 	<select id="selectAll" resultType="com.smhrd.domain.Member">
 		select * from mem_info
 	</select>
+	
+	<select id="confirmid" parameterType="com.smhrd.domain.Member">
+		select id from mem_info where mem_id=#{mem_id}
+	</select>
 
 	<delete id="deleteMember" parameterType="String">
 		delete from mem_info where mem_num=#{mem_num}

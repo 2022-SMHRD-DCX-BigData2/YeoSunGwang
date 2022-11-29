@@ -41,8 +41,32 @@ public class MemberDAO {
 
 		return cnt;
 	} // 회원가입 끝
+	
+	// 아이디 중복 체크
+	public int joinIdCheck(String id){
+        
+        int cnt = 0;
+        
+        try {
+           cnt = sqlSession.selectOne("confirmid", id);
+           
+           if (cnt > 0) {
+              cnt = 1;         
+           } else {
+              cnt = 0;
+           }
+           
+        } catch (Exception e) {
+           e.printStackTrace();
+        } finally {
+           sqlSession.close();
+        }
+        
+        return   cnt;
+     } // 아이디 중복체크 끝
+	
 
-	//로그인 기능구현
+	// 로그인 기능구현
 	public Member selectMember(Member login){
 		Member loginMember = null;
 		try {
@@ -55,7 +79,6 @@ public class MemberDAO {
 	            sqlSession.commit();
 	         }else {
 	            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
-	        	 System.out.println("DAO : 로그인 실패!");
 	            sqlSession.rollback();
 	         }
 	         
