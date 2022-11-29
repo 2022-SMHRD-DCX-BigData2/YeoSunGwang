@@ -8,7 +8,7 @@ public class Member {
 	private String nick;
 	private String name;
 	private String email;
-	private Number memnum;
+	private int memnum;
 
 	public String getId() {
 		return id;
@@ -50,22 +50,21 @@ public class Member {
 		this.email = email;
 	}
 
-	public Number getMemnum() {
+	public int getMemnum() {
 		return memnum;
 	}
 
-	public void setMemnum(Number memnum) {
+	public void setMemnum(int memnum) {
 		this.memnum = memnum;
 	}
 
-	public Member(String id, String pw, String nick, String name, String email, Number memnum) {
+	public Member(String id, String pw, String nick, String name, String email) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.nick = nick;
 		this.name = name;
 		this.email = email;
-		this.memnum = memnum;
 	}
 
 	public Member(String id, String pw) {
@@ -74,7 +73,7 @@ public class Member {
 		this.pw = pw;
 	}
 
-	public Member(String id, String pw, String nick, String name, Number memnum) {
+	public Member(String id, String pw, String nick, String name, int memnum) {
 		super();
 		this.id = id;
 		this.pw = pw;

@@ -29,10 +29,9 @@ public class JoinCon extends HttpServlet {
 		String nick = request.getParameter("nick");
 		String name = request.getParameter("name");
 		String email = request.getParameter("email");
-		Number memnum = Integer.parseInt(request.getParameter("memnum"));
 
 		// 2. 받아온 값을 Member객체에 담아주기
-		Member joinMember = new Member(id, pw, nick, name, email, memnum);
+		Member joinMember = new Member(id, pw, nick, name, email);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(joinMember.toString());
 

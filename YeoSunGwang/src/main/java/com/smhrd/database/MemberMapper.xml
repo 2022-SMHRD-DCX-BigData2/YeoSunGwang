@@ -6,7 +6,7 @@
 <mapper namespace="com.smhrd.database.MemberMapper">
 
 	<insert id="insertMember" parameterType="com.smhrd.domain.Member">
-		insert into mem_info values(#{id},#{pw},#{nick},#{name},#{email},#{NUM_SEQ.NEXTVAL})
+		insert into mem_info values(NUM_SEQ.nextval,#{id},#{email},#{pw},#{name},#{nick})
 	</insert>
 	
 	<select id="selectMember" parameterType="com.smhrd.domain.Member" resultType="com.smhrd.domain.Member">
