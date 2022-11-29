@@ -2,6 +2,9 @@ package com.smhrd.domain;
 
 
 public class Member {
+
+
+
 	// 필드명 = 속성(property)
 	private String mem_id;
 	private String mem_pw;
@@ -47,6 +50,14 @@ public class Member {
 		this.mem_num = mem_num;
 	}
 
+	public Member(String mem_id, String mem_pw, String mem_nick, String mem_name, int mem_num) {
+		super();
+		this.mem_id = mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_nick = mem_nick;
+		this.mem_name = mem_name;
+		this.mem_num = mem_num;
+	}
 
 
 	public String getMem_id() {

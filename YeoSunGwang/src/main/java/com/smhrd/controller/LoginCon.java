@@ -31,7 +31,6 @@ public class LoginCon extends HttpServlet {
 		// 3. DAO 객체 생성, 일 할 메소드 만들기
 		MemberDAO dao = new MemberDAO();
 		Member loginMember = dao.selectMember(login);
-		System.out.println(loginMember.toString());
 		// 4.MemberMapper.xml에서 SQL 
 		
 		// 5. 명령 후 처리

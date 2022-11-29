@@ -11,8 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.smhrd.domain.Member;
 import com.smhrd.domain.MemberDAO;
 
-import oracle.sql.NUMBER;
-
 public class JoinCon extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
