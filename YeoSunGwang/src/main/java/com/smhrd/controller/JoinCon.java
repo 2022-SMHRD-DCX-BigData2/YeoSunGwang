@@ -24,14 +24,14 @@ public class JoinCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 
 		// 1. email,pw,tel,address 파라미터 수집
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
-		String nick = request.getParameter("nick");
-		String name = request.getParameter("name");
-		String email = request.getParameter("email");
+		String mem_id = request.getParameter("id");
+		String mem_pw = request.getParameter("pw");
+		String mem_nick = request.getParameter("nick");
+		String mem_name = request.getParameter("name");
+		String mem_email = request.getParameter("email");
 
 		// 2. 받아온 값을 Member객체에 담아주기
-		Member joinMember = new Member(id, pw, nick, name, email);
+		Member joinMember = new Member(mem_id, mem_pw, mem_nick, mem_name, mem_email);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(joinMember.toString());
 
@@ -47,7 +47,7 @@ public class JoinCon extends HttpServlet {
 			// 회원가입 성공하면 joinSuccess.jsp로 이동
 			// response.sendRedirect("joinSuccess.jsp");
 			RequestDispatcher rd = request.getRequestDispatcher("MAIN.html");
-			request.setAttribute("join", id);
+			request.setAttribute("join", mem_id);
 			rd.forward(request, response);
 
 		} else {

@@ -19,19 +19,19 @@ public class LoginCon extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		
 		// 1. email,pw 파라미터 수집
-		String id = request.getParameter("id");
-		String pw = request.getParameter("pw");
+		String mem_id = request.getParameter("id");
+		String mem_pw = request.getParameter("pw");
 		
 		
 		// 2. 받아온 값을 Member객체에 담아주기
-		Member login = new Member(id, pw);
+		Member login = new Member(mem_id, mem_pw);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(login.toString());
 		
 		// 3. DAO 객체 생성, 일 할 메소드 만들기
 		MemberDAO dao = new MemberDAO();
 		Member loginMember = dao.selectMember(login);
-		
+		System.out.println(loginMember.toString());
 		// 4.MemberMapper.xml에서 SQL 
 		
 		// 5. 명령 후 처리
