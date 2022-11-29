@@ -60,6 +60,20 @@ public class Member {
 	}
 
 
+
+
+	public Member(String mem_id, String mem_nick, String mem_name, int mem_num) {
+		super();
+		this.mem_id = mem_id;
+		this.mem_nick = mem_nick;
+		this.mem_name = mem_name;
+		this.mem_num = mem_num;
+	}
+	
+	
+
+
+
 	public String getMem_id() {
 		return mem_id;
 	}

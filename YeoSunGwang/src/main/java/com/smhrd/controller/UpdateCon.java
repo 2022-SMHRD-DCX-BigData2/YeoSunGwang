@@ -33,7 +33,8 @@ public class UpdateCon extends HttpServlet {
 		String mem_pw = request.getParameter("pw");
 
 		// 받아온 데이터를 Member객체에 담아주기
-		Member update = new Member(mem_id,mem_pw, mem_nick, mem_name, mem_num);
+		Member update = new Member(mem_id, mem_pw, mem_nick, mem_name, mem_num);
+		System.out.println(update.toString());
 
 		// DAO에 일할 메소드 만들기
 		MemberDAO dao = new MemberDAO();
@@ -44,11 +45,11 @@ public class UpdateCon extends HttpServlet {
 			// 세션에 저장되어있는 정보가 수정이전의 로그인 정보이기 때문에
 			// 같은 이름으로 덮어쓰기 해야한다.
 			session.setAttribute("loginMember", update);
-			response.sendRedirect("editMemInfo.html");
+			response.sendRedirect("editMemInfo.jsp");
 		} else {
 			System.out.println(" 회원정보 수정 실패!");
 			// 회원가입 실패하면 다시 회원가입 하게끔 main.jsp로 이동
-			response.sendRedirect("editMemInfo.html");
+			response.sendRedirect("editMemInfo.jsp");
 		}
 
 	}
