@@ -25,21 +25,21 @@
                     <div class="join_input">
                         <h1 style="font-size:3em">회원가입</h1>
                         <li>아이디</li>
-                        <li><input type="text" name="id"><button type="button" onclick="idCheck()">중복확인</button></li>
+                        <li><input type="text" name="id" id="id"><button type="button" onclick="idCheck()">중복확인</button></li>
                         <br>
                         <li>비밀번호</li>
-                        <li><input type="password" name="pw"></li>
+                        <li><input type="password" name="pw" id="pw"></li>
                         <br>
                         <li>이름</li>
-                        <li><input type="text" name="name"></li>
+                        <li><input type="text" name="name" id="name"></li>
                         <br>
                         <li>이메일</li>
-                        <li><input type="text" name="email"><button type="button" onclick="emailCheck()">중복확인</button></li>
+                        <li><input type="text" name="email" id="email"><button type="button" onclick="emailCheck()">중복확인</button></li>
                         <br>
                         <li>닉네임</li>
-                        <li><input type="text" name="nick"><button type="button" onclick="nickCheck()">중복확인</button></li>
+                        <li><input type="text" name="nick" id="nick"><button type="button" onclick="nickCheck()">중복확인</button></li>
                         <br>
-                        <button type="submit" id="join" value="회원가입" onclick="joinSuccess()"><p>회원가입</p></button>
+                        <button type="button" id="join" value="회원가입" onclick="joinform_check()"><p>회원가입</p></button>
                     </div>
                 </ul>
             </div>
@@ -50,20 +50,22 @@
     <script type="text/javascript">
 
         function idCheck() {
-            // 아이디 중복확인
-            Swal.fire({
-                icon: 'error',
-                title: '중복된 아이디입니다!',
-                text: '아이디를 확인해주세요!',
-            })
-        }
-
-        function idCheckSuccess() {
-            // 사용가능한 아이디
-            Swal.fire({
-                icon: 'succes',
-                title: '사용가능한 아이디입니다!',
-            })
+        	if(document.getElementById('id').value == "" || document.getElementById('id').value.lenth <0){
+        		Swal.fire({
+                    icon: 'warning',
+                    title: '아이디를 입력해주세요!',
+                });
+              id.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+              return false;
+        	}else{
+        		//2. 회원정보아이디를 가지고 있는 지 체크하려면 DB에 접근해야한다.
+        		//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
+        		window.open("joinIdCheck.jsp?id="+document.getElementById('id').value,"","width=450, height=250");
+        	}
+            
+        	//아이디 중복체크 팝업창(현재 공백문서)
+            //window.open("팝업될 문서 경로", "팝업될 문서 이름", "옵션");
+            //window.open("joinIdCheck.jsp?userid="+document.fr.id.value,"","width=450, height=250");
         }
 
         function emailCheck() {
@@ -72,14 +74,6 @@
                 icon: 'error',
                 title: '중복된 이메일입니다!',
                 text: '이메일을 확인해주세요!',
-            })
-        }
-
-        function emailCheckSuccess() {
-            // 사용가능한 아이디
-            Swal.fire({
-                icon: 'succes',
-                title: '사용가능한 이메일입니다!',
             })
         }
 
@@ -92,31 +86,68 @@
             })
         }
 
-        function nickCheckSuccess() {
-            // 사용가능한 닉네임
-            Swal.fire({
-                icon: 'error',
-                title: '사용가능한 닉네임입니다!',
-            })
-        }
+       	//joinform_check 함수로 유효성 검사
+           function joinform_check() {
+             //변수에 담아주기
+             var id = document.getElementById('id');
+             var pw = document.getElementById('pw');
+             var name = document.getElementById('name');
+             var email = document.getElementById('email');
+             var nick = document.getElementById('nick');
 
-        function joinSuccess() {
-            Swal.fire({
-                icon: 'success',
-                title: '회원가입 성공!',
-                confirmButtonText: '홈페이지로 이동',
-            }).then(result => {
-                // 만약 Promise리턴을 받으면,
-                if (result.isConfirmed) { // 만약 모달창에서 confirm 버튼을 눌렀다면
-                    location.href = "MAIN.html";
-                }
-            }).then(result => {
-                if(result.isConfirmed){
-                    document.getElementById('join-info').submit();
-                }
-            })
-        }
-
+             if (id.value == "") {
+           	  Swal.fire({
+                     icon: 'warning',
+                     title: '아이디를 입력해주세요!',
+                 });
+               id.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+               return false; //return: 반환하다 return false:  아무것도 반환하지 말아라 아래 코드부터 아무것도 진행하지 말것
+             }else if(pw.value == "") {
+           	  Swal.fire({
+                     icon: 'warning',
+                     title: '비밀번호를 입력해주세요!',
+                 });
+               pw.focus();
+               return false;
+             }else if(name.value == "") {
+           	  Swal.fire({
+                     icon: 'warning',
+                     title: '이름을 입력해주세요!',
+                 })
+               name.focus();
+               return false;
+             }else if(email.value == "") {
+           	  Swal.fire({
+                     icon: 'warning',
+                     title: '이메일을 입력해주세요!',
+                 });
+               email.focus();
+               return false;
+             }else if(nick.value == "") {
+           	  Swal.fire({
+                     icon: 'warning',
+                     title: '이메일을 입력해주세요!',
+                 });
+               nick.focus();
+               return false;
+             }else{
+				Swal.fire({
+				    icon: 'success',
+				    title: '회원가입 성공!',
+				    confirmButtonText: '홈페이지로 이동',
+				}).then(result => {
+				    // 만약 Promise리턴을 받으면,
+				    if (result.isConfirmed) { 
+				        location.href = "MAIN.html";
+				    }
+				}).then(result => {
+				    if(result.isConfirmed){
+				        document.getElementById('join-info').submit();
+				    }
+				})  	  
+              }
+           }
+     
         function joinFail() {
             Swal.fire({
                 icon: 'error',
@@ -124,6 +155,7 @@
                 text: '정확한 회원정보를 입력해주세요.',
             })
         }
+     
     </script>
 </body>
 
