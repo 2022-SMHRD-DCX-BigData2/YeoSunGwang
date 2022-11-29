@@ -47,8 +47,11 @@
 			<!-- <form action="" method="post">
 			action속성에 값이 없으면 기본적으로 자기자신을 불러오지만 중복확인 버튼을 클릭했을때 변경되지않는다.-->	
 			<form action="joinIdCheck.jsp" method="post" name="wfr">
-				ID : <input type="text" name="userid" value="<%=id%>">
-				<input type="submit" value="중복 확인">	 
+				<div style="display: flex; align-items: center;">
+					<span>ID</span>
+					<input type="text" name="userid" value="<%=id%>">
+					<input type="submit" value="중복 확인" style="height: 4.2em;">	 
+				</div>
 			</form>
 		</fieldset>
 		

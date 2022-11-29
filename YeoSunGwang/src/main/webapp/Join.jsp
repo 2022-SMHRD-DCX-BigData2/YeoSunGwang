@@ -1,3 +1,8 @@
+<%@page import="com.smhrd.domain.Member"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+   pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,10 +67,6 @@
         		//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
         		window.open("joinIdCheck.jsp?id="+document.getElementById('id').value,"","width=450, height=250");
         	}
-            
-        	//아이디 중복체크 팝업창(현재 공백문서)
-            //window.open("팝업될 문서 경로", "팝업될 문서 이름", "옵션");
-            //window.open("joinIdCheck.jsp?userid="+document.fr.id.value,"","width=450, height=250");
         }
 
         function emailCheck() {
@@ -138,7 +139,7 @@
 				}).then(result => {
 				    // 만약 Promise리턴을 받으면,
 				    if (result.isConfirmed) { 
-				        location.href = "MAIN.html";
+				        location.href = "MAIN.jsp";
 				    }
 				}).then(result => {
 				    if(result.isConfirmed){

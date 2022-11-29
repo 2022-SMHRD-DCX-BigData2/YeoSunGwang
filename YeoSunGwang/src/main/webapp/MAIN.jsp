@@ -43,22 +43,22 @@
 		<ul>
 			<li><a href="MAIN.jsp">HOME</a></li>
 			<!-- 홈화면 -->
-			<li><a href="Board.html">COMMUNITY</a></li>
+			<li><a href="Board.jsp">COMMUNITY</a></li>
 			<!-- 게시판 -->
-			<li><a href="Exchange_Yeosu.html">VOUCHER</a></li>
+			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
 			<!-- 포인트 교환 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">MY PAGE</a></li>
 			<%}else{ %>
-			<li><a href="editMemInfo.html">MY PAGE</a></li>
+			<li><a href="editMemInfo.jsp">MY PAGE</a></li>
 			<%} %>
 		</ul>
 	</div>
 	<div class="links2">
 		<ul>
 			<%if(loginMember == null) { %>
-			<li><a href="Join.html">SIGN UP</a></li>
-			<li><a href="Login.html">SIGN IN</a></li>
+			<li><a href="Join.jsp">SIGN UP</a></li>
+			<li><a href="Login.jsp">SIGN IN</a></li>
 		</ul>
 		<%}else{ %>
 		<ul>
@@ -82,7 +82,7 @@
 			<p>관광의 도시 여수로 오세요</p>
 			<figcaption>
 			<p>
-				<button id="hoverbutton" onclick="location.href='POST_Yeo_ALL.html'">CLICK</button>
+				<button id="hoverbutton" onclick="location.href='POST_Yeo_ALL.jsp'">CLICK</button>
 			</p>
 			<div class="heading">
 				<h2>
@@ -100,7 +100,7 @@
 			</p>
 			<figcaption>
 			<p>
-				<button id="hoverbutton" onclick="location.href='POST_Sun_ALL.html'">CLICK</button>
+				<button id="hoverbutton" onclick="location.href='POST_Sun_ALL.jsp'">CLICK</button>
 			</p>
 			<div class="heading">
 				<h2>
@@ -117,7 +117,7 @@
 			<figcaption>
 			<p>
 				<button id="hoverbutton"
-					onclick="location.href='POST_Gwang_ALL.html'">CLICK</button>
+					onclick="location.href='POST_Gwang_ALL.jsp'">CLICK</button>
 			</p>
 			<div class="heading">
 				<h2>
