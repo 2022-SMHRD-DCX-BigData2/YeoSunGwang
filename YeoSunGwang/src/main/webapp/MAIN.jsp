@@ -1,9 +1,11 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<%@page import="com.smhrd.domain.Member"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<% 
+   Member loginMember = (Member)session.getAttribute("loginMember");
+%>
+
 <html>
 
 <head>
@@ -25,32 +27,25 @@
 <body>
 	<!-- 상단바 시작 -->
 	<header id="header">
-		<h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo" class="logo"></a></h1>
+		<h1><a href="MAIN.jsp"><img src="images/여순광.png" alt="logo" class="logo"></a></h1>
 		<nav class="links">
 			<ul>
-				<li><a href="MAIN.html">HOME</a></li> <!-- 홈화면 -->
+				<li><a href="MAIN.jsp">HOME</a></li> <!-- 홈화면 -->
 				<li><a href="Board.html">COMMUNITY</a></li> <!-- 게시판 -->
 				<li><a href="Exchange_Yeosu.html">VOUCHER</a></li> <!-- 포인트 교환 -->
-				<li><a href="editMemInfo.html">MY PAGE</a></li> <!-- 마이 페이지 -->
+				
 			</ul>
 		</nav>
 		<nav class="links2">
-			<ul>
-
-				<!-- 비로그인 상태
-				{{^sessionedUser}}
+			<ul>	
+				<%if(loginMember == null) { %>
 				<li><a href="Join.html">SIGN UP</a></li>
 				<li><a href="Login.html">SIGN IN</a></li>
-				{{/sessionedUser}}
-
-				로그인 상태
-				{{#sessionedUser}}
-				<li><a href="MAIN.html">LOGOUT</a></li>
-				{{/sessionedUser}} -->
-
-				<li><a href="Join.html">SIGN UP</a></li>
-				<li><a href="Login.html">SIGN IN</a></li>
-
+				<%}else{ %>
+				<li><%= loginMember.getMem_nick()%> 님 꺼지세요</li>
+				<li><a href="editMemInfo.html">MY PAGE</a></li>
+				<li><a href="LogoutCon">LOGOUT</a></li>
+				<%} %>
 			</ul>
 		</nav>
 	</header>

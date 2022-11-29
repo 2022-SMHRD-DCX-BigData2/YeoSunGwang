@@ -42,7 +42,7 @@
 									class="login" onclick="autoLogin()">자동 로그인
 							</p>
 						</li>
-						<button type="submit" id="login" value="login"
+						<button type="button" id="login" value="login"
 							onclick="loginSuccess()">
 							<p>로그인</p>
 						</button>
@@ -79,13 +79,9 @@
                 confirmButtonText: '홈페이지로 이동',
             }).then(result => {
                 if (result.isConfirmed) {
-                    location.href = "MAIN.html";
+                	document.getElementById('login-info').submit();
                 }
-            }).then(result => {
-                if (result.isConfirmed) {
-                    document.getElementById('login-info').submit();
-                }
-            });
+            })
         }
 
         function loginFail() {
