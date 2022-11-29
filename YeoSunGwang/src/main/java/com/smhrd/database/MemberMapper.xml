@@ -10,18 +10,18 @@
 	</insert>
 	
 	<select id="selectMember" parameterType="com.smhrd.domain.Member" resultType="com.smhrd.domain.Member">
-		select * from member where id=#{id} and pw=#{pw}
+		select * from mem_info where id=#{id} and pw=#{pw}
 	</select>
 	
 	<update id="updateMember" parameterType="com.smhrd.domain.Member">
-      update member set pw=#{pw}, id=#{id}, nick=#{nick} where name=#{name}
+      update mem_info set pw=#{pw}, id=#{id}, nick=#{nick} where name=#{name}
    </update>
 	
 	<select id="selectAll" resultType="com.smhrd.domain.Member">
-		select * from member
+		select * from mem_info
 	</select>
 
 	<delete id="deleteMember" parameterType="String">
-		delete from member where memnum=#{memnum}
+		delete from mem_info where memnum=#{memnum}
 	</delete>
 </mapper>
