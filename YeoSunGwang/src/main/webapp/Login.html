@@ -2,62 +2,75 @@
 <html lang="en">
 
 <head>
-    <title>여기가 여순광?</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
-    </noscript>
-    <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
-    <script src="assets/js/sweetalert2.min.js"></script>
+<title>여기가 여순광?</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="assets/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="assets/css/noscript.css" />
+</noscript>
+<link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+<script src="assets/js/sweetalert2.min.js"></script>
 </head>
 
 <body>
-    <header style="display: flex; justify-content: center;">
-        <h1><a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a></h1>
-    </header>
+	<header style="display: flex; justify-content: center;">
+		<h1>
+			<a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a>
+		</h1>
+	</header>
 
-    <form action="#" method="get" id="login-info">
-        <div id="wrap" class="My1" style="background-color:#F4F4F4;">
-            <div class="join_div"> <!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
-                <ul>
-                    <div class="join_input"> <!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
-                        <li>아이디</li>
-                        <li><input type="text" name="id"></li>
-                        <br>
-                        <li>비밀번호</li>
-                        <li><input type="text" name="pw"></li>
-                        <br>
-                        <li style="margin-bottom: 2em; flex-direction: column;">
-                            <p style="margin: 0;">
-                                <input type="checkbox" name="login" value="keeplogin" class="login"
-                                    onclick="keepLogin()">로그인 유지
-                            </p>
-                            <p style="margin: 0;">
-                                <input type="checkbox" name="login" value="autologin" class="login"
-                                    onclick="autoLogin()">자동 로그인
-                            </p>
-                        </li>
-                        <button type="button" id="login" name="login" onclick="loginSuccess()">
-                            <p>로그인</p>
-                        </button>
+	<form action="LoginCon" method="Post" id="login-info">
+		<div id="wrap" class="My1" style="background-color: #F4F4F4;">
+			<div class="join_div">
+				<!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
+				<ul>
+					<div class="join_input">
+						<!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
+						<li>아이디</li>
+						<li><input type="text" name="id"></li> <br>
+						<li>비밀번호</li>
+						<li><input type="text" name="pw"></li> <br>
+						<li style="margin-bottom: 2em; flex-direction: column;">
+							<p style="margin: 0;">
+								<input type="checkbox" name="login" value="keeplogin"
+									class="login" onclick="keepLogin()">로그인 유지
+							</p>
+							<p style="margin: 0;">
+								<input type="checkbox" name="login" value="autologin"
+									class="login" onclick="autoLogin()">자동 로그인
+							</p>
+						</li>
+						<button type="submit" id="login" value="login"
+							onclick="loginSuccess()">
+							<p>로그인</p>
+						</button>
 
-                        <ul class="find">
-                            <li><button type="button" onclick="location.href='Join.html'"><a>회 원 가 입</a></button></li>
-                            <li><button type="button" onclick="location.href='FindId.html'"><a>아이디 찾기</a></button></li>
-                            <li><button type="button" onclick="location.href='FindPw.html'"><a>비밀번호 찾기</a></button></li>
-                        </ul>
+						<ul class="find">
+							<li><button type="button"
+									onclick="location.href='Join.html'">
+									<a>회 원 가 입</a>
+								</button></li>
+							<li><button type="button"
+									onclick="location.href='FindId.html'">
+									<a>아이디 찾기</a>
+								</button></li>
+							<li><button type="button"
+									onclick="location.href='FindPw.html'">
+									<a>비밀번호 찾기</a>
+								</button></li>
+						</ul>
 
 
-                    </div>
-                </ul>
-            </div>
+					</div>
+				</ul>
+			</div>
 
-        </div>
-    </form>
+		</div>
+	</form>
 
-    <script type="text/javascript">
+	<script type="text/javascript">
 
         function loginSuccess() {
             Swal.fire({
