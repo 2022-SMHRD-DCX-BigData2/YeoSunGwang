@@ -20,7 +20,7 @@
 <body>
 	<header style="display: flex; justify-content: center;">
 		<h1>
-			<a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a>
+			<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"></a>
 		</h1>
 	</header>
 

@@ -122,7 +122,7 @@
 			<tr align="center">
 				<td>001</td>
 				<td>말머리</td>
-				<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 				<td>광양대부호 정상민</td>
 				<td>2022-11-24</td>
 				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
@@ -131,7 +131,7 @@
 			<tr align="center">
 				<td>001</td>
 				<td>말머리</td>
-				<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 				<td>광양대부호 정상민</td>
 				<td>2022-11-24</td>
 				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
@@ -140,7 +140,7 @@
 			<tr align="center">
 				<td>001</td>
 				<td>말머리</td>
-				<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 				<td>광양대부호 정상민</td>
 				<td>2022-11-24</td>
 				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
@@ -149,7 +149,7 @@
 			<tr align="center">
 				<td>001</td>
 				<td>말머리</td>
-				<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 				<td>광양대부호 정상민</td>
 				<td>2022-11-24</td>
 				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
@@ -158,7 +158,7 @@
 			<tr align="center">
 				<td>001</td>
 				<td>말머리</td>
-				<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 				<td>광양대부호 정상민</td>
 				<td>2022-11-24</td>
 				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
@@ -167,11 +167,11 @@
 		</table>
 
 		<div style="display: flex; justify-content: end; margin-right: 5%;">
-			<button type="button" onclick="location.href='MyBoard.html'"
+			<button type="button" onclick="location.href='MyBoard.jsp'"
 				style="margin-left: 100px; background-color: white; height: 3.5em; width: 9em; line-height: 0; font-size: 0.8em; padding: 0.5em;">
 				내가 쓴 글 보기</button>
 
-			<button type="button" onclick="location.href='write.html'"
+			<button type="button" onclick="location.href='write.jsp'"
 				style="margin-left: 20px; background-color: white; height: 3.5em; width: 8em; line-height: 0; font-size: 0.8em; padding: 0;">
 				글 쓰기</button>
 		</div>

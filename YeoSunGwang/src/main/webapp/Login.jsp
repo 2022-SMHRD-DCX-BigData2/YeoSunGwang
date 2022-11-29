@@ -22,7 +22,7 @@
 <body>
 	<header style="display: flex; justify-content: center;">
 		<h1>
-			<a href="MAIN.html"><img src="images/여순광.png" alt="logo"></a>
+			<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"></a>
 		</h1>
 	</header>
 
@@ -54,15 +54,15 @@
 
 						<ul class="find">
 							<li><button type="button"
-									onclick="location.href='Join.html'">
+									onclick="location.href='Join.jsp'">
 									<a>회 원 가 입</a>
 								</button></li>
 							<li><button type="button"
-									onclick="location.href='FindId.html'">
+									onclick="location.href='FindId.jsp'">
 									<a>아이디 찾기</a>
 								</button></li>
 							<li><button type="button"
-									onclick="location.href='FindPw.html'">
+									onclick="location.href='FindPw.jsp'">
 									<a>비밀번호 찾기</a>
 								</button></li>
 						</ul>

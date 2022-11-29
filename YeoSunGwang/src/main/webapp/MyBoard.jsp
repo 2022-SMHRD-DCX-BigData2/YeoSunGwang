@@ -3,13 +3,14 @@
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<% 
+   Member loginMember = (Member)session.getAttribute("loginMember");
+%>
+
 <html>
+
 
 <head>
 <title>여기가 여순광?</title>
@@ -25,46 +26,47 @@
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
+<script src="https://kit.fontawesome.com/7208daee16.js"
+	crossorigin="anonymous"></script>
+<link rel="stylesheet" href="assets/css/sweetalert2.min.css">
+<script src="assets/js/sweetalert2.min.js"></script>
 </head>
 
 <body>
 	<!-- 상단바 시작 -->
 	<header id="header">
-		<h1>
-			<a href="MAIN.html"><img src="images/여순광.png" alt="logo"
-				class="logo"></a>
-		</h1>
-		<nav class="links">
-			<ul>
-				<li><a href="MAIN.html">HOME</a></li>
-				<!-- 홈화면 -->
-				<li><a href="Board.html">COMMUNITY</a></li>
-				<!-- 게시판 -->
-				<li><a href="Exchange_Yeosu.html">VOUCHER</a></li>
-				<!-- 포인트 교환 -->
-				<li><a href="editMemInfo.html">MY PAGE</a></li>
-				<!-- 마이 페이지 -->
-			</ul>
-		</nav>
-		<nav class="links2">
-			<ul>
-
-				<!-- 비로그인 상태
-				{{^sessionedUser}}
-				<li><a href="Join.html">SIGN UP</a></li>
-				<li><a href="Login.html">SIGN IN</a></li>
-				{{/sessionedUser}}
-
-				로그인 상태
-				{{#sessionedUser}}
-				<li><a href="MAIN.html">LOGOUT</a></li>
-				{{/sessionedUser}} -->
-
-				<li><a href="Join.html">SIGN UP</a></li>
-				<li><a href="Login.html">SIGN IN</a></li>
-
-			</ul>
-		</nav>
+	<h1>
+		<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"
+			class="logo"></a>
+	</h1>
+	<div class="links">
+		<ul>
+			<li><a href="MAIN.jsp">HOME</a></li>
+			<!-- 홈화면 -->
+			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<!-- 게시판 -->
+			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
+			<!-- 포인트 교환 -->
+			<%if(loginMember == null) { %>
+			<li><a onclick="needlogin()">MY PAGE</a></li>
+			<%}else{ %>
+			<li><a href="editMemInfo.jsp">MY PAGE</a></li>
+			<%} %>
+		</ul>
+	</div>
+	<div class="links2">
+		<ul>
+			<%if(loginMember == null) { %>
+			<li><a href="Join.jsp">SIGN UP</a></li>
+			<li><a href="Login.jsp">SIGN IN</a></li>
+		</ul>
+		<%}else{ %>
+		<ul>
+			<li><%= loginMember.getMem_nick()%> 님 환영합니다</li>
+			<li><a href="LogoutCon">LOGOUT</a></li>
+			<%} %>
+		</ul>
+	</div>
 	</header>
 	<!-- 상단바 끝 -->
 
@@ -88,7 +90,7 @@
 				<tr align="center">
 					<td>001</td>
 					<td>말머리</td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td>광양대부호 정상민</td>
 					<td>2022-11-24</td>
 					<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
@@ -97,7 +99,7 @@
 				<tr align="center">
 					<td></td>
 					<td></td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -106,7 +108,7 @@
 				<tr align="center">
 					<td></td>
 					<td></td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -115,7 +117,7 @@
 				<tr align="center">
 					<td></td>
 					<td></td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -124,7 +126,7 @@
 				<tr align="center">
 					<td></td>
 					<td></td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -133,7 +135,7 @@
 				<tr align="center">
 					<td></td>
 					<td></td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -142,7 +144,7 @@
 				<tr align="center">
 					<td></td>
 					<td></td>
-					<td align="left"><a href="view.html">여기가 여순광? 화이팅!!</a></td>
+					<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
 					<td></td>
 					<td></td>
 					<td></td>

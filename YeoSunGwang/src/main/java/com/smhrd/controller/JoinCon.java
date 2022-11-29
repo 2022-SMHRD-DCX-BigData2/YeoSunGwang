@@ -44,14 +44,14 @@ public class JoinCon extends HttpServlet {
 			System.out.println("JoinCon : 회원가입 성공!");
 			// 회원가입 성공하면 joinSuccess.jsp로 이동
 			// response.sendRedirect("joinSuccess.jsp");
-			RequestDispatcher rd = request.getRequestDispatcher("MAIN.html");
+			RequestDispatcher rd = request.getRequestDispatcher("MAIN.jsp");
 			request.setAttribute("join", mem_id);
 			rd.forward(request, response);
 
 		} else {
 			System.out.println("JoinCon : 회원가입 실패!");
 			// 회원가입 실패하면 다시 회원가입 하게끔 main.jsp로 이동
-			response.sendRedirect("MAIN.html");
+			response.sendRedirect("MAIN.jsp");
 		}
 
 	}
