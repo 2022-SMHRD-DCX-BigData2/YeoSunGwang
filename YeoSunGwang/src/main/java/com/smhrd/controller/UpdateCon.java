@@ -45,11 +45,11 @@ public class UpdateCon extends HttpServlet {
 			// 세션에 저장되어있는 정보가 수정이전의 로그인 정보이기 때문에
 			// 같은 이름으로 덮어쓰기 해야한다.
 			session.setAttribute("loginMember", update);
-			response.sendRedirect("editMemInfo.jsp");
+			response.sendRedirect("editMemInfo_Nick.jsp");
 		} else {
 			System.out.println(" 회원정보 수정 실패!");
 			// 회원가입 실패하면 다시 회원가입 하게끔 main.jsp로 이동
-			response.sendRedirect("editMemInfo.jsp");
+			response.sendRedirect("editMemInfo_Nickfail.jsp");
 		}
 		
 

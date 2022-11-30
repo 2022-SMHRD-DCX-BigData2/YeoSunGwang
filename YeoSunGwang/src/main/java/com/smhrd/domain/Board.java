@@ -1,5 +1,7 @@
 package com.smhrd.domain;
 
+import java.sql.Date;
+
 public class Board {
 
 	// 필드명 = 속성(property)
@@ -7,13 +9,14 @@ public class Board {
 	private String board_content;
 	private String board_num;
 	private int mem_num;
-	private String board_date;
+	private Date board_date;
 	private Number Like_total;
 	private int travel_admin;
 	private int category_admin;
 	
-	// getter, setter
+
 	
+	// getter, setter
 	public String getBoard_title() {
 		return board_title;
 	}
@@ -38,10 +41,10 @@ public class Board {
 	public void setMem_num(int mem_num) {
 		this.mem_num = mem_num;
 	}
-	public String getBoard_date() {
+	public Date getBoard_date() {
 		return board_date;
 	}
-	public void setBoard_date(String board_date) {
+	public void setBoard_date(Date board_date) {
 		this.board_date = board_date;
 	}
 	public Number getLike_total() {
@@ -63,9 +66,24 @@ public class Board {
 		this.category_admin = category_admin;
 	}
 	
+	
 	// 생성자
 	
+
 	
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	// 테스트 해보는 toString	
+	@Override
+	public String toString() {
+		return "Board [board_title=" + board_title + ", board_content=" + board_content + ", board_date=" + board_date + ", " + "Like_total=" + Like_total + ", + travel_admin=" + travel_admin + ", category_admin=" + category_admin + "]";
+	}
 	
 }
