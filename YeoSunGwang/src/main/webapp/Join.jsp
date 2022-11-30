@@ -77,21 +77,37 @@
         }
 
         function emailCheck() {
-            // 아이디 중복확인
-            Swal.fire({
-                icon: 'error',
-                title: '중복된 이메일입니다!',
-                text: '이메일을 확인해주세요!',
-            })
+            // 이메일 중복확인
+        	if(document.getElementById('email').value == "" || document.getElementById('email').value.lenth <0){
+        		Swal.fire({
+                    icon: 'warning',
+                    title: '이메일을 입력해주세요!',
+                });
+              id.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+              return false;
+        	}else{
+        		//2. 회원정보아이디를 가지고 있는 지 체크하려면 DB에 접근해야한다.
+        		//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
+        		window.open("joinEmailCheck.jsp?useremail="+document.getElementById('email').value,"",
+        				'status=no, height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+        	}
         }
 
         function nickCheck() {
             // 닉네임 중복확인
-            Swal.fire({
-                icon: 'error',
-                title: '중복된 닉네임입니다!',
-                text: '닉네임을 확인해주세요!',
-            })
+        	if(document.getElementById('nick').value == "" || document.getElementById('nick').value.lenth <0){
+        		Swal.fire({
+                    icon: 'warning',
+                    title: '닉네임을 입력해주세요!',
+                });
+              id.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+              return false;
+        	}else{
+        		//2. 회원정보아이디를 가지고 있는 지 체크하려면 DB에 접근해야한다.
+        		//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
+        		window.open("joinNickCheck.jsp?usernick="+document.getElementById('nick').value,"",
+        				'status=no, height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
+        	}
         }
 
        	//joinform_check 함수로 유효성 검사
@@ -134,28 +150,15 @@
              }else if(nick.value == "") {
            	  Swal.fire({
                      icon: 'warning',
-                     title: '이메일을 입력해주세요!',
+                     title: '닉네임을 입력해주세요!',
                  });
                nick.focus();
                return false;
              }else{
-				Swal.fire({
-				    icon: 'success',
-				    title: '회원가입 성공!',
-				    confirmButtonText: '홈페이지로 이동',
-				}).then(result => {
-				    // 만약 Promise리턴을 받으면,
-				    if (result.isConfirmed) { 
-				        location.href = "MAIN.jsp";
-				    }
-				}).then(result => {
-				    if(result.isConfirmed){
-				        document.getElementById('join-info').submit();
-				    }
-				})  	  
+            	 document.getElementById('join-info').submit(); 	  
               }
            }
-     
+           
         function joinFail() {
             Swal.fire({
                 icon: 'error',
