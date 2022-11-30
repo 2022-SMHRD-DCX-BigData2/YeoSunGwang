@@ -4,6 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -26,7 +27,7 @@
 		</h1>
 	</header>
 	<!-- 사용자에게 데이터를 넘길 공간 -->
-	<form action="#" method="get">
+	<form action="FindIDCon" method="get" id="idFind-info">
 		<div id="wrap" class="My1" style="background-color: #F4F4F4;">
 			<div class="join_div">
 				<!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
@@ -37,8 +38,8 @@
 						<li><input type="text" name="name"></li> <br>
 						<li>이메일</li>
 						<li><input type="text" name="email"></li> <br>
-						<button type="button" id="login" name="findID"
-							onclick="idFindSuccess()">
+						<button type="button" id="login" name="findId"
+							onclick="idFind()">
 							<p>아이디 찾기</p>
 						</button>
 					</div>
@@ -48,33 +49,8 @@
 		</div>
 	</form>
 
-
-	<!-- <form action="#" method="get">
-        <table id="FindIdtable">
-            <tr>
-                <td>이름<input type="text" name="name" class="input" style="width: 100%;"></td>
-            </tr>
-
-            <tr>
-                <td><span>닉네임</span><input type="text" name="nick" class="input" style="width: 100%;"></td>
-            </tr>
-
-            <tr>
-                <td>생일<br><input type="date" name="birth" class="input" style="width: 100%;"></td>
-            </tr>
-
-            <tr>
-                <td colspan="2" align="center">
-                    <input type="submit" value="아이디 찾기" onclick="idFindSuccess()">
-                </td>
-            </tr>
-            
-        
-        </table>
-                
-    </form> -->
-	</script>
 	<script type="text/javascript">
+	
 		function idFindFail() {
 			// 아이디 검색 실패
 			Swal.fire({
@@ -84,13 +60,19 @@
 			})
 		}
 
-		function idFindSuccess() {
-			// 사용가능한 아이디
-			Swal.fire({
-				icon : 'success',
-				title : '회원님의 아이디는 \n test 입니다.'
-			})
-		}
+		
+        function idFind() {
+            Swal.fire({
+                icon: 'success',
+                title: '아이디 찾기 성공!',
+                confirmButtonText: ' 아이디 확인',
+            }).then(result => {
+                if (result.isConfirmed) {
+                	document.getElementById('idFind-info').submit();
+                }
+            })
+        }
+        
 	</script>
 </body>
 

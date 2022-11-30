@@ -119,6 +119,7 @@ public class MemberDAO {
 		}
 		return cnt;
 	}// 회원정보 수정 끝
+	
 	public int updateMember2(Member update2) {
 		int cnt = 0;
 		
@@ -144,6 +145,34 @@ public class MemberDAO {
 		}
 		return cnt;
 	}// 회원정보 수정 끝
+	
+	// 아이디찾기 기능구현
+		public Member FindID(Member FindId){
+			Member FindIdMember = null;
+			try {
+		         //               mapper.xml의 id값
+				FindIdMember = sqlSession.selectOne("confirmid", FindId);
+		         
+		         // 만약에 내가 원하는 일을 했으면 DB에 반영
+		         if(FindIdMember != null) {
+		            System.out.println("DAO : 아이디찾기 성공!");
+		            sqlSession.commit();
+		         }else {
+		            // 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+		        	 System.out.println("DAO : 아이디 찾기 실패@");
+		            sqlSession.rollback();
+		         }
+		         
+		         
+		      } catch (Exception e) {
+		         // TODO: handle exception
+		         e.printStackTrace();
+		      } finally {
+		         // 빌렸던 Connection 객체를 반납
+		         sqlSession.close();
+		      }
+			return FindIdMember;
+		} // 아이디찾기 끝
 	
 	//회원 전체 검색 기능 구현
 	public List<Member> selectAll(){

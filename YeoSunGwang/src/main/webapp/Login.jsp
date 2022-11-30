@@ -78,13 +78,14 @@
 	<script type="text/javascript">
 
         function loginSuccess() {
+        	document.getElementById('login-info').submit();
             Swal.fire({
                 icon: 'success',
                 title: '로그인 성공!',
                 confirmButtonText: '홈페이지로 이동',
             }).then(result => {
                 if (result.isConfirmed) {
-                	document.getElementById('login-info').submit();
+                	
                 }
             })
         }
