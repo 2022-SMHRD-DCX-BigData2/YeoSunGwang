@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import com.smhrd.domain.Member;
 import com.smhrd.domain.MemberDAO;
 
-public class UpdateCon extends HttpServlet {
+public class UpdateCon2 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
@@ -33,18 +33,18 @@ public class UpdateCon extends HttpServlet {
 		String mem_pw = request.getParameter("pw");
 
 		// 받아온 데이터를 Member객체에 담아주기
-		Member update = new Member(mem_id, mem_pw, mem_nick, mem_name, mem_num);
-		System.out.println(update.toString());
+		Member update2 = new Member(mem_id, mem_pw, mem_nick, mem_name, mem_num);
+		System.out.println(update2.toString());
 
 		// DAO에 일할 메소드 만들기
-		MemberDAO dao = new MemberDAO();
-		int cnt = dao.updateMember(update);
+		MemberDAO dao2 = new MemberDAO();
+		int cnt2 = dao2.updateMember2(update2);
 		// 5. 명령 후 처리
-		if (cnt > 0) {
+		if (cnt2 > 0) {
 			System.out.println("회원정보 수정 성공!");
 			// 세션에 저장되어있는 정보가 수정이전의 로그인 정보이기 때문에
 			// 같은 이름으로 덮어쓰기 해야한다.
-			session.setAttribute("loginMember", update);
+			session.setAttribute("loginMember", update2);
 			response.sendRedirect("editMemInfo.jsp");
 		} else {
 			System.out.println(" 회원정보 수정 실패!");

@@ -16,6 +16,10 @@
 	<update id="updateMember" parameterType="com.smhrd.domain.Member">
       update mem_info set mem_nick=#{mem_nick} where mem_name=#{mem_name} and mem_id=#{mem_id}
    </update>
+   
+	<update id="updateMember2" parameterType="com.smhrd.domain.Member">
+      update mem_info set mem_pw=#{mem_pw} where mem_name=#{mem_name} and mem_id=#{mem_id}
+   </update>
 	
 	<select id="selectAll" resultType="com.smhrd.domain.Member">
 		select * from mem_info

@@ -93,10 +93,10 @@
                                 <a><input type="text" name="nick" placeholder="변경할 닉네임을 입력해 주세요."
                                         style="width: 500px; margin-left: 10px;"></a>
                                 <button id="editinfo" style="width: 500px; margin-left: 10px;" type="submit"
-                                    value="update" onclick="nickchange()">수정</button>
+                                    value="update" onclick="nickchange()">변경</button>
                             </form>
 
-                            <form action="UpdateCon" method="POST" id="pw-change">
+                            <form action="UpdateCon2" method="POST" id="pw-change">
                                 <p style="margin-left: 10px; font-weight: bold;">비밀번호 변경</p>
                                 <a><input type="text" name="name" placeholder="이름을 입력하세요."
                                         style="width: 500px; margin-left: 10px;"></a>
