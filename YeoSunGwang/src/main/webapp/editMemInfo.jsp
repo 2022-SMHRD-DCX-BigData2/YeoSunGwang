@@ -92,7 +92,7 @@
                                         style="width: 500px; margin-left: 10px;"></a>
                                 <a><input type="text" name="nick" placeholder="변경할 닉네임을 입력해 주세요."
                                         style="width: 500px; margin-left: 10px;"></a>
-                                <button id="editinfo" style="width: 500px; margin-left: 10px;" type="submit"
+                                <button id="editinfo" style="width: 500px; margin-left: 10px;" type="button"
                                     value="update" onclick="nickchange()">변경</button>
                             </form>
 
@@ -104,7 +104,7 @@
                                         style="width: 500px; margin-left: 10px;"></a>
                                 <a><input type="password" name="pw" placeholder="변경할 비밀번호를 입력해 주세요."
                                         style="width: 500px; margin-left: 10px;"></a>
-                                <button style="width: 500px; margin-left: 10px;" type="submit" value="update"
+                                <button style="width: 500px; margin-left: 10px;" type="button" value="update"
                                     onclick="pwchange()">변경</button>
                             </form>
                         </div>
