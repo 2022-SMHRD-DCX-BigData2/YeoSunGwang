@@ -53,6 +53,12 @@
 
     </script>
     <script type="text/javascript">
+	    var popupWidth = 500;
+	    var popupHeight = 300;
+	    var popupX = (document.body.offsetWidth / 2) - (380 / 2);
+	 	// 만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
+	 	var popupY= (window.screen.height / 2) - (300 / 2);
+	 	// 만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
 
         function idCheck() {
         	if(document.getElementById('id').value == "" || document.getElementById('id').value.lenth <0){
@@ -65,7 +71,8 @@
         	}else{
         		//2. 회원정보아이디를 가지고 있는 지 체크하려면 DB에 접근해야한다.
         		//자바스크립트로 어떻게 DB에 접근할까? => 파라미터로 id값을 가져가서 jsp페이지에서 진행하면 된다.
-        		window.open("joinIdCheck.jsp?id="+document.getElementById('id').value,"","width=450, height=250");
+        		window.open("joinIdCheck.jsp?userid="+document.getElementById('id').value,"",
+        				'status=no, height=' + popupHeight  + ', width=' + popupWidth  + ', left='+ popupX + ', top='+ popupY);
         	}
         }
 

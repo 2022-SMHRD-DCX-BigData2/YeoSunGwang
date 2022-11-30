@@ -27,6 +27,22 @@
 		
 		//3. joinIdCheck(ID)메서드
 		int result = dao.joinIdCheck(id);
+		%>
+		
+		<!-- 4.팝업창구현  -->
+		<fieldset>
+			<!-- <form action="" method="post">
+			action속성에 값이 없으면 기본적으로 자기자신을 불러오지만 중복확인 버튼을 클릭했을때 변경되지않는다.-->	
+			<form action="joinIdCheck.jsp" method="post" name="joinCheck">
+				<div style="display: flex; align-items: center;">
+					<div style="margin-left: 1em; margin-right: 1em;">ID</div>
+					<input type="text" name="userid" value="<%=id%>">
+					<input type="submit" value="중복 확인" style="height: 4.2em;">	 
+				</div>
+			</form>
+		</fieldset>
+		
+		<%
 		if (result == 1){
 			out.print("사용가능한 아이디입니다");
 			//5. 아이디사용하기버튼추가 => 동기방식사용 but 요즘은 비동기방식을 더 많이사용한다
@@ -41,18 +57,6 @@
 		}
 		
 		%>
-		<!-- 4.팝업창구현  -->
-		<fieldset>
-			<!-- <form action="" method="post">
-			action속성에 값이 없으면 기본적으로 자기자신을 불러오지만 중복확인 버튼을 클릭했을때 변경되지않는다.-->	
-			<form action="joinIdCheck.jsp" method="post" name="joinCheck">
-				<div style="display: flex; align-items: center;">
-					<div style="margin-left: 1em; margin-right: 1em;">ID</div>
-					<input type="text" name="userid" value="<%=id%>">
-					<input type="submit" value="중복 확인" style="height: 4.2em;">	 
-				</div>
-			</form>
-		</fieldset>
 		
 		<!-- 6. 선택된아이디는 중복확인창에서 회원가입 페이지로 정보전달  -->
 		 <script type="text/javascript">

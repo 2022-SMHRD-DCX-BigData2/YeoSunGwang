@@ -1,5 +1,9 @@
 package com.smhrd.domain;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.List;
 
 import org.apache.ibatis.reflection.SystemMetaObject;
@@ -13,6 +17,9 @@ public class MemberDAO {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 
 	SqlSession sqlSession = sqlSessionFactory.openSession();
+	
+	Connection conn = null;
+	PreparedStatement psmt = null;
 
 	// 회원가입 기능 구현
 	public int insertMember(Member joinMember) {
@@ -45,25 +52,44 @@ public class MemberDAO {
 	
 	// 아이디 중복 체크
 	public int joinIdCheck(String id){
-        
-        int cnt = 0;
-        
-        try {
-           cnt = sqlSession.selectOne("confirmid", id);
-           
-           if (cnt > 0) {
-              cnt = 1;         
-           } else {
-              cnt = 0;
-           }
-           System.out.println("아이디 중복체크결과 : " + cnt);
-        } catch (Exception e) {
-           e.printStackTrace();
-        } finally {
-           sqlSession.close();
-        }
-        
-        return cnt;
+		int result = -1;
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			System.out.println("클래스 파일 로딩 완료!");
+			//1. DB연결
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:XE";
+			String dbid = "suncheon_1109_1";
+			String dbpw = "smhrd1";
+			conn = DriverManager.getConnection(url,dbid,dbpw);
+			if(conn != null) {
+				System.out.println("DB연결 성공!");
+			}else {
+				System.out.println("DB연결 실패!");
+			}
+			//2. sql 구문 & pstmt생성
+			String sql = "select mem_id from mem_info where mem_id=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			//3. 실행 -> select -> rs저장
+			ResultSet rs = psmt.executeQuery();
+			//4. 데이터처리
+			if(rs.next()){	
+				result = 0;
+			}else{
+				result = 1;
+			}
+			System.out.println("아이디 중복체크결과 : "+result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(psmt != null) psmt.close();
+				if(conn != null) conn.close();
+			}catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return result;
      } // 아이디 중복체크 끝
 	
 
