@@ -38,7 +38,7 @@
 						<li><input type="text" name="name"></li> <br>
 						<li>이메일</li>
 						<li><input type="text" name="email"></li> <br>
-						<button type="button" id="login" name="findId"
+						<button type="submit" id="login" name="findId"
 							onclick="idFind()">
 							<p>아이디 찾기</p>
 						</button>
@@ -49,31 +49,7 @@
 		</div>
 	</form>
 
-	<script type="text/javascript">
-	
-		function idFindFail() {
-			// 아이디 검색 실패
-			Swal.fire({
-				icon : 'error',
-				title : '찾을 수 없는 아이디입니다!',
-				text : '입력 정보를 확인해주세요!',
-			})
-		}
 
-		
-        function idFind() {
-            Swal.fire({
-                icon: 'success',
-                title: '아이디 찾기 성공!',
-                confirmButtonText: ' 아이디 확인',
-            }).then(result => {
-                if (result.isConfirmed) {
-                	document.getElementById('idFind-info').submit();
-                }
-            })
-        }
-        
-	</script>
 </body>
 
 </html>

@@ -31,15 +31,27 @@ Member FindIdMember = (Member) session.getAttribute("FindIdMember");
 		</h1>
 	</header>
 
+	<%if(FindIdMember != null) {%> 
 	<div
 		style="display: flex; flex-direction: column; align-items: center;">
-		<h1 style="font-size:3em;">
+		<h1 style="font-size:2em;">
 			회원님의 아이디는
 			<span style="color:#6CCFC6; font-size:2.2em"><%=FindIdMember.getMem_id()%></span>입니다.
 		</h1>
 		<button style="font-size:1em;" onclick="location.href='Login.jsp'">로그인으로 이동</button>
 		<br> <br>
 	</div>
+	<%} else if(FindIdMember == null) { %>
+		<div
+		style="display: flex; flex-direction: column; align-items: center;">
+		<h1 style="font-size:2em;">
+		<span style="font-size:1.5em; color:red;">이름</span>과 <span  style="font-size:1.5em; color:red;">이메일</span>이 잘못입력되었습니다. 
+		</h1>
+		<button style="font-size:1em;" onclick="location.href='FindId.jsp'">아이디 찾기로 이동</button>
+		<br> <br>
+	</div>
+	<%} %>
+	
 
 </body>
 
