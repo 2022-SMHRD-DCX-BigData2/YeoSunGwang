@@ -24,6 +24,9 @@
     </header>
 
     <form action="JoinCon" method="POST" id="join-info" name="join">
+    <input type="hidden" name="ichk" value="0">
+    <input type="hidden" name="echk" value="0">
+    <input type="hidden" name="nchk" value="0">
         <div id="wrap" class="My1" style="background-color:#F4F4F4;">
             <div class="join_div">
                 <ul>
@@ -119,6 +122,8 @@
              var email = document.getElementById('email');
              var nick = document.getElementById('nick');
 
+             var j = document.join
+             
              if (id.value == "") {
            	  Swal.fire({
                      icon: 'warning',
@@ -154,9 +159,30 @@
                  });
                nick.focus();
                return false;
+             }else if(j.ichk.value == "0"){
+             	  Swal.fire({
+                      icon: 'warning',
+                      title: '아이디 중복확인을\n해주세요!',
+                  });
+                 id.focus();
+                 return false;
+             }else if(j.echk.value == "0"){
+             	  Swal.fire({
+                      icon: 'warning',
+                      title: '이메일 중복확인을\n해주세요!',
+                  });
+                 email.focus();
+                 return false;
+             }else if(j.nchk.value == "0"){
+             	  Swal.fire({
+                      icon: 'warning',
+                      title: '닉네임 중복확인을\n해주세요!',
+                  });
+                 nick.focus();
+                 return false;
              }else{
             	 document.getElementById('join-info').submit(); 	  
-              }
+             }
            }
            
         function joinFail() {

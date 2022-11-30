@@ -50,11 +50,18 @@
 					 <div style="color: blue;">사용 가능한 이메일입니다.</div>
 					 <input type="button" value="이메일 사용하기" onclick="result();" style="line-height:0;">
 				</div>
+				
+				<script>
+				opener.document.join.echk.value = "1";
+				</script>
 			<%
 			
 		}else if(result == 0){
 			%>
-			<div style="color: red;">중복된 이메일입니다.</div>
+				<div style="color: red;">중복된 이메일입니다.</div>
+				<script>
+				opener.document.join.echk.value = "0";
+				</script>
 			<%
 		}else{
 			out.print("에러 발생!!!(-1)"); 
