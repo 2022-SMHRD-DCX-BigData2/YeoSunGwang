@@ -27,7 +27,7 @@
 		</h1>
 	</header>
 	<!-- 사용자에게 데이터를 넘길 공간 -->
-	<form action="FindIDCon" method="get" id="idFind-info">
+	<form action="FindIDCon" method="get">
 		<div id="wrap" class="My1" style="background-color: #F4F4F4;">
 			<div class="join_div">
 				<!-- 회원가입에 있던거 그대로 가져왔음! 클래스명때문에 헷갈리지않기 -->
@@ -38,8 +38,7 @@
 						<li><input type="text" name="name"></li> <br>
 						<li>이메일</li>
 						<li><input type="text" name="email"></li> <br>
-						<button type="submit" id="login" name="findId"
-							onclick="idFind()">
+						<button type="submit" id="login">
 							<p>아이디 찾기</p>
 						</button>
 					</div>
