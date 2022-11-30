@@ -41,12 +41,20 @@
 	</h1>
 	<div class="links">
 		<ul>
-			<li><a href="MAIN.jsp">HOME</a></li>
 			<!-- 홈화면 -->
-			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<li><a href="MAIN.jsp">HOME</a></li>
+			
 			<!-- 게시판 -->
-			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
+			<li><a href="Board.jsp">COMMUNITY</a></li>
+			
 			<!-- 포인트 교환 -->
+			<%if(loginMember == null) { %>
+			<li><a onclick="needlogin()">VOUCHER</a></li>
+			<%}else{ %>
+			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
+			<%} %>
+			
+			<!-- 마이 페이지 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">MY PAGE</a></li>
 			<%}else{ %>
@@ -222,6 +230,15 @@
 				title : '코드가 발급되었습니다.\n상품권발급내역을\n확인하세요.'
 			})
 		}
-	</script>
+		
+
+        function needlogin() {
+            Swal.fire({
+                icon: 'error',
+                title: '로그인 후 \n 이용할 수 있습니다!',
+            })
+        }
+</script>
+
 </body>
 </html>

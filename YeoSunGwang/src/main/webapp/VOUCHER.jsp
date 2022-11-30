@@ -69,7 +69,6 @@
 	</div>
 	</header>
 	<!-- 상단바 끝 -->
-
 <body>
 	<div id="wrap">
 		<div id="High_nav">
@@ -77,8 +76,7 @@
 		</div>
 		<div id="wrap1">
 			<br>
-			<button onclick="location.href='editMemInfo.jsp'";>회원 정보
-				수정</button>
+			<button onclick="location.href='editMemInfo.jsp'";>회원 정보 수정</button>
 			<button onclick="location.href='POINT.jsp'";>포인트 내역</button>
 			<button onclick="location.href='VOUCHER.jsp'";>상품권 발급 내역</button>
 			<button onclick="location.href='MyPost.jsp'";>나의 활동</button>
@@ -109,15 +107,23 @@
 	</div>
 
 	<div class="ourfooter">
-		<footer>
-			<nav>
-				<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-			</nav>
-			<p>
-				<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-					2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
-			</p>
+		<footer> <nav> <a href='#' target='_blank'>Blog</a> | <a
+			href='#' target='_blank'>Github</a> </nav>
+		<p>
+			<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
+				2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+		</p>
 		</footer>
 	</div>
+
+	<script>
+        function needlogin() {
+            Swal.fire({
+                icon: 'error',
+                title: '로그인 후 \n 이용할 수 있습니다!',
+            })
+        }
+</script>
+
 </body>
 </html>

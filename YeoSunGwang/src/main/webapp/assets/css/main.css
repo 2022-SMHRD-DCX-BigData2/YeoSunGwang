@@ -4161,6 +4161,7 @@ gtr
 					font-weight: 400;
 					letter-spacing: 0.25em;
 					text-transform: uppercase;
+					cursor: pointer;
 				}
 
 				#header > nav.links {
