@@ -176,6 +176,7 @@
 
 		</table>
 
+		<%if(loginMember != null){ %>
 		<div style="display: flex; justify-content: end; margin-right: 5%;">
 			<button type="button" onclick="location.href='MyBoard.jsp'"
 				style="margin-left: 100px; background-color: white; height: 3.5em; width: 9em; line-height: 0; font-size: 0.8em; padding: 0.5em;">
@@ -185,6 +186,9 @@
 				style="margin-left: 20px; background-color: white; height: 3.5em; width: 8em; line-height: 0; font-size: 0.8em; padding: 0;">
 				글 쓰기</button>
 		</div>
+		<%} else { %>
+		<%} %>
+		
 		<footer
 			style="display: flex; flex-direction: column; align-items: center;">
 			<div class="pagination" style="border-color: black;">

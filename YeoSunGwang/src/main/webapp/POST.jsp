@@ -121,7 +121,11 @@
 						<li><a onclick="clickCOM()" style="cursor: pointer;"><span
 								class="tooltip"><i class="fa-solid fa-comment"> 11</i><span
 									class="tooltip-text">댓글 보기</span></span></a></li>
+						<% if(loginMember != null){ %>
 						<li><a href="#"><i class="fa-regular fa-heart"> 11</i></a></li>
+						<%}else {  %>
+						<li><a><i class="fa-regular fa-heart">11</i></a></li>
+						<%} %>
 
 					</ul>
 					<div class="link_map">
@@ -140,7 +144,7 @@
 
 			<div id="COMMENTS" style="display: none;">
 
-
+				<%if(loginMember != null){ %>
 				<form action="" style="margin: 0 0 0 0;">
 					<ul>
 						<li><input type="text" placeholder="  댓글을 입력하세요."></li>
@@ -149,6 +153,8 @@
 					</ul>
 					<br>
 				</form>
+				<%} else{ %>
+				<%} %>
 
 
 				<table>

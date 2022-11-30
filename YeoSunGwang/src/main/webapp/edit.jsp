@@ -114,7 +114,11 @@
 				</div>
 			</div>
 			<div class="bt_wrap">
-				<a href="Board.jsp" class="on">등록</a> <a href="Board.jsp">취소</a>
+				<% if(loginMember != null){ %>
+				<a href="Board.jsp" class="on">수정</a> 
+				<%} else { %>
+				<%} %>
+				<a href="Board.jsp">취소</a>
 			</div>
 		</div>
 	</div>
