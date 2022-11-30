@@ -39,6 +39,7 @@
 		<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"
 			class="logo"></a>
 	</h1>
+	
 		<div class="links">
 		<ul>
 			<!-- 홈화면 -->

@@ -39,14 +39,23 @@
 		<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"
 			class="logo"></a>
 	</h1>
+	
 	<div class="links">
 		<ul>
-			<li><a href="MAIN.jsp">HOME</a></li>
 			<!-- 홈화면 -->
-			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<li><a href="MAIN.jsp">HOME</a></li>
+			
 			<!-- 게시판 -->
-			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
+			<li><a href="Board.jsp">COMMUNITY</a></li>
+			
 			<!-- 포인트 교환 -->
+			<%if(loginMember == null) { %>
+			<li><a onclick="needlogin()">VOUCHER</a></li>
+			<%}else{ %>
+			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
+			<%} %>
+			
+			<!-- 마이 페이지 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">MY PAGE</a></li>
 			<%}else{ %>
@@ -54,6 +63,7 @@
 			<%} %>
 		</ul>
 	</div>
+	
 	<div class="links2">
 		<ul>
 			<%if(loginMember == null) { %>
