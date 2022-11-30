@@ -3,11 +3,74 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<!-- Travel 0:여수 1:순천 2:광양 -->
-<!-- Category 0:음식점 1:카페 2:관광지 -->
 
 <mapper namespace="com.smhrd.database.BoardMapper">
 
 
+	<!-- Travel 0:여수 1:순천 2:광양 -->
+	<!-- Category 0:음식점 1:카페 2:관광지 -->
 
+	<!-- 광양 ALL -->
+	<select id="">
+		select * from BOARD where travel_admin=2 and (category_admin = 0 or category_admin =1 or category_admin =2);
+	</select>
+
+	<!-- 광양 RES -->
+	<select id="">
+		select * from BOARD where travel_admin=2 and category_admin = 0;
+	</select>
+	
+	<!-- 광양 CAFE -->
+	<select id="">
+		select * from BOARD where travel_admin=2 and category_admin = 1;
+	</select>
+	
+	<!-- 광양 TOUR -->
+	<select id="">
+		select * from BOARD where travel_admin=2 and category_admin = 2;
+	</select>
+	
+	
+	<!-- 순천 ALL -->
+	<select id="">
+		select * from BOARD where travel_admin=1 and (category_admin = 0 or category_admin =1 or category_admin =2);
+	</select>
+
+	<!-- 순천 RES -->
+	<select id="">
+		select * from BOARD where travel_admin=1 and category_admin = 0;
+	</select>
+	
+	<!-- 순천 CAFE -->
+	<select id="">
+		select * from BOARD where travel_admin=1 and category_admin = 1;
+	</select>
+	
+	<!-- 순천 TOUR -->
+	<select id="">
+		select * from BOARD where travel_admin=1 and category_admin = 2;
+	</select>
+	
+	
+	<!-- 여수 ALL -->
+	<select id="">
+		select * from BOARD where travel_admin=0 and (category_admin = 0 or category_admin =1 or category_admin =2);
+	</select>
+
+	<!-- 여수 RES -->
+	<select id="">
+		select * from BOARD where travel_admin=0 and category_admin = 0;
+	</select>
+	
+	<!-- 여수 CAFE -->
+	<select id="">
+		select * from BOARD where travel_admin=0 and category_admin = 1;
+	</select>
+	
+	<!-- 여수 TOUR -->
+	<select id="">
+		select * from BOARD where travel_admin=0 and category_admin = 2;
+	</select>
+	
+	
 </mapper>
