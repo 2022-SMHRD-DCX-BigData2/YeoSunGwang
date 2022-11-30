@@ -233,6 +233,13 @@
 				title : '코드가 발급되었습니다.\n상품권발급내역을\n확인하세요.'
 			})
 		}
+
+		function needlogin() {
+							Swal.fire({
+								icon: 'error',
+								title: '로그인 후 \n 이용할 수 있습니다!',
+							})
+						}
 	</script>
 </body>
 </html>

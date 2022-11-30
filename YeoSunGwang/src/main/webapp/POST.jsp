@@ -215,6 +215,16 @@
 				title : '링크를 복사했습니다!'
 			})
 		}
+		
+
+		function needlogin() {
+			Swal.fire({
+				icon: 'error',
+				title: '로그인 후 \n 이용할 수 있습니다!',
+			})
+		}
+
+	
 	</script>
 </body>
 </html>

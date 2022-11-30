@@ -300,6 +300,16 @@
 			</p>
 		</footer>
 	</div>
+	
+	<script>
+		function needlogin() {
+			Swal.fire({
+				icon: 'error',
+				title: '로그인 후 \n 이용할 수 있습니다!',
+			})
+		}
+	</script>
+	
 </body>
 
 </html>
