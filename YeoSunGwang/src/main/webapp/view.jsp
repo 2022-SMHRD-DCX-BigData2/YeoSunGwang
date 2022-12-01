@@ -93,7 +93,7 @@
 				<div class="info">
 					<dl>
 						<dt>번호</dt>
-						<dd>1</dd>
+						<!-- <dd></dd> -->
 					</dl>
 					<dl>
 						<dt>글쓴이</dt>

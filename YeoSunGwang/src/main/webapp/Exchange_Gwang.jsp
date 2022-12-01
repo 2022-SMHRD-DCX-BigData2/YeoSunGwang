@@ -99,15 +99,15 @@
 				<article>
 
 					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
+						<img src="images/광양 상품권.png">
 					</div>
 
 					<div id="Exchange_div">
 						<header>
-							<h2>여수 지역 상품권 5,000원 권</h2>
+							<h2>광양 지역 상품권 5,000원 충전</h2>
 						</header>
 
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
+						<p>🎟️광양 지역에서만 사용 가능합니다.</p>
 						<ul class="actions special">
 							<li><a href="#" class="button" onclick="warning()">발급</a></li>
 						</ul>
@@ -118,15 +118,15 @@
 				<article>
 
 					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
+						<img src="images/광양 상품권.png">
 					</div>
 
 					<div id="Exchange_div">
 						<header>
-							<h2>여수 지역 상품권 10,000원 권</h2>
+							<h2>광양 지역 상품권 10,000원 충전</h2>
 						</header>
 
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
+						<p>🎟️광양 지역에서만 사용 가능합니다.</p>
 						<ul class="actions special">
 							<li><a href="#" class="button" onclick="warning()">발급</a></li>
 						</ul>
@@ -137,78 +137,22 @@
 				<article>
 
 					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
+						<img src="images/광양 상품권.png">
 					</div>
 
 					<div id="Exchange_div">
 						<header>
-							<h2>여수 지역 상품권 30,000원 권</h2>
+							<h2>광양 지역 상품권 30,000원 충전</h2>
 						</header>
 
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
+						<p>🎟️광양 지역에서만 사용 가능합니다.</p>
 						<ul class="actions special">
 							<li><a href="#" class="button" onclick="warning()">발급</a></li>
 						</ul>
 
 					</div>
 				</article>
-
-				<article>
-
-					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
-					</div>
-
-					<div id="Exchange_div">
-						<header>
-							<h2>여수 지역 상품권 5,000원 권</h2>
-						</header>
-
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button" onclick="warning()">발급</a></li>
-						</ul>
-
-					</div>
-				</article>
-
-				<article>
-
-					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
-					</div>
-
-					<div id="Exchange_div">
-						<header>
-							<h2>여수 지역 상품권 10,000원 권</h2>
-						</header>
-
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button" onclick="warning()">발급</a></li>
-						</ul>
-
-					</div>
-				</article>
-
-				<article>
-
-					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
-					</div>
-
-					<div id="Exchange_div">
-						<header>
-							<h2>여수 지역 상품권 30,000원 권</h2>
-						</header>
-
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button" onclick="warning()">발급</a></li>
-						</ul>
-
-					</div>
-				</article>
+				
 			</section>
 		</div>
 	</div>
@@ -230,7 +174,7 @@
 			// 경고
 			Swal.fire({
 				icon : 'success',
-				title : '코드가 발급되었습니다.\n상품권발급내역을\n확인하세요.'
+				title : '코드가 발급되었습니다.\n상품권발급내역을\n확인하세요. \n 광양 지역 상품권은 \n 충전식으로 제공됩니다.'
 			})
 		}
 

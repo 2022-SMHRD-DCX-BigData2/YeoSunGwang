@@ -120,25 +120,43 @@
 				<td>좋아요❤️</td>
 			</tr>
 
-			<tr align="center">
-				<td>001</td>
+						<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->
+			
+			<%-- 			
+				<tr align="center">
+			
+				<td><%=####.getBoard_num()%></td> --> 게시글 No.
+				
+				<%if(####.getTravel_admin() == 3){ %>
+				<td>여수</td>
+				<%} else if(####.getTravel_admin() == 4){ %>
 				<td>순천</td>
-				<td align="left"><a href="view.jsp">ㅋㅋㅋㅋㅋㅋ</a></td>
-				<td>정지맹</td>
-				<td>2022-11-24</td>
-				<td>10<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-		</table>
-	</div>
-
-	<footer
-		style="display: flex; flex-direction: column; align-items: center; background-color: #F3F1EA;">
-		<div class="pagination" style="border-color: black;">
-			<a href="#" class="page active">1</a> <a href="#" class="page active">2</a>
-			<a href="#" class="page active">3</a> <a href="#" class="page active">4</a>
-			<a href="#" class="page active">5</a> <a href="#" class="next">Next</a>
+				<%} else if(####.getTravel_admin() == 5){ %>
+				<td>광양</td>
+				<%} %> --> 말머리
+				
+				<td align="left"><a href="view.jsp"><%=####.getBoard_title() %></a></td> --> 게시글 제목
+				<td><%=####.getmem_nick() %></td> --> 게시글 작성자 닉네임
+				<td><%=####.getBoard_date() %></td> --> 게시일자
+				<td><%=####.getLike_total() %><i class="fa-solid fa-heart" style="color: red;"></i></td> -->좋아요
+				
+			</tr> 
+		--%>
+			</table>
 		</div>
-	</footer>
+
+		<footer style="display: flex; flex-direction: column; align-items: center;">
+		
+			<div class="pagination" style="border-color: black;">
+				<a href="#" class="page active">1</a>
+				<a href="#" class="page active">2</a> 
+				<a href="#" class="page active">3</a> 
+				<a href="#" class="page active">4</a> 
+				<a href="#" class="page active">5</a>
+				<a href="#" class="next">Next</a>
+			</div>
+			
+		</footer>
 
 	<div class="ourfooter">
 		<footer>

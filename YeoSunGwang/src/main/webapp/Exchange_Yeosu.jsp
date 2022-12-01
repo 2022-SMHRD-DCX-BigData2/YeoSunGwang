@@ -98,7 +98,7 @@
 				<article>
 
 					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
+						<img src="images/여수 상품권 5000.png">
 					</div>
 
 					<div id="Exchange_div">
@@ -117,7 +117,7 @@
 				<article>
 
 					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
+						<img src="images/여수 상품권 10000.png">
 					</div>
 
 					<div id="Exchange_div">
@@ -136,7 +136,7 @@
 				<article>
 
 					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
+						<img src="images/여수 상품권 30000.png">
 					</div>
 
 					<div id="Exchange_div">
@@ -151,63 +151,7 @@
 
 					</div>
 				</article>
-
-				<article>
-
-					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
-					</div>
-
-					<div id="Exchange_div">
-						<header>
-							<h2>여수 지역 상품권 5,000원 권</h2>
-						</header>
-
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button" onclick="warning()">발급</a></li>
-						</ul>
-
-					</div>
-				</article>
-
-				<article>
-
-					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
-					</div>
-
-					<div id="Exchange_div">
-						<header>
-							<h2>여수 지역 상품권 10,000원 권</h2>
-						</header>
-
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button" onclick="warning()">발급</a></li>
-						</ul>
-
-					</div>
-				</article>
-
-				<article>
-
-					<div id="img11">
-						<img src="images/여수 상품권 10,000.jpg">
-					</div>
-
-					<div id="Exchange_div">
-						<header>
-							<h2>여수 지역 상품권 30,000원 권</h2>
-						</header>
-
-						<p>🎟️여수 지역에서만 사용 가능합니다.</p>
-						<ul class="actions special">
-							<li><a href="#" class="button" onclick="warning()">발급</a></li>
-						</ul>
-
-					</div>
-				</article>
+	
 			</section>
 		</div>
 	</div>

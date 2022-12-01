@@ -89,7 +89,7 @@
 		<div style="float: left; width: 33.333333%;">
 			<figure class="snip1200"> <img src="images/Winter_Yeo.png"
 				alt="">
-			<p>관광의 도시 여수로 오세요</p>
+			<p>여수 밤바다가 아름다운 여수로 오세요</p>
 			<figcaption>
 			<p>
 				<button id="hoverbutton" onclick="location.href='POST_Yeo_ALL.jsp'">CLICK</button>
@@ -123,7 +123,7 @@
 		<div style="float: left; width: 33.333333%;">
 			<figure class="snip1200"> <img src="images/Main_Gwang.png"
 				alt="">
-			<p>정상민의 광양으로 오세요!</p>
+			<p>매화꽃이 만개하는 광양에 오세요</p>
 			<figcaption>
 			<p>
 				<button id="hoverbutton"

@@ -109,70 +109,28 @@
 				<td>좋아요❤️</td>
 			</tr>
 
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">제목 길때 테스트
-						123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789123456789
-				</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
-
-			<tr align="center">
-				<td>001</td>
-				<td>말머리</td>
-				<td align="left"><a href="view.jsp">여기가 여순광? 화이팅!!</a></td>
-				<td>광양대부호 정상민</td>
-				<td>2022-11-24</td>
-				<td>102<i class="fa-solid fa-heart" style="color: red;"></i></td>
-			</tr>
+			<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->
+			
+			<%-- 			
+				<tr align="center">
+			
+				<td><%=####.getBoard_num()%></td> --> 게시글 No.
+				
+				<%if(####.getTravel_admin() == 3){ %>
+				<td>여수</td>
+				<%} else if(####.getTravel_admin() == 4){ %>
+				<td>순천</td>
+				<%} else if(####.getTravel_admin() == 5){ %>
+				<td>광양</td>
+				<%} %> --> 말머리
+				
+				<td align="left"><a href="view.jsp"><%=####.getBoard_title() %></a></td> --> 게시글 제목
+				<td><%=####.getmem_nick() %></td> --> 게시글 작성자 닉네임
+				<td><%=####.getBoard_date() %></td> --> 게시일자
+				<td><%=####.getLike_total() %><i class="fa-solid fa-heart" style="color: red;"></i></td> -->좋아요
+				
+			</tr> 
+		--%>
 
 		</table>
 
@@ -189,14 +147,17 @@
 		<%} else { %>
 		<%} %>
 		
-		<footer
-			style="display: flex; flex-direction: column; align-items: center;">
+		<footer style="display: flex; flex-direction: column; align-items: center;">
+		
 			<div class="pagination" style="border-color: black;">
-				<a href="#" class="page active">1</a> <a href="#"
-					class="page active">2</a> <a href="#" class="page active">3</a> <a
-					href="#" class="page active">4</a> <a href="#" class="page active">5</a>
+				<a href="#" class="page active">1</a>
+				<a href="#" class="page active">2</a> 
+				<a href="#" class="page active">3</a> 
+				<a href="#" class="page active">4</a> 
+				<a href="#" class="page active">5</a>
 				<a href="#" class="next">Next</a>
 			</div>
+			
 		</footer>
 	</div>
 

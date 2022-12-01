@@ -80,7 +80,7 @@
 	</header>
 	<!-- 상단바 끝 -->
 
-	<form>
+	<form action="#" method="POST" name="editwrite">
 	<div id="wrap">
 		<div id="High_nav">
 			<h1 id="High_nav_1">Edit Write</h1>

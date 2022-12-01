@@ -98,7 +98,7 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 	</header>
 	<!-- 상단바 끝 -->
 
-	<form>
+	<form action="#" method="POST" name="write">
 	<div id="wrap">
 		<div id="High_nav">
 			<h1 id="High_nav_1">Write</h1>
