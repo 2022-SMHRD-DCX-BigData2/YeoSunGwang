@@ -80,7 +80,7 @@
 	</header>
 	<!-- 상단바 끝 -->
 
-
+	<form>
 	<div id="wrap">
 		<div id="High_nav">
 			<h1 id="High_nav_1">Edit Write</h1>
@@ -92,7 +92,7 @@
 					<dl>
 						<dt style="margin-top: 2%; width: 4%;">제목</dt>
 						<dd>
-							<input type="text" placeholder="제목 입력"
+							<input type="text" placeholder="제목 입력" name="title"
 								style="margin-left: 5%; background-color: white; width: 97%;">
 						</dd>
 					</dl>
@@ -100,17 +100,17 @@
 				<div class="info">
 					<dl>
 						<dt style="margin-top: 2%;">말머리</dt>
-						<dd>
-							<select name="" id="" style="background-color: white;">
-								<option>여수</option>
-								<option>순천</option>
-								<option>광양</option>
-							</select>
-						</dd>
-					</dl>
+							<dd>
+								<select name="prepend" style="background-color: white;">
+									<option value="Y">여수</option>
+									<option value="S">순천</option>
+									<option value="G">광양</option>
+								</select>
+							</dd>
+						</dl>
 				</div>
 				<div class="cont">
-					<textarea placeholder="내용 입력" style="background-color: white;"></textarea>
+					<textarea placeholder="내용 입력" style="background-color: white;" name="content"></textarea>
 				</div>
 			</div>
 			<div class="bt_wrap">
@@ -122,6 +122,7 @@
 			</div>
 		</div>
 	</div>
+	</form>
 	<div class="ourfooter">
 		<footer>
 
