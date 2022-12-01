@@ -21,5 +21,7 @@ public class BoardDAO {
 	Connection conn = null;
 	PreparedStatement psmt = null;
 	
+	//
+	
 
 }
