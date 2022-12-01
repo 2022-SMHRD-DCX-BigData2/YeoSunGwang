@@ -7,7 +7,7 @@ public class Board {
 	// 필드명 = 속성(property)
 	private String board_title;
 	private String board_content;
-	private String board_num;
+	private int board_num;
 	private int mem_num;
 	private Date board_date;
 	private Number Like_total;
@@ -29,10 +29,10 @@ public class Board {
 	public void setBoard_content(String board_content) {
 		this.board_content = board_content;
 	}
-	public String getBoard_num() {
+	public int getBoard_num() {
 		return board_num;
 	}
-	public void setBoard_num(String board_num) {
+	public void setBoard_num(int board_num) {
 		this.board_num = board_num;
 	}
 	public int getMem_num() {
