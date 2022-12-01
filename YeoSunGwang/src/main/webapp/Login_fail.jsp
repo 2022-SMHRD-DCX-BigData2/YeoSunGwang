@@ -50,7 +50,7 @@
 						<button type="submit" id="login" value="login">
 							<p>로그인</p>
 						</button>
-						<br> <span style="color: red; align-self: center;">아이디(로그인 전용 아이디) 또는 비밀번호를 잘못
+						<br> <span style="color: red; align-self: center;">아이디 또는 비밀번호를 잘못
 							입력했습니다. <br>입력하신 내용을 다시 확인해주세요.</span>
 
 						<ul class="find">
