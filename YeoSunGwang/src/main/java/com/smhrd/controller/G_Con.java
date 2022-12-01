@@ -6,13 +6,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class G_ALLCon extends HttpServlet {
+public class G_Con extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		System.out.println("[G_ALLCon]");
+		System.out.println("[G_Con]");
 		// 0. POST방식 인코딩 - "UTF-8"
 		request.setCharacterEncoding("UTF-8");
 		

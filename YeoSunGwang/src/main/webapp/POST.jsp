@@ -96,9 +96,11 @@
 
 		<div id="post_info">
 			<div class="info_title">
-				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> <span class="tooltip"
-					style="color: #EA2027;"><i class="fa-solid fa-camera"></i> <span
-					class="tooltip-text">사진스팟</span></span>
+				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> 
+				<span class="tooltip" style="display: list-item; color: #EA2027; list-style: none;">
+				<i class="fa-solid fa-camera"></i> 
+				<span class="tooltip-text">사진스팟</span>
+				</span>
 			</div>
 
 			<div class="image-box">

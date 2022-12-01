@@ -39,22 +39,22 @@
 		<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"
 			class="logo"></a>
 	</h1>
-	
+
 	<div class="links">
 		<ul>
 			<!-- 홈화면 -->
 			<li><a href="MAIN.jsp">HOME</a></li>
-			
+
 			<!-- 게시판 -->
 			<li><a href="Board.jsp">COMMUNITY</a></li>
-			
+
 			<!-- 포인트 교환 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">VOUCHER</a></li>
 			<%}else{ %>
 			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
 			<%} %>
-			
+
 			<!-- 마이 페이지 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">MY PAGE</a></li>
@@ -63,7 +63,7 @@
 			<%} %>
 		</ul>
 	</div>
-	
+
 	<div class="links2">
 		<ul>
 			<%if(loginMember == null) { %>
@@ -105,200 +105,162 @@
 		<!-- 게시글(POST) -->
 		<div id="MAIN11">
 			<div class="posts11">
-				<article>
-					<div id="img11">
-						<a href="POST.jsp" class="image fit"><img
-							src="images/Yeo_모이핀.png"></a>
-					</div>
-
-					<div id="post_in">
-
-						<div id="com_like">
-							<p>
-								<a href="POST.jsp" style="text-decoration: none;"> &nbsp;
-									여수 돌산 이쁜카페 MOI FIN</a>
-							</p>
-							<ul>
-								<li><i class="fa-solid fa-comment"></i> 12</li>
-								<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-							</ul>
-						</div>
-
-						<div id="com_like1">
-							<ul style="font-size: 1.3em">
-								<li><span class="tooltip" style="color: #EA2027;"><i
-										class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-								<!-- 사진스팟 표시 -->
-								<li><a href="#"><span class="tooltip"><i
-											class="fa-solid fa-map-location-dot"></i> <span
-											class="tooltip-text">지도로 이동합니다</span></span></a></li>
-								<!-- 지도로고 -->
-							</ul>
-						</div>
-					</div>
-				</article>
 
 				<article>
-					<div id="img11">
-						<a href="POST.jsp" class="image fit"><img
-							src="images/Main_Gwang.png"></a>
+				<div id="img11">
+					<a href="POST.jsp" class="image fit"><img
+						src="images/Yeo_모이핀.png"></a>
+				</div>
+
+				<div id="post_in">
+
+					<div id="com_like">
+						<p>
+							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
+								돌산 이쁜카페 MOI FIN</a>
+						</p>
+						<ul>
+							<li><i class="fa-solid fa-comment"></i> 12</li>
+							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
+						</ul>
 					</div>
 
-					<div id="post_in">
-
-						<div id="com_like">
-							<p>
-								<a href="POST.jsp" style="text-decoration: none;"> &nbsp;
-									광양 매화마을</a>
-							</p>
-							<ul>
-								<li><i class="fa-solid fa-comment"></i> 12</li>
-								<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-							</ul>
-						</div>
-
-						<div id="com_like1">
-							<ul style="font-size: 1.3em">
-								<li><span class="tooltip" style="color: #EA2027;"><i
-										class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-								<!-- 사진스팟 표시 -->
-								<li><a href="#"><span class="tooltip"><i
-											class="fa-solid fa-map-location-dot"></i> <span
-											class="tooltip-text">지도로 이동합니다</span></span></a></li>
-								<!-- 지도로고 -->
-							</ul>
-						</div>
+					<div id="com_like1">
+						<ul style="font-size: 1.3em">
+							<li><span class="tooltip" style="color: #EA2027;"><i
+									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
+							<!-- 사진스팟 표시 -->
+							<li><a href="#"><span class="tooltip"><i
+										class="fa-solid fa-map-location-dot"></i> <span
+										class="tooltip-text">지도로 이동합니다</span></span></a></li>
+							<!-- 지도로고 -->
+						</ul>
 					</div>
+				</div>
 				</article>
-
+				
 				<article>
-					<div id="img11">
-						<a href="POST.jsp" class="image fit"><img
-							src="images/Yeo_모이핀.png"></a>
+				<div id="img11">
+					<a href="POST.jsp" class="image fit"><img
+						src="images/Yeo_모이핀.png"></a>
+				</div>
+
+				<div id="post_in">
+
+					<div id="com_like">
+						<p>
+							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
+								돌산 이쁜카페 MOI FIN</a>
+						</p>
+						<ul>
+							<li><i class="fa-solid fa-comment"></i> 12</li>
+							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
+						</ul>
 					</div>
 
-					<div id="post_in">
-
-						<div id="com_like">
-							<p>
-								<a href="POST.jsp" style="text-decoration: none;"> &nbsp;
-									여수 돌산 이쁜카페 MOI FIN</a>
-							</p>
-							<ul>
-								<li><i class="fa-solid fa-comment"></i> 12</li>
-								<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-							</ul>
-						</div>
-
-						<div id="com_like1">
-							<ul style="font-size: 1.3em">
-								<li><span class="tooltip" style="color: #EA2027;"><i
-										class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-								<!-- 사진스팟 표시 -->
-								<li><a href="#"><span class="tooltip"><i
-											class="fa-solid fa-map-location-dot"></i> <span
-											class="tooltip-text">지도로 이동합니다</span></span></a></li>
-								<!-- 지도로고 -->
-							</ul>
-						</div>
+					<div id="com_like1">
+						<ul style="font-size: 1.3em">
+							<li><span class="tooltip" style="color: #EA2027;"><i
+									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
+							<!-- 사진스팟 표시 -->
+							<li><a href="#"><span class="tooltip"><i
+										class="fa-solid fa-map-location-dot"></i> <span
+										class="tooltip-text">지도로 이동합니다</span></span></a></li>
+							<!-- 지도로고 -->
+						</ul>
 					</div>
+				</div>
 				</article>
-
+				
 				<article>
-					<div id="img11">
-						<a href="POST.jsp" class="image fit"><img
-							src="images/Yeo_모이핀.png"></a>
+				<div id="img11">
+					<a href="POST.jsp" class="image fit"><img
+						src="images/Yeo_모이핀.png"></a>
+				</div>
+
+				<div id="post_in">
+
+					<div id="com_like">
+						<p>
+							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
+								돌산 이쁜카페 MOI FIN</a>
+						</p>
+						<ul>
+							<li><i class="fa-solid fa-comment"></i> 12</li>
+							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
+						</ul>
 					</div>
 
-					<div id="post_in">
-
-						<div id="com_like">
-							<p>
-								<a href="POST.jsp" style="text-decoration: none;">여수 돌산
-									이쁜카페 MOI FIN</a>
-							</p>
-							<ul>
-								<li><i class="fa-solid fa-comment"></i> 12</li>
-								<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-							</ul>
-						</div>
-
-						<div id="com_like1">
-							<ul style="font-size: 1.3em">
-								<li><span class="tooltip" style="color: #EA2027;"><i
-										class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-								<!-- 사진스팟 표시 -->
-								<li><a href="#"><span class="tooltip"><i
-											class="fa-solid fa-map-location-dot"></i> <span
-											class="tooltip-text">지도로 이동합니다</span></span></a></li>
-								<!-- 지도로고 -->
-							</ul>
-						</div>
+					<div id="com_like1">
+						<ul style="font-size: 1.3em">
+							<li><span class="tooltip" style="color: #EA2027;"><i
+									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
+							<!-- 사진스팟 표시 -->
+							<li><a href="#"><span class="tooltip"><i
+										class="fa-solid fa-map-location-dot"></i> <span
+										class="tooltip-text">지도로 이동합니다</span></span></a></li>
+							<!-- 지도로고 -->
+						</ul>
 					</div>
+				</div>
 				</article>
+				
+				
+				<article> 
+				<div id="img11">
+					<a href="POST.jsp" class="image fit"><img
+						src="images/Yeo_모이핀.png"></a>
+				</div>
 
-				<article>
-					<div id="img11">
-						<a href="POST.jsp" class="image fit"><img
-							src="images/Yeo_모이핀.png"></a>
+				<div id="post_in">
+
+					<div id="com_like">
+						<p>
+							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
+								돌산 이쁜카페 MOI FIN</a>
+						</p>
+						<ul>
+							<li><i class="fa-solid fa-comment"></i> 12</li>
+							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
+						</ul>
 					</div>
 
-					<div id="post_in">
-
-						<div id="com_like">
-							<p>
-								<a href="POST.jsp" style="text-decoration: none;">여수 돌산
-									이쁜카페 MOI FIN</a>
-							</p>
-							<ul>
-								<li><i class="fa-solid fa-comment"></i> 12</li>
-								<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-							</ul>
-						</div>
-
-						<div id="com_like1">
-							<ul style="font-size: 1.3em">
-								<li><span class="tooltip" style="color: #EA2027;"><i
-										class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-								<!-- 사진스팟 표시 -->
-								<li><a href="#"><span class="tooltip"><i
-											class="fa-solid fa-map-location-dot"></i> <span
-											class="tooltip-text">지도로 이동합니다</span></span></a></li>
-								<!-- 지도로고 -->
-							</ul>
-						</div>
+					<div id="com_like1">
+						<ul style="font-size: 1.3em">
+							<li><span class="tooltip" style="color: #EA2027;"><i
+									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
+							<!-- 사진스팟 표시 -->
+							<li><a href="#"><span class="tooltip"><i
+										class="fa-solid fa-map-location-dot"></i> <span
+										class="tooltip-text">지도로 이동합니다</span></span></a></li>
+							<!-- 지도로고 -->
+						</ul>
 					</div>
+				</div>
 				</article>
-
-				<article>
-
-					<h1>빈 포스트</h1>
-					<h1>빈 자리</h1>
-					<h1>정 땅 민</h1>
-
-				</article>
+				
+				
+				<article></article>
+				<article></article>
 
 			</div>
 		</div>
 		<footer
 			style="display: flex; flex-direction: column; align-items: center;">
-			<div class="pagination" style="border-color: black;">
-				<a href="#" class="page active">1</a> <a href="#"
-					class="page active">2</a> <a href="#" class="page active">3</a> <a
-					href="#" class="page active">4</a> <a href="#" class="page active">5</a>
-				<a href="#" class="next">Next</a>
-			</div>
+		<div class="pagination" style="border-color: black;">
+			<a href="#" class="page active">1</a> <a href="#" class="page active">2</a>
+			<a href="#" class="page active">3</a> <a href="#" class="page active">4</a>
+			<a href="#" class="page active">5</a> <a href="#" class="next">Next</a>
+		</div>
 		</footer>
 	</div>
 	<div class="ourfooter">
-		<footer>
-			<nav>
-				<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-			</nav>
-			<p>
-				<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-					2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
-			</p>
+		<footer> <nav> <a href='#' target='_blank'>Blog</a> | <a
+			href='#' target='_blank'>Github</a> </nav>
+		<p>
+			<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
+				2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+		</p>
 		</footer>
 	</div>
 
@@ -310,7 +272,7 @@
 			})
 		}
 	</script>
-	
+
 
 </body>
 
