@@ -86,6 +86,28 @@
 	</div>
 	</header>
 	<!-- 상단바 끝 -->
+	
+	<div id="wrap" class="My1">
+		<div id="High_nav">
+			<h1 id="Exchange_nav_1">suncheon</h1>
+		</div>
+
+		<div id="Middle_nav">
+			<ul>
+				<br>
+				<li><a href="POST_Sun_ALL.jsp"
+					style="font-weight: bold; color: #2EBAAE; text-decoration: underline; text-underline-position: under;">all</a></li>
+				<li><a href="POST_Sun_REST.jsp">RESTAURANT</a></li>
+				<li><a href="POST_Sun_CAFE.jsp">CAFE</a></li>
+				<li><select name="local" id="local"
+					onchange="if(this.value) location.href=(this.value);">
+						<option value="POST_Sun_ALL.jsp">순천</option>
+						<option value="POST_Yeo_ALL.jsp">여수</option>
+						<option value="POST_Gwang_ALL.jsp">광양</option>
+				</select></li>
+				<li><a href="POST_Gwang_TOUR.jsp">tour Spot</a></li>
+			</ul>
+		</div>
 
 	<div id="MAIN11">
 			<div class="posts11">
