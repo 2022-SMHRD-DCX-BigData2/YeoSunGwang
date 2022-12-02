@@ -41,22 +41,22 @@
 		<a href="MAIN.jsp"><img src="images/여순광.png" alt="logo"
 			class="logo"></a>
 	</h1>
-	
+
 	<div class="links">
 		<ul>
 			<!-- 홈화면 -->
 			<li><a href="MAIN.jsp">HOME</a></li>
-			
+
 			<!-- 게시판 -->
 			<li><a href="Board.jsp">COMMUNITY</a></li>
-			
+
 			<!-- 포인트 교환 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">VOUCHER</a></li>
 			<%}else{ %>
 			<li><a href="Exchange_Yeosu.jsp">VOUCHER</a></li>
 			<%} %>
-			
+
 			<!-- 마이 페이지 -->
 			<%if(loginMember == null) { %>
 			<li><a onclick="needlogin()">MY PAGE</a></li>
@@ -65,7 +65,7 @@
 			<%} %>
 		</ul>
 	</div>
-	
+
 	<div class="links2">
 		<ul>
 			<%if(loginMember == null) { %>
@@ -98,10 +98,9 @@
 
 		<div id="post_info">
 			<div class="info_title">
-				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> 
-				<span class="tooltip" style="display: list-item; color: #EA2027; list-style: none;">
-				<i class="fa-solid fa-camera"></i> 
-				<span class="tooltip-text">사진스팟</span>
+				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> <span class="tooltip"
+					style="display: list-item; color: #EA2027; list-style: none;">
+					<i class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span>
 				</span>
 			</div>
 
@@ -151,10 +150,12 @@
 				<%if(loginMember != null){ %>
 				<form action="CommentsCon" method="GET" style="margin: 0 0 0 0;">
 					<ul>
-						<li><input type="text" placeholder="  댓글을 입력하세요." name="comments"></li>
+						<li><input type="text" placeholder="  댓글을 입력하세요."
+							name="comments"></li>
 						<li><input type="submit" value="등록"
 							style="font-size: 0.599em;"></li>
-						<li><input type="hidden" name="mem_num" value="<%= loginMember.getMem_num() %>"></li>
+						<li><input type="hidden" name="mem_num"
+							value="<%= loginMember.getMem_num() %>"></li>
 						<!-- <li><inpit type="hidden" name="Board_num" value= 해당 게시글의 보드넘버 ></li> -->
 					</ul>
 					<br>
@@ -162,49 +163,30 @@
 				<%} else{ %>
 				<%} %>
 
-
 				<table>
+				
 					<tbody>
-					<%if(Comments != null){ %>
-					<%for(int i = 1; i < 5; i++){ %>
+						<tr>
+							<td><i class="fa-solid fa-user"></i> &nbsp; 작성자</td>
+						</tr>
 
 						<tr>
-							<td><i class="fa-solid fa-user"></i> &nbsp; <%= loginMember.getMem_nick()%></td>
+							<td>댓글내용</td>
 						</tr>
-						
-						<tr>
-							<td><%=Comments.getComments()%></td>
-						</tr>
-						<%}%>
-						<%}%>
-
-
 					</tbody>
 
 				</table>
-
-
-
-
 			</div>
-
-
-
 		</div>
-
-
-
 	</div>
 
 	<div class="ourfooter">
-		<footer>
-			<nav>
-				<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-			</nav>
-			<p>
-				<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-					2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
-			</p>
+		<footer> <nav> <a href='#' target='_blank'>Blog</a> | <a
+			href='#' target='_blank'>Github</a> </nav>
+		<p>
+			<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
+				2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+		</p>
 		</footer>
 	</div>
 
