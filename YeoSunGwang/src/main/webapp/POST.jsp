@@ -1,4 +1,5 @@
 <%@page import="com.smhrd.domain.Member"%>
+<%@page import="com.smhrd.domain.Comments"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -7,6 +8,7 @@
 
 <% 
    Member loginMember = (Member)session.getAttribute("loginMember");
+   Comments Comments = (Comments)session.getAttribute("insertComments");
 %>
 
 <html>
@@ -147,11 +149,13 @@
 			<div id="COMMENTS" style="display: none;">
 
 				<%if(loginMember != null){ %>
-				<form action="" style="margin: 0 0 0 0;">
+				<form action="CommentsCon" method="GET" style="margin: 0 0 0 0;">
 					<ul>
-						<li><input type="text" placeholder="  댓글을 입력하세요."></li>
+						<li><input type="text" placeholder="  댓글을 입력하세요." name="comments"></li>
 						<li><input type="submit" value="등록"
 							style="font-size: 0.599em;"></li>
+						<li><input type="hidden" name="mem_num" value="<%= loginMember.getMem_num() %>"></li>
+						<!-- <li><inpit type="hidden" name="Board_num" value= 해당 게시글의 보드넘버 ></li> -->
 					</ul>
 					<br>
 				</form>
@@ -161,21 +165,18 @@
 
 				<table>
 					<tbody>
-						<tr>
-							<td>댓글</td>
-						</tr>
+					<%if(Comments != null){ %>
+					<%for(int i = 1; i < 5; i++){ %>
 
 						<tr>
-							<td>댓글</td>
+							<td><i class="fa-solid fa-user"></i> &nbsp; <%= loginMember.getMem_nick()%></td>
 						</tr>
-
+						
 						<tr>
-							<td>댓글</td>
+							<td><%=Comments.getComments()%></td>
 						</tr>
-
-						<tr>
-							<td>댓글</td>
-						</tr>
+						<%}%>
+						<%}%>
 
 
 					</tbody>

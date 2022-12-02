@@ -1,6 +1,6 @@
 package com.smhrd.controller;
 
-import java.io.IOException;
+import java.io.IOException; 
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -47,7 +47,7 @@ public class JoinCon extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("MAIN.jsp");
 			request.setAttribute("join", mem_id);
 			rd.forward(request, response);
-
+ 
 		} else {
 			System.out.println("JoinCon : 회원가입 실패!");
 			// 회원가입 실패하면 다시 회원가입 하게끔 main.jsp로 이동
