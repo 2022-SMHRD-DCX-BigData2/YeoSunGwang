@@ -3374,13 +3374,14 @@ gtr
 
 	#img11>a>img {
 		width: 100%;
-		height: 14em;
+		height: 17em;
 	}
 
 	#img11{
 		width: 100%;
-		height: 14em;
+		height: 17em;
 		background-color: white;
+		border:0.5px solid;
 	}
 
 	#MAIN11 > section > article{
@@ -3390,6 +3391,7 @@ gtr
 	#post_in{
 		background-color: white;
 		height: 7em;
+		border:0.5px solid;
 	}
 
 	#post_in > header{

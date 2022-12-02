@@ -113,58 +113,25 @@
 		<div id="MAIN11">
 			<div class="posts11">
 
-				<%if(boardList != null){ %>
 				<%for(BoardVO vo: boardList) { %>
-				<article>
-				<div id="img11">
-					<a href="POST.jsp" class="image fit"><img src=<%= vo.getImg_link() %>></a>
-				</div>
-
-				<div id="post_in">
-				
-   						
-   						
-					<div id="com_like">
-						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; <%= vo.getBoard_title() %></a>
-						</p>
-						<ul>
-							<li><i class="fa-solid fa-comment"></i> 12</li>
-							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-						</ul>
-					</div>
-
-					<div id="com_like1">
-						<ul style="font-size: 1.3em">
-							<li><span class="tooltip" style="color: #EA2027;"><i
-									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-							<!-- 사진스팟 표시 -->
-							<li><a href="#"><span class="tooltip"><i
-										class="fa-solid fa-map-location-dot"></i> <span
-										class="tooltip-text">지도로 이동합니다</span></span></a></li>
-							<!-- 지도로고 -->
-						</ul>
-					</div>
-				</div>
-				</article>
-				<%}} %>
 				
 				<article>
 				<div id="img11">
 					<a href="POST.jsp" class="image fit"><img
-						src="images/Yeo_모이핀.png"></a>
+						src="<%= vo.getImg_link() %>"></a>
 				</div>
 
 				<div id="post_in">
 
+
+
 					<div id="com_like">
 						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
-								돌산 이쁜카페 MOI FIN</a>
+							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; <%= vo.getBoard_title()%></a>
 						</p>
 						<ul>
-							<li><i class="fa-solid fa-comment"></i> 12</li>
-							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
+							<li><i class="fa-solid fa-comment">5</i></li>
+							<li><a href=""><i class="fa-regular fa-heart"></i></a><%= vo.getLike_total()%></li>
 						</ul>
 					</div>
 
@@ -173,7 +140,7 @@
 							<li><span class="tooltip" style="color: #EA2027;"><i
 									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
 							<!-- 사진스팟 표시 -->
-							<li><a href="#"><span class="tooltip"><i
+							<li><a href="<%= vo.getMab_link() %>"><span class="tooltip"><i
 										class="fa-solid fa-map-location-dot"></i> <span
 										class="tooltip-text">지도로 이동합니다</span></span></a></li>
 							<!-- 지도로고 -->
@@ -181,86 +148,19 @@
 					</div>
 				</div>
 				</article>
-				
-				<article>
-				<div id="img11">
-					<a href="POST.jsp" class="image fit"><img
-						src="images/Yeo_모이핀.png"></a>
-				</div>
-
-				<div id="post_in">
-
-					<div id="com_like">
-						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
-								돌산 이쁜카페 MOI FIN</a>
-						</p>
-						<ul>
-							<li><i class="fa-solid fa-comment"></i> 12</li>
-							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-						</ul>
-					</div>
-
-					<div id="com_like1">
-						<ul style="font-size: 1.3em">
-							<li><span class="tooltip" style="color: #EA2027;"><i
-									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-							<!-- 사진스팟 표시 -->
-							<li><a href="#"><span class="tooltip"><i
-										class="fa-solid fa-map-location-dot"></i> <span
-										class="tooltip-text">지도로 이동합니다</span></span></a></li>
-							<!-- 지도로고 -->
-						</ul>
-					</div>
-				</div>
-				</article>
-				
-				
-				<article> 
-				<div id="img11">
-					<a href="POST.jsp" class="image fit"><img
-						src="images/Yeo_모이핀.png"></a>
-				</div>
-
-				<div id="post_in">
-
-					<div id="com_like">
-						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
-								돌산 이쁜카페 MOI FIN</a>
-						</p>
-						<ul>
-							<li><i class="fa-solid fa-comment"></i> 12</li>
-							<li><a href=""><i class="fa-regular fa-heart"></i></a> 12</li>
-						</ul>
-					</div>
-
-					<div id="com_like1">
-						<ul style="font-size: 1.3em">
-							<li><span class="tooltip" style="color: #EA2027;"><i
-									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
-							<!-- 사진스팟 표시 -->
-							<li><a href="#"><span class="tooltip"><i
-										class="fa-solid fa-map-location-dot"></i> <span
-										class="tooltip-text">지도로 이동합니다</span></span></a></li>
-							<!-- 지도로고 -->
-						</ul>
-					</div>
-				</div>
-				</article>
-				
-				
-				<article></article>
-				<article></article>
+				<%}%>
 
 			</div>
 		</div>
 		<footer
 			style="display: flex; flex-direction: column; align-items: center;">
 		<div class="pagination" style="border-color: black;">
-			<a href="#" class="page active">1</a> <a href="#" class="page active">2</a>
-			<a href="#" class="page active">3</a> <a href="#" class="page active">4</a>
-			<a href="#" class="page active">5</a> <a href="#" class="next">Next</a>
+			<a href="#" class="page active">1</a> 
+			<a href="#" class="page active">2</a>
+			<a href="#" class="page active">3</a> 
+			<a href="#" class="page active">4</a>
+			<a href="#" class="page active">5</a> 
+			<a href="#" class="next">Next</a>
 		</div>
 		</footer>
 	</div>
