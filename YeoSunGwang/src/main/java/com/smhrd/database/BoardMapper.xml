@@ -12,65 +12,65 @@
 	<!-- Category 0:음식점 1:카페 2:관광지 -->
 
 	<!-- 광양 ALL -->
-	<select  id="G_ALL" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=2 and (category_admin = 0 or category_admin =1 or category_admin =2);
+	<select  id="G_ALL" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=2 and (category_admin = 0 or category_admin =1 or category_admin =2)
 	</select>
 
 	<!-- 광양 RES -->
-	<select id="G_RES" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=2 and category_admin = 0;
+	<select id="G_RES" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=2 and category_admin = 0 
 	</select>
 	
 	<!-- 광양 CAFE -->
-	<select id="G_CAFE" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=2 and category_admin = 1;
+	<select id="G_CAFE" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=2 and category_admin = 1 
 	</select>
 	
 	<!-- 광양 TOUR -->
-	<select id="G_TOUR" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=2 and category_admin = 2;
+	<select id="G_TOUR" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=2 and category_admin = 2 
 	</select>
 	
 	
 	<!-- 순천 ALL -->
-	<select id="S_ALL" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=1 and (category_admin = 0 or category_admin =1 or category_admin =2);
+	<select id="S_ALL" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=1 and (category_admin = 0 or category_admin =1 or category_admin =2) 
 	</select>
 
 	<!-- 순천 RES -->
-	<select id="S_RES" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=1 and category_admin = 0;
+	<select id="S_RES" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=1 and category_admin = 0 
 	</select>
 	
 	<!-- 순천 CAFE -->
-	<select id="S_CAFE" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=1 and category_admin = 1;
+	<select id="S_CAFE" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=1 and category_admin = 1 
 	</select>
 	
 	<!-- 순천 TOUR -->
-	<select id="S_ALL" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=1 and category_admin = 2;
+	<select id="S_TOUR" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=1 and category_admin = 2 
 	</select>
 	
 	
 	<!-- 여수 ALL -->
-	<select id="Y_ALL" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=0 and (category_admin = 0 or category_admin =1 or category_admin =2);
+	<select id="Y_ALL" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=0 and (category_admin = 0 or category_admin =1 or category_admin =2) 
 	</select>
 
 	<!-- 여수 RES -->
-	<select id="Y_RES" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=0 and category_admin = 0;
+	<select id="Y_RES" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=0 and category_admin = 0 
 	</select>
 	
 	<!-- 여수 CAFE -->
-	<select id="Y_CAFE" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=0 and category_admin = 1;
+	<select id="Y_CAFE" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=0 and category_admin = 1 
 	</select>
 	
 	<!-- 여수 TOUR -->
-	<select id="Y_TOUR" parameterType="com.smhrd.domain.Board" resultType="com.smhrd.domain.Board">
-		select * from BOARD where travel_admin=0 and category_admin = 2;
+	<select id="Y_TOUR" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where travel_admin=0 and category_admin = 2 
 	</select>
 	
 	

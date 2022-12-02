@@ -1,3 +1,7 @@
+<%@page import="com.smhrd.domain.BoardDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.domain.BoardVO"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
@@ -6,7 +10,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <% 
-   Member loginMember = (Member)session.getAttribute("loginMember");
+    Member loginMember = (Member)session.getAttribute("loginMember");
+	List<BoardVO> boardList = new ArrayList<BoardVO>();
+	BoardDAO dao = new BoardDAO();
+	boardList =dao.G_ALL();
 %>
 
 <html>
@@ -106,18 +113,20 @@
 		<div id="MAIN11">
 			<div class="posts11">
 
+				<%if(boardList != null){ %>
+				<%for(BoardVO vo: boardList) { %>
 				<article>
 				<div id="img11">
-					<a href="POST.jsp" class="image fit"><img
-						src="images/Yeo_모이핀.png"></a>
+					<a href="POST.jsp" class="image fit"><img src=<%= vo.getImg_link() %>></a>
 				</div>
 
 				<div id="post_in">
-
+				
+   						
+   						
 					<div id="com_like">
 						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; 여수
-								돌산 이쁜카페 MOI FIN</a>
+							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; <%= vo.getBoard_title() %></a>
 						</p>
 						<ul>
 							<li><i class="fa-solid fa-comment"></i> 12</li>
@@ -138,6 +147,7 @@
 					</div>
 				</div>
 				</article>
+				<%}} %>
 				
 				<article>
 				<div id="img11">

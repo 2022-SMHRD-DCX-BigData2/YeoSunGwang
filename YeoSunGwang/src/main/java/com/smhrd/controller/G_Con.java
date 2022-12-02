@@ -38,7 +38,10 @@ public class G_Con extends HttpServlet {
 		BoardDAO dao = new BoardDAO();
 		boardList =dao.G_ALL();
 		
-		
+		for(BoardVO vo: boardList) {
+			System.out.println(vo.getBoard_content());
+			
+		}
 		
 		
 

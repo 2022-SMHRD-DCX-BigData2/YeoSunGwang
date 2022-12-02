@@ -34,7 +34,7 @@
 <script src="assets/js/sweetalert2.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f3f1ea;">
 	<!-- 상단바 시작 -->
 	<header id="header">
 	<h1>

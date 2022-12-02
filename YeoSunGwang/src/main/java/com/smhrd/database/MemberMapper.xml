@@ -33,7 +33,4 @@
 		select mem_pw from mem_info where mem_id=#{mem_id} and mem_name=#{mem_name} and mem_email=#{mem_email}
 	</select>
 
-	<delete id="deleteMember" parameterType="String">
-		delete from mem_info where mem_num=#{mem_num}
-	</delete>
 </mapper>
