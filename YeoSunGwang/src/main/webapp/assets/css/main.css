@@ -3381,7 +3381,7 @@ gtr
 		width: 100%;
 		height: 17em;
 		background-color: white;
-		border:0.5px solid;
+		border:rgba(0, 0, 0, 0.227) 0.8px solid;
 	}
 
 	#MAIN11 > section > article{
@@ -3391,7 +3391,7 @@ gtr
 	#post_in{
 		background-color: white;
 		height: 7em;
-		border:0.5px solid;
+		border:rgba(0, 0, 0, 0.227) 0.8px solid;
 	}
 
 	#post_in > header{
