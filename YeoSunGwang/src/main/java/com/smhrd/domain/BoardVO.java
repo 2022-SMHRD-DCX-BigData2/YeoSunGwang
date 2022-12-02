@@ -1,6 +1,6 @@
 package com.smhrd.domain;
 
-public class Board {
+public class BoardVO {
 
 	// 필드명 = 속성(property)
 	private String board_title;
@@ -10,8 +10,8 @@ public class Board {
 	private int Like_total;
 	private int travel_admin;
 	private int category_admin;
-	private String mab_link;
-
+	private String map_link;
+	private String img_link;
 
 	public String getBoard_title() {
 		return board_title;
@@ -70,23 +70,27 @@ public class Board {
 	}
 
 	public String getMab_link() {
-		return mab_link;
+		return map_link;
 	}
 
-	public void setMab_link(String mab_link) {
-		this.mab_link = mab_link;
+	public void setMab_link(String map_link) {
+		this.map_link = map_link;
 	}
-	
-	
 
-	public Board() {
+	public String getImg_link() {
+		return img_link;
+	}
+
+	public void setImg_link(String img_link) {
+		this.img_link = img_link;
+	}
+
+	public BoardVO() {
 		super();
 	}
-	
-	
 
-	public Board(String board_title, String board_content, int board_num, String board_date, int like_total,
-			int travel_admin, int category_admin, String mab_link) {
+	public BoardVO(String board_title, String board_content, int board_num, String board_date, int like_total,
+			int travel_admin, int category_admin, String map_link, String img_link) {
 		super();
 		this.board_title = board_title;
 		this.board_content = board_content;
@@ -95,16 +99,16 @@ public class Board {
 		this.Like_total = like_total;
 		this.travel_admin = travel_admin;
 		this.category_admin = category_admin;
-		this.mab_link = mab_link;
+		this.map_link = map_link;
+		this.img_link = img_link;
 	}
-	
 
-	// 테스트 해보는 toString
+	//toString
 	@Override
 	public String toString() {
 		return "Board [board_title=" + board_title + ", board_content=" + board_content + ", board_date=" + board_date
 				+ ", " + "Like_total=" + Like_total + ", + travel_admin=" + travel_admin + ", category_admin="
-				+ category_admin + "map_link=" + mab_link +  "]";
+				+ category_admin + "map_link=" + map_link + "img_link=" + img_link + "]";
 	}
 
 }
