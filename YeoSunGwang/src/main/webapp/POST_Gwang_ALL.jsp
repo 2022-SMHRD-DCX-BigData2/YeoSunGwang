@@ -121,7 +121,7 @@
 					style="margin: 0 0 0 0;">
 					<div id="img11">
 						<input type="hidden" value=<%= vo.getBoard_title()%> name="board_title">  
-						<a href="#" onclick="postsubmit()" class="image fit"><img src="<%=vo.getImg_link()%>"></a>
+						<input type="image" src="<%= vo.getImg_link()%>" alt="">
 					</div>
 				</form>
 
@@ -132,9 +132,9 @@
 					<div id="com_like">
 						<p>
 							<form action="ViewPostCon" method="post" id="postsubmit" name="Viewtitle"> 
-							<input type="text" value= <%= vo.getBoard_title()%> name="board_title">
+							<input type="hidden" value= <%= vo.getBoard_title()%> name="board_title">
 							<p>
-							<a href="#" onclick="postsubmit()" style="text-decoration: none;"> &nbsp;&nbsp; <%= vo.getBoard_title()%></a>
+							<input type="submit" value="<%= vo.getBoard_title()%>">
 							</p>
 							</form> 
 						</p>
