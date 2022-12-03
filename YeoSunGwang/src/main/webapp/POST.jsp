@@ -13,9 +13,7 @@
 <% 
 	Member loginMember = (Member)session.getAttribute("loginMember");
    	Comments Comments = (Comments)session.getAttribute("insertComments");
-   	List<BoardVO> boardList = new ArrayList<BoardVO>();
-   	BoardDAO dao = new BoardDAO();
-   	boardList =dao.P_ALL();
+   	BoardVO ViewPost = (BoardVO)session.getAttribute("ViewPost");
 %>
 
 <html>
@@ -106,23 +104,20 @@
 		
 		<div id="post_info">
 			<div class="info_title">
-				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> <span class="tooltip"
-					style="display: list-item; color: #EA2027; list-style: none;">
+				<span><%= ViewPost.getBoard_title() %> &nbsp;</span> 
+				<span class="tooltip" style="display: list-item; color: #EA2027; list-style: none;">
 					<i class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span>
 				</span>
 			</div>
 
 			<div class="image-box">
-				<img class="image-thumbnail" src="images/Yeo_모이핀.png" alt="">
+				<img class="image-thumbnail" src="<%= ViewPost.getImg_link()%>" alt="">
 			</div>
 
 
 			<div class="info_text">
-				<span> <br> <br> 전남 여수시 돌산읍 무술목길 50 모이핀 <br> <br>
-					전남 여수시 돌산읍 평사리 1273-5 / 여수시 돌산읍 무술목길 50 <br> <br> 영업
-					09:00 - 21:00 20:30 라스트오더 <br> <br> 0507-1477-6003 <br>
-					<br> 주차, 포장, 무선 인터넷, 남/녀 화장실 구분 <br> <br>
-					http://www.모이핀.com/ <br> <br>
+				<span>
+				<%= ViewPost.getBoard_content() %>
 				</span>
 			</div>
 
@@ -158,13 +153,10 @@
 				<%if(loginMember != null){ %>
 				<form action="CommentsCon" method="GET" style="margin: 0 0 0 0;">
 					<ul>
-						<li><input type="text" placeholder="  댓글을 입력하세요."
-							name="comments"></li>
-						<li><input type="submit" value="등록"
-							style="font-size: 0.599em;"></li>
-						<li><input type="hidden" name="mem_num"
-							value="<%= loginMember.getMem_num() %>"></li>
-						<!-- <li><inpit type="hidden" name="Board_num" value= 해당 게시글의 보드넘버 ></li> -->
+						<li><input type="text" placeholder="  댓글을 입력하세요." name="comments"></li>
+						<li><input type="submit" value="등록" style="font-size: 0.599em;"></li>
+						<li><input type="hidden" name="mem_num" value=<%= loginMember.getMem_num() %>></li>
+						<%-- <li><inpit type="hidden" name="board_num" value=<%= ViewPost.getBoard_num() %>></li> --%>
 					</ul>
 					<br>
 				</form>

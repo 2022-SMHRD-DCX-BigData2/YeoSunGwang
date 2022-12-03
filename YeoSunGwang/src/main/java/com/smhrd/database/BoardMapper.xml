@@ -12,8 +12,8 @@
 	<!-- Category 0:음식점 1:카페 2:관광지 -->
 	
 	<!-- 데이터 전체 -->
-	<select id="P_ALL">
-		select * from BOARD
+	<select  id="ViewPost" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">
+		select * from BOARD where board_title=#{board_title}
 	</select>
 
 	<!-- 광양 ALL -->

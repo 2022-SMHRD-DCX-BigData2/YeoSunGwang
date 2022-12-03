@@ -122,7 +122,7 @@ public class BoardVO {
 	}
 	
 	public String check() {
-		return "Board [board_title=" + board_title + "]";
+		return "가져오는값 Board [board_title=" + board_title + "]";
 	}
 
 }
