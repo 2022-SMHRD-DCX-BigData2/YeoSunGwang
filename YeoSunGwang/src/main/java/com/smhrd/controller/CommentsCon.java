@@ -25,11 +25,11 @@ public class CommentsCon extends HttpServlet {
 
 		// 1. 파라미터 수집
 		int mem_num = Integer.parseInt(request.getParameter("mem_num"));
-		int board_num = Integer.parseInt(request.getParameter("board_num"));
+		String board_title = request.getParameter("board_title");
 		String comments = request.getParameter("comments");
 		String mem_nick = request.getParameter("mem_nick");
 		// 2. 받아온 값을 Comments객체에 담아주기
-		Comments insertComments = new Comments(mem_num, board_num, comments, mem_nick);
+		Comments insertComments = new Comments(mem_num, board_title, comments, mem_nick);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(insertComments.toString());
 
