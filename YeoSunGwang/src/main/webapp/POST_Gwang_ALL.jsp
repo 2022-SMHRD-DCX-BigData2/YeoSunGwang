@@ -116,10 +116,14 @@
 				<%for(BoardVO vo: boardList) { %>
 				
 				<article>
-				<div id="img11">
-					<a href="POST.jsp" class="image fit"><img
-						src="<%= vo.getImg_link() %>"></a>
-				</div>
+
+				<form action="ViewPostCon" method="post" id="postsubmit"
+					style="margin: 0 0 0 0;">
+					<div id="img11">
+						<input type="hidden" value=<%= vo.getBoard_title()%> name="board_title"> 
+						<a href="#" onclick="postsubmit()" class="image fit"><img src="<%=vo.getImg_link()%>"></a>
+					</div>
+				</form>
 
 				<div id="post_in">
 
@@ -127,7 +131,12 @@
 
 					<div id="com_like">
 						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; <%= vo.getBoard_title()%></a>
+							<form action="ViewPostCon" method="post" id="postsubmit"> 
+							<input type="hidden" value= <%= vo.getBoard_title()%> name="board_title">
+							<p>
+							<a href="#" onclick="postsubmit()" style="text-decoration: none;"> &nbsp;&nbsp; <%= vo.getBoard_title()%></a>
+							</p>
+							</form> 
 						</p>
 						<ul>
 							<li><i class="fa-solid fa-comment">5</i></li>
@@ -152,6 +161,7 @@
 
 			</div>
 		</div>
+		
 		<footer
 			style="display: flex; flex-direction: column; align-items: center;">
 		<div class="pagination" style="border-color: black;">
@@ -163,6 +173,7 @@
 			<a href="#" class="next">Next</a>
 		</div>
 		</footer>
+		
 	</div>
 	<div class="ourfooter">
 		<footer> <nav> <a href='#' target='_blank'>Blog</a> | <a
@@ -181,6 +192,10 @@
 				title: '로그인 후 \n 이용할 수 있습니다!',
 			})
 		}
+		
+		function postsubmit() {
+			document.getElementById('postsubmit').submit();
+			}
 	</script>
 
 

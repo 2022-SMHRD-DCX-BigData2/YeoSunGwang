@@ -13,6 +13,8 @@ public class BoardVO {
 	private String map_link;
 	private String img_link;
 
+	
+	// getter, setter
 	public String getBoard_title() {
 		return board_title;
 	}
@@ -88,7 +90,8 @@ public class BoardVO {
 	public BoardVO() {
 		super();
 	}
-
+	
+	// 생성자
 	public BoardVO(String board_title, String board_content, int board_num, String board_date, int like_total,
 			int travel_admin, int category_admin, String map_link, String img_link) {
 		super();
@@ -102,13 +105,24 @@ public class BoardVO {
 		this.map_link = map_link;
 		this.img_link = img_link;
 	}
+	
+	
+	// 생성자
+	public BoardVO(String board_title) {
+		super();
+		this.board_title = board_title;
+	}
 
 	//toString
 	@Override
 	public String toString() {
 		return "Board [board_title=" + board_title + ", board_content=" + board_content + ", board_date=" + board_date
-				+ ", " + "Like_total=" + Like_total + ", + travel_admin=" + travel_admin + ", category_admin="
+				+ ", " + "Like_total=" + Like_total + ", travel_admin=" + travel_admin + ", category_admin="
 				+ category_admin + "map_link=" + map_link + "img_link=" + img_link + "]";
+	}
+	
+	public String check() {
+		return "Board [board_title=" + board_title + "]";
 	}
 
 }

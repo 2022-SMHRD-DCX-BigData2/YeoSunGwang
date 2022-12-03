@@ -10,6 +10,11 @@
 	<!-- Travel 0:여수 1:순천 2:광양 -->
 	<!-- Travel(커뮤니티 게시글 말머리) 3:여수 4:순천 5:광양 -->
 	<!-- Category 0:음식점 1:카페 2:관광지 -->
+	
+	<!-- 데이터 전체 -->
+	<select id="P_ALL">
+		select * from BOARD
+	</select>
 
 	<!-- 광양 ALL -->
 	<select  id="G_ALL" parameterType="com.smhrd.domain.BoardVO" resultType="com.smhrd.domain.BoardVO">

@@ -325,4 +325,30 @@ public List<BoardVO> Y_RES(){
 		}
 		return Y_TOUR;
 	} // 회원 전체 검색 끝
+	
+	public List<BoardVO> P_ALL() {
+		List<BoardVO> P_ALL = null;
+		try {
+			// mapper.xml의 id값
+			P_ALL = sqlSession.selectList("P_ALL");
+
+			// 만약에 내가 원하는 일을 했으면 DB에 반영
+			if (P_ALL != null) {
+				System.out.println("DAO : 광양 리스트 검색 성공!");
+				sqlSession.commit();
+			} else {
+				// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+				System.out.println("DAO : 광양 리스트 검색 실패!");
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 빌렸던 Connection 객체를 반납
+			sqlSession.close();
+		}
+		return P_ALL;
+	} // 회원 전체 검색 끝
+	
 }

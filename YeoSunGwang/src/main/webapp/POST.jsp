@@ -1,3 +1,7 @@
+<%@page import="com.smhrd.domain.BoardDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.domain.BoardVO"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@page import="com.smhrd.domain.Comments"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -7,8 +11,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <% 
-   Member loginMember = (Member)session.getAttribute("loginMember");
-   Comments Comments = (Comments)session.getAttribute("insertComments");
+	Member loginMember = (Member)session.getAttribute("loginMember");
+   	Comments Comments = (Comments)session.getAttribute("insertComments");
+   	List<BoardVO> boardList = new ArrayList<BoardVO>();
+   	BoardDAO dao = new BoardDAO();
+   	boardList =dao.P_ALL();
 %>
 
 <html>
@@ -96,6 +103,7 @@
 			</ul>
 		</div>
 
+		<%for(BoardVO vo: boardList) { %>
 		<div id="post_info">
 			<div class="info_title">
 				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> <span class="tooltip"
@@ -144,7 +152,7 @@
 
 			</div>
 			<br>
-
+			<%} %>
 			<div id="COMMENTS" style="display: none;">
 
 				<%if(loginMember != null){ %>
