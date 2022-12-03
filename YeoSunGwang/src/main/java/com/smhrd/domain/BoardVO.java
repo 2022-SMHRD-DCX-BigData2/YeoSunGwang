@@ -71,11 +71,13 @@ public class BoardVO {
 		this.category_admin = category_admin;
 	}
 
-	public String getMab_link() {
+	
+
+	public String getMap_link() {
 		return map_link;
 	}
 
-	public void setMab_link(String map_link) {
+	public void setMap_link(String map_link) {
 		this.map_link = map_link;
 	}
 
