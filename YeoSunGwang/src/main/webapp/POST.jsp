@@ -103,7 +103,7 @@
 			</ul>
 		</div>
 
-		<%for(BoardVO vo: boardList) { %>
+		
 		<div id="post_info">
 			<div class="info_title">
 				<span>여수 돌산 이쁜 카페 MOI FIN &nbsp;</span> <span class="tooltip"
@@ -152,7 +152,7 @@
 
 			</div>
 			<br>
-			<%} %>
+			
 			<div id="COMMENTS" style="display: none;">
 
 				<%if(loginMember != null){ %>
