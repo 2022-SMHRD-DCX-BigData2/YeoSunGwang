@@ -31,13 +31,13 @@
 	</insert>
 	
 	<!-- 커뮤니티 글 상세보기 -->
-	<select id="selectOneComu">
-		select * from comu where #{comu_num=?}
+	<select id="selectOneComu" parameterType="com.dto.ComuVO" resultType="com.dto.ComuVO">
+		select * from comu where comu_num=#{?}
 	</select>
 		
 	<!-- 커뮤니티 글 수정하기 -->	
-	<!-- <update id="updateComu" parameterType="com.dto.ComuVO">
-      	update comu set mem_nick=#{mem_nick} where mem_name=#{mem_name} and mem_id=#{mem_id}
-    </update> -->
+	<update id="updateComu" parameterType="com.dto.ComuVO">
+      	update comu set mem_nick=#{mem_nick} where comu_title=#{comu_title} and comu_content=#{comu_content}
+    </update>
 
 </mapper>
