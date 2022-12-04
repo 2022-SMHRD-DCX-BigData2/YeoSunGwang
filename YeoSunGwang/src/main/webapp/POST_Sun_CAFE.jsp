@@ -116,10 +116,14 @@
 				<%for(BoardVO vo: boardList) { %>
 				
 				<article>
-				<div id="img11">
-					<a href="POST.jsp" class="image fit"><img
-						src="<%= vo.getImg_link() %>"></a>
-				</div>
+
+				<form action="ViewPostCon" method="post" id="postsubmit" name="Viewtitle"
+					style="margin: 0 0 0 0;">
+					<div id="img11">
+						<input type="hidden" value=<%= vo.getBoard_title()%> name="board_title">  
+						<input type="image" src="<%= vo.getImg_link()%>" alt="">
+					</div>
+				</form>
 
 				<div id="post_in">
 
@@ -127,7 +131,12 @@
 
 					<div id="com_like">
 						<p>
-							<a href="POST.jsp" style="text-decoration: none;"> &nbsp; <%= vo.getBoard_title()%></a>
+							<form action="ViewPostCon" method="post" id="postsubmit" name="Viewtitle"> 
+							<input type="hidden" value= <%= vo.getBoard_title()%> name="board_title">
+							<p>
+							<input type="submit" value="<%= vo.getBoard_title()%>">
+							</p>
+							</form> 
 						</p>
 						<ul>
 							<li><i class="fa-solid fa-comment">5</i></li>
