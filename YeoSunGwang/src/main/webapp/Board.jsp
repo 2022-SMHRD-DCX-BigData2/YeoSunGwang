@@ -95,6 +95,7 @@
 				</button>
 			</div>
 			<select name="local_num">
+				<option>전체</option>
 				<option value="1">여수</option>
 				<option value="2">순천</option>
 				<option value="3">광양</option>

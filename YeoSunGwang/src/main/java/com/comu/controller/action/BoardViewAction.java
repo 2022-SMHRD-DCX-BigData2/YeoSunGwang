@@ -19,8 +19,8 @@ public class BoardViewAction implements Action {
 		String url = "view.jsp";
 		String comu_num = request.getParameter("comu_num");
 		ComuDAO cDao = new ComuDAO();
-//		ComuVO cVo = cDao.selectOneBoardByNum(comu_num);
-//		request.setAttribute("comu", cVo);
+		ComuVO cVo = cDao.selectOneBoardByNum(comu_num);
+		request.setAttribute("comu", cVo);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
 	}
