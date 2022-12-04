@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.CommentsDAO"%>
 <%@page import="com.smhrd.domain.BoardDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.domain.BoardVO"%>
@@ -14,6 +15,11 @@
 	Member loginMember = (Member)session.getAttribute("loginMember");
    	Comments Comments = (Comments)session.getAttribute("insertComments");
    	BoardVO ViewPost = (BoardVO)session.getAttribute("ViewPost");
+   	
+ 	List<Comments> CommentsList = new ArrayList<Comments>();
+	CommentsDAO dao = new CommentsDAO();
+	CommentsList =dao.C_ALL(); 
+	
 %>
 
 <html>
@@ -156,7 +162,8 @@
 						<li><input type="text" placeholder="  댓글을 입력하세요." name="comments"></li>
 						<li><input type="submit" value="등록" style="font-size: 0.599em;"></li>
 						<li><input type="hidden" name="mem_num" value=<%= loginMember.getMem_num() %>></li>
-						<%-- <li><inpit type="hidden" name="board_num" value=<%= ViewPost.getBoard_num() %>></li> --%>
+						<li><input type="hidden" name="board_title" value=<%= ViewPost.getBoard_title() %>></li>
+						<li><input type="hidden" name="mem_nick" value=<%= loginMember.getMem_nick() %>></li>
 					</ul>
 					<br>
 				</form>
@@ -164,17 +171,18 @@
 				<%} %>
 
 				<table>
-				
+			
+				<% for(Comments vo: CommentsList){ %>
 					<tbody>
 						<tr>
-							<td><i class="fa-solid fa-user"></i> &nbsp; 작성자</td>
+							<td><i class="fa-solid fa-user"></i> &nbsp; <%=vo.getMem_nick()%></td>
 						</tr>
 
 						<tr>
-							<td>댓글내용</td>
+							<td><%= vo.getComments() %></td>
 						</tr>
 					</tbody>
-
+					<%}%>
 				</table>
 			</div>
 		</div>

@@ -139,7 +139,7 @@
 							<li><span class="tooltip" style="color: #EA2027;"><i
 									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
 							<!-- 사진스팟 표시 -->
-							<li><a href="<%= vo.getMab_link() %>"><span class="tooltip"><i
+							<li><a href="<%= vo.getMap_link() %>"><span class="tooltip"><i
 										class="fa-solid fa-map-location-dot"></i> <span
 										class="tooltip-text">지도로 이동합니다</span></span></a></li>
 							<!-- 지도로고 -->

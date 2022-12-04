@@ -6,7 +6,19 @@
 <mapper namespace="com.smhrd.database.CommentsMapper">
 
 	<insert id="insertComments" parameterType="com.smhrd.domain.Comments">
-		insert into COMMENTS (comments_num, comments, mem_num) values(COMMENTS_SEQ.nextval,#{comments},#{mem_num})
+		insert into COMMENTS (comments_num, comments, mem_num, board_title, mem_nick) values(COMMENTS_SEQ.nextval,#{comments},#{mem_num},#{board_title},#{mem_nick})
 	</insert>
+	
+	<select id="ViewComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">
+		select * from comments
+	</select> 
+
+<!-- 	<select id="ViewComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">
+		SELECT A.MEM_NICK, A.COMMENTS, B.BOARD_NUM
+FROM ( SELECT A.MEM_NICK, B.COMMENTS, B.BOARD_NUM
+FROM MEM_INFO A INNER JOIN COMMENTS B
+ON A.MEM_NUM = B.MEM_NUM ) A INNER JOIN BOARD B
+ON A.BOARD_NUM = B.BOARD_NUM
+	</select> -->
 	
 </mapper>

@@ -3394,6 +3394,7 @@ gtr
 		background-color: white;
 		height: 6em;
 		border:rgba(0, 0, 0, 0.227) 0.8px solid;
+		margin-top: -0.7em;
 	}
 
 	#post_in > header{
@@ -3445,7 +3446,7 @@ gtr
 	#com_like > p {
 		display: flex;
 		border-bottom: rgba(0, 0, 0, 0.227) 0.8px solid;
-		width: 97%;
+		width: 100%;
 		margin-left: 0.5em;
 	}
 
@@ -4725,8 +4726,17 @@ gtr
 
 	}
 
+			#img11>input[type=image] {
+				height: 100%;
+				width: 100%;
+			}
+			
+			#com_like > p {
+			margin: 0.5em 0 1em 0;
+			}
+
 /* Footer */
-	#mainfooter > nav{
+#mainfooter > nav{
 		display: flex;
 		align-content: flex-end;
 	}
@@ -5156,3 +5166,15 @@ gtr
 			border: 0;
 			resize: vertical;
 		}
+
+#postsubmit>p>input[type=submit] {
+	height: 3em;
+	line-height: 3m;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	font-size: 1em;
+	margin-left: -1.5em;
+	margin-top : -0.5em;
+	
+}
