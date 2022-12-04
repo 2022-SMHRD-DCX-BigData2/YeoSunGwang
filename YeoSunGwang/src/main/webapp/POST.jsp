@@ -171,8 +171,9 @@
 				<%} %>
 
 				<table>
-			
+
 				<% for(Comments vo: CommentsList){ %>
+								<% if(ViewPost.getBoard_num() == vo.getBoard_num()){ %>
 					<tbody>
 						<tr>
 							<td><i class="fa-solid fa-user"></i> &nbsp; <%=vo.getMem_nick()%></td>
@@ -182,6 +183,8 @@
 							<td><%= vo.getComments() %></td>
 						</tr>
 					</tbody>
+					<%} else { %>
+					<%}%>
 					<%}%>
 				</table>
 			</div>
