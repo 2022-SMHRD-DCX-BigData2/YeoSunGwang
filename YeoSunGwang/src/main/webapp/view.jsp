@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -14,7 +15,7 @@
 
 <head>
 <title>여기가 여순광?</title>
-<meta charset="utf-8" />
+<meta charset="EUC-KR" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -46,7 +47,7 @@
 			<li><a href="MAIN.jsp">HOME</a></li>
 			
 			<!-- 게시판 -->
-			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<li><a href="BoardServlet?command=board_list">COMMUNITY</a></li>
 			
 			<!-- 포인트 교환 -->
 			<%if(loginMember == null) { %>
@@ -88,37 +89,34 @@
 
 		<div class="board_view_wrap">
 			<div class="board_view">
-				<div class="title" style="font-weight: bold;">글 제목이 들어갑니다.</div>
+				<div class="title" style="font-weight: bold;">${comu.comu_title}</div>
 
 				<div class="info">
 					<dl>
 						<dt>번호</dt>
-						<!-- <dd></dd> -->
+						<dd>${comu.comu_num}</dd>
 					</dl>
 					<dl>
 						<dt>글쓴이</dt>
-						<dd>김이름</dd>
+						<dd>${comu.mem_nick}</dd>
 					</dl>
 					<dl>
-						<dt>작성일</dt>
-						<dd>2021.1.16</dd>
-					</dl>
-					<dl>
-						<dt>조회</dt>
-						<dd>33</dd>
+						<dt>좋아요</dt>
+						<dd>${comu.like_total}</dd>
 					</dl>
 				</div>
 				<div class="cont"
 					style="background-color: white; border: 1px solid;">
-					글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글
-					내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이
-					들어갑니다<br> 글 내용이 들어갑니다
+					${comu.comu_content}
 				</div>
 			</div>
 			<div class="bt_wrap">
-				<a href="Board.jsp" class="on">목록</a> 
+				<input type="button" value="목록" 
+				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: white; color: black; margin-right: 1%;"
+				onclick="location.href='BoardServlet?command=board_list'">
 				<% if(loginMember != null){ %>
-				<a href="edit.jsp">수정</a>
+				<input type="submit" value="수정" onclick="location.href='edit.jsp'" 
+				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: #000; color: white; margin-left: 1%;">
 				<%} else { %>
 				<%} %>
 			</div>

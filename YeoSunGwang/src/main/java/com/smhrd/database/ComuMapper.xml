@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.smhrd.database.ComuMapper">
+
+	<!-- 커뮤니티 목록 불러오기 -->
+	<select id="selectComu" parameterType="com.dto.ComuVO" resultType="com.dto.ComuVO">
+		select * from comu order by comu_num desc
+	</select>
+
+	<!-- 커뮤니티 글 작성하기 -->
+	<insert id="insertComu" parameterType="com.dto.ComuVO">
+		insert into comu values(comu_seq.nextval,#{mem_nick},#{comu_title},#{comu_content},#{local_num}, #{like_total})
+	</insert>
+	
+	
+		
+	<!-- 커뮤니티 글 수정하기 -->	
+	<!-- <update id="updateComu" parameterType="com.dto.ComuVO">
+      	update comu set mem_nick=#{mem_nick} where mem_name=#{mem_name} and mem_id=#{mem_id}
+    </update> -->
+
+</mapper>

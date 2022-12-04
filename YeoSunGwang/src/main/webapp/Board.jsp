@@ -1,7 +1,8 @@
-<%@page import="com.smhrd.domain.Member"%>
+<%@ page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
@@ -46,7 +47,7 @@
 			<li><a href="MAIN.jsp">HOME</a></li>
 			
 			<!-- 게시판 -->
-			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<li><a href="BoardServlet?command=board_list">COMMUNITY</a></li>
 			
 			<!-- 포인트 교환 -->
 			<%if(loginMember == null) { %>
@@ -93,10 +94,10 @@
 					<i class="fa-solid fa-magnifying-glass"></i>
 				</button>
 			</div>
-			<select>
-				<option>여수</option>
-				<option>순천</option>
-				<option>광양</option>
+			<select name="local_num">
+				<option value="1">여수</option>
+				<option value="2">순천</option>
+				<option value="3">광양</option>
 			</select>
 		</div>
 		<table style="border: 1px solid whitesmoke;" id="boardtable">
@@ -105,32 +106,19 @@
 				<td style="width: 5em;">말머리</td>
 				<td align="left" style="width: 60%; text-align: center;">제목</td>
 				<td>글쓴이</td>
-				<td>등록일</td>
 				<td>좋아요❤️</td>
 			</tr>
 
-			<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->
-			
-			<%-- 			
+			<c:forEach var="comu" items="${comuList}">
 				<tr align="center">
-			
-				<td><%=####.getBoard_num()%></td> --> 게시글 No.
-				
-				<%if(####.getTravel_admin() == 3){ %>
-				<td>여수</td>
-				<%} else if(####.getTravel_admin() == 4){ %>
-				<td>순천</td>
-				<%} else if(####.getTravel_admin() == 5){ %>
-				<td>광양</td>
-				<%} %> --> 말머리
-				
-				<td align="left"><a href="view.jsp"><%=####.getBoard_title() %></a></td> --> 게시글 제목
-				<td><%=####.getmem_nick() %></td> --> 게시글 작성자 닉네임
-				<td><%=####.getBoard_date() %></td> --> 게시일자
-				<td><%=####.getLike_total() %><i class="fa-solid fa-heart" style="color: red;"></i></td> -->좋아요
-				
-			</tr> 
-		--%>
+					<td>${comu.comu_num}</td>
+					<td>${comu.local_num}</td>
+					<td align="left"><a href="BoardServlet?command=board_view&comu_num=${comu.comu_num}">
+							${comu.comu_title} </a></td>
+					<td>${comu.mem_nick}</td>
+					<td>${comu.like_total}</td>
+				</tr>
+			</c:forEach>
 
 		</table>
 
@@ -140,7 +128,7 @@
 				style="margin-left: 100px; background-color: white; height: 3.5em; width: 9em; line-height: 0; font-size: 0.8em; padding: 0.5em;">
 				내가 쓴 글 보기</button>
 
-			<button type="button" onclick="location.href='write.jsp'"
+			<button type="button" onclick="location.href='BoardServlet?command=board_write_form'"
 				style="margin-left: 20px; background-color: white; height: 3.5em; width: 8em; line-height: 0; font-size: 0.8em; padding: 0;">
 				글 쓰기</button>
 		</div>

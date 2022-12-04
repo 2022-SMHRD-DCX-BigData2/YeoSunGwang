@@ -1,4 +1,4 @@
-<%@page import="com.smhrd.domain.Member"%>
+<%@ page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -14,7 +14,7 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 
 <head>
 <title>여기가 여순광?</title>
-<meta charset="utf-8" />
+<meta charset="EUC-KR" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -32,7 +32,7 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 <script src="assets/js/sweetalert2.min.js"></script>
 </head>
 
-<body>
+<body style="background-color: #f3f1ea;">
 	<!-- 상단바 시작 -->
 	<header id="header">
 	<h1>
@@ -46,7 +46,7 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 			<li><a href="MAIN.jsp">HOME</a></li>
 
 			<!-- 게시판 -->
-			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<li><a href="BoardServlet?command=board_list">COMMUNITY</a></li>
 
 			<!-- 포인트 교환 -->
 			<%
@@ -98,7 +98,8 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 	</header>
 	<!-- 상단바 끝 -->
 
-	<form action="#" method="POST" name="write">
+	<form action="BoardServlet" method="POST" name="write">
+	<input type="hidden" name="command" value="board_write">
 	<div id="wrap">
 		<div id="High_nav">
 			<h1 id="High_nav_1">Write</h1>
@@ -110,40 +111,49 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 					<div class="title">
 						<dl>
 							<dt style="margin-top: 2%; width: 4%;">제목</dt>
+							<input type="hidden" name="like_total" value="0">
 							<dd>
-								<input type="text" placeholder="제목 입력" name="title"
-									style="margin-left: 5%; background-color: white; width: 97%">
+								<input type="text" placeholder="제목 입력" name="comu_title" maxlength="100"
+									style="margin-left: 4%; background-color: white; width: 97%">
 							</dd>
 						</dl>
 					</div>
 					<div class="info">
-						<dl>
+						<dl style="display: flex; align-items: center;">
 							<dt style="margin-top: 2%;">말머리</dt>
 							<dd>
-								<select name="prepend" style="background-color: white;">
-									<option value="Y">여수</option>
-									<option value="S">순천</option>
-									<option value="G">광양</option>
+								<select name="local_num" style="background-color: white;">
+									<option value="1">여수</option>
+									<option value="2">순천</option>
+									<option value="3">광양</option>
 								</select>
+							</dd>
+							<dt style="margin-top: 2%; margin-left: 10%;">작성자</dt>
+							<dd>
+								<input type="text" value="<%=loginMember.getMem_nick()%>" readonly
+									style="background-color: white; width: 60%" name="mem_nick">
 							</dd>
 						</dl>
 					</div>
 					<div class="cont">
-						<textarea placeholder="내용 입력" style="background-color: white;" name="content"></textarea>
+						<textarea placeholder="내용 입력" style="background-color: white;" name="comu_content" maxlength="3000" ></textarea>
 					</div>
 			</div>
 			<div class="bt_wrap">
 				<%
 				if (loginMember != null) {
 				%>
-				<a href="Board.jsp" class="on">등록</a>
+				<input type="submit" value="등록" onclick="return boardCheck()" 
+				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: #000; color: white; margin-right: 1%;">
+				<input type="button" value="목록" 
+				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: white; color: black; margin-lseft: 1%;"
+				onclick="location.href='BoardServlet?command=board_list'"> 
 				<%
 				} else {
 				%>
 				<%
 				}
 				%>
-				<a href="Board.jsp">취소</a>
 			</div>
 		</div>
 	</div>
@@ -166,6 +176,24 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 				icon : 'error',
 				title : '로그인 후 \n 이용할 수 있습니다!',
 			})
+		}
+		
+		function boardCheck() {
+			if (document.write.comu_title.value.length == 0) {
+				Swal.fire({
+					icon : 'warning',
+					title : '제목을 입력하세요!',
+				})
+				return false;
+			}
+			if (document.write.comu_content.value.length == 0) {
+				Swal.fire({
+					icon : 'warning',
+					title : '내용을 입력하세요!',
+				})
+				return false;
+			}
+			return true;
 		}
 	</script>
 

@@ -44,7 +44,7 @@
 			<li><a href="MAIN.jsp">HOME</a></li>
 			
 			<!-- 게시판 -->
-			<li><a href="Board.jsp">COMMUNITY</a></li>
+			<li><a href="BoardServlet?command=board_list">COMMUNITY</a></li>
 			
 			<!-- 포인트 교환 -->
 			<%if(loginMember == null) { %>
