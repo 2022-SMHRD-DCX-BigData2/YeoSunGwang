@@ -171,9 +171,11 @@
 				<%} %>
 
 				<table>
-
-				<% for(Comments vo: CommentsList){ %>
-								<% if(ViewPost.getBoard_num() == vo.getBoard_num()){ %>
+						<tr style="border: 2px solid black; text-align: center;">
+						<td style="font-weight: bold;">인터넷은 우리가 함께 만들어 가는 소중한 공간입니다. &nbsp; 댓글 작성 시 타인에 대한 배려와 책임을 담아주세요.</td>
+						</tr>
+					<% for(Comments vo: CommentsList){ %>
+					<% if(ViewPost.getBoard_num() == vo.getBoard_num()){ %>
 					<tbody>
 						<tr>
 							<td><i class="fa-solid fa-user"></i> &nbsp; <%=vo.getMem_nick()%></td>
@@ -183,8 +185,7 @@
 							<td><%= vo.getComments() %></td>
 						</tr>
 					</tbody>
-					<%} else { %>
-					<%}%>
+					<%} else %>
 					<%}%>
 				</table>
 			</div>

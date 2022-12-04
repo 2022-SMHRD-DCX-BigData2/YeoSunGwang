@@ -105,7 +105,7 @@
 						<option value="POST_Yeo_ALL.jsp">여수</option>
 						<option value="POST_Gwang_ALL.jsp">광양</option>
 				</select></li>
-				<li><a href="POST_Gwang_TOUR.jsp">tour Spot</a></li>
+				<li><a href="POST_Sun_TOUR.jsp">tour Spot</a></li>
 			</ul>
 		</div>
 

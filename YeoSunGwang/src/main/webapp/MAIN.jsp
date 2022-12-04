@@ -84,7 +84,7 @@
 
 	<!-- 메인-->
 	<div id="wrap" class="My1"
-		style="background-color: whitesmoke; margin-top: 5.3em; min-height: 80vh;">
+		style="background-color: whitesmoke; margin-top: 3.3em; margin-bottom: 0.5em; min-height: 80vh;">
 
 		<div style="float: left; width: 33.333333%;">
 			<figure class="snip1200"> <img src="images/Winter_Yeo.png"
