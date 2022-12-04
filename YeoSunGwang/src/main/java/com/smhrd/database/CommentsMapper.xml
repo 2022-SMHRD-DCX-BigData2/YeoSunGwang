@@ -6,7 +6,7 @@
 <mapper namespace="com.smhrd.database.CommentsMapper">
 
 	<insert id="insertComments" parameterType="com.smhrd.domain.Comments">
-		insert into COMMENTS (comments_num, comments, mem_num, board_title, mem_nick) values(COMMENTS_SEQ.nextval,#{comments},#{mem_num},#{board_title},#{mem_nick})
+		insert into COMMENTS (comments_num, comments, mem_num, board_num, mem_nick) values(COMMENTS_SEQ.nextval,#{comments},#{mem_num},#{board_num},#{mem_nick})
 	</insert>
 	
 	<select id="ViewComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">

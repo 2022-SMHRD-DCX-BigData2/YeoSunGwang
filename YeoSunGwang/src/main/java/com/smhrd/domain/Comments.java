@@ -5,12 +5,11 @@ public class Comments {
 	// 필드명
 	private int mem_num;
 	private int comments_num;
-	private String board_title;
+	private int board_num;
 	private String comments;
 	private String mem_nick;
 	
-	
-	// getter, setter
+	// getter , setter
 	public int getMem_num() {
 		return mem_num;
 	}
@@ -23,11 +22,11 @@ public class Comments {
 	public void setComments_num(int comments_num) {
 		this.comments_num = comments_num;
 	}
-	public String getBoard_title() {
-		return board_title;
+	public int getBoard_num() {
+		return board_num;
 	}
-	public void setBoard_title(String board_title) {
-		this.board_title = board_title;
+	public void setBoard_num(int board_num) {
+		this.board_num = board_num;
 	}
 	public String getComments() {
 		return comments;
@@ -42,19 +41,27 @@ public class Comments {
 		this.mem_nick = mem_nick;
 	}
 	
-	// 0 생성자
+	// 0개짜리 생성자
 	public Comments() {
 		super();
 	}
 	
 	// 4개짜리 생성자
-	public Comments(int mem_num, String board_title, String comments, String mem_nick) {
+	public Comments(int mem_num, int board_num, String comments, String mem_nick) {
 		super();
 		this.mem_num = mem_num;
-		this.board_title = board_title;
+		this.board_num = board_num;
 		this.comments = comments;
 		this.mem_nick = mem_nick;
 	}
+
+	
+	
+	
+	
+	
+	
+
 
 	
 

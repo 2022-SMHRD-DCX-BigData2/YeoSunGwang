@@ -157,12 +157,12 @@
 			<div id="COMMENTS" style="display: none;">
 
 				<%if(loginMember != null){ %>
-				<form action="CommentsCon" method="GET" style="margin: 0 0 0 0;">
+				<form action="CommentsCon" method="GET" style="margin: 0 0 0 0; width: 103%;">
 					<ul>
 						<li><input type="text" placeholder="  댓글을 입력하세요." name="comments"></li>
 						<li><input type="submit" value="등록" style="font-size: 0.599em;"></li>
 						<li><input type="hidden" name="mem_num" value=<%= loginMember.getMem_num() %>></li>
-						<li><input type="hidden" name="board_title" value=<%= ViewPost.getBoard_title() %>></li>
+						<li><input type="hidden" name="board_num" value=<%= ViewPost.getBoard_num() %>></li>
 						<li><input type="hidden" name="mem_nick" value=<%= loginMember.getMem_nick() %>></li>
 					</ul>
 					<br>
