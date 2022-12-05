@@ -11,6 +11,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
 import com.smhrd.database.SqlSessionManager;
+import com.comu.controller.action.BoardViewAction;
 
 public class CommentsDAO {
 
@@ -127,5 +128,30 @@ public class CommentsDAO {
 			sqlSession.close();
 		}
 		return C_ALL;
+	} 
+	
+	public List<Comments> C_COMU() {
+		List<Comments>C_COMU = null;
+		try {
+			// mapper.xml의 id값
+			C_COMU = sqlSession.selectList("ViewComuComments");
+
+			// 만약에 내가 원하는 일을 했으면 DB에 반영
+			if (C_COMU != null) {
+				System.out.println("DAO : 댓글 리스트 검색 성공!");
+				sqlSession.commit();
+			} else {
+				// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+				System.out.println("DAO : 댓글 리스트 검색 실패!");
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 빌렸던 Connection 객체를 반납
+			sqlSession.close();
+		}
+		return C_COMU;
 	} 
 }

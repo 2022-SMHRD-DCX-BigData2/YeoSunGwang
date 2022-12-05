@@ -39,7 +39,7 @@ public class ComuCommentsCon extends HttpServlet {
 		
 		if (cnt2 > 0) {
 			System.out.println("CommentsCon : 커뮤 댓글 등록 성공!");
-			RequestDispatcher rd = request.getRequestDispatcher("Board.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("BoardServlet?command=board_list");
 			request.setAttribute("comments", mem_num);
 			rd.forward(request, response);
 			
@@ -48,7 +48,7 @@ public class ComuCommentsCon extends HttpServlet {
 			
 		} else {
 			System.out.println("CommentsCon : 커뮤 댓글 등록 실패!");
-			response.sendRedirect("Board.jsp");
+			response.sendRedirect("BoardServlet?command=board_view&comu_num=${comu.comu_num}");
 		}
 
 	}

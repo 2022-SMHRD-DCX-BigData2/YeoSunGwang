@@ -124,9 +124,12 @@
 						<td>광양</td>
 					</c:if>
 					
+					<form action="#" method="post">
 					<td align="left">
+						<input type="hidden" value="${comu.comu_num}" name="comu_num">
 						<a href="BoardServlet?command=board_view&comu_num=${comu.comu_num}">${comu.comu_title} </a>
 					</td>
+					</form>
 					
 					<td>${comu.mem_nick}</td>
 					<td>${comu.like_total}</td>

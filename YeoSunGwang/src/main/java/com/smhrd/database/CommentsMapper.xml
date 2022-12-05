@@ -17,6 +17,11 @@
 		select * from comments
 	</select> 
 	
+	<select id="ViewComuComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">
+		select * from comments where comu_num = #{comu_num}
+	</select>
+	
+	
 	<update id="UpdateComments" parameterType="com.smhrd.domain.Comments">
 		UPDATE BOARD A
 		SET A.COMMENTS_TOTAL = ( SELECT COUNT(*)

@@ -75,6 +75,13 @@ public class ComuVO {
 		this.comu_num = comu_num;
 		this.mem_nick = mem_nick;
 	}
+	
+	
+
+	public ComuVO(int comu_num) {
+		super();
+		this.comu_num = comu_num;
+	}
 
 	@Override
 	public String toString() {

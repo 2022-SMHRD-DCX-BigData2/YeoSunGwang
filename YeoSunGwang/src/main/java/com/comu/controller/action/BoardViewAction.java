@@ -6,6 +6,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.dao.ComuDAO;
 import com.dto.ComuVO;
@@ -20,6 +21,11 @@ public class BoardViewAction implements Action {
 		String comu_num = request.getParameter("comu_num");
 		ComuDAO cDao = new ComuDAO();
 		ComuVO cVo = cDao.selectOneBoardByNum(comu_num);
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("cVo", cVo);
+		
+		
 		request.setAttribute("comu", cVo);
 		RequestDispatcher dispatcher = request.getRequestDispatcher(url);
 		dispatcher.forward(request, response);
