@@ -1,7 +1,5 @@
 package com.dto;
 
-import java.sql.Timestamp;
-
 public class ComuVO {
 
 	private int comu_num;
@@ -68,6 +66,14 @@ public class ComuVO {
 	}
 	public ComuVO() {
 		super();
+	}
+
+
+
+	public ComuVO(int comu_num, String mem_nick) {
+		super();
+		this.comu_num = comu_num;
+		this.mem_nick = mem_nick;
 	}
 
 	@Override

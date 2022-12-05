@@ -1,7 +1,6 @@
 package com.comu.controller;
 
 import com.comu.controller.action.Action;
-import com.comu.controller.action.BoardDeleteAction;
 import com.comu.controller.action.BoardListAction;
 import com.comu.controller.action.BoardUpdateAction;
 import com.comu.controller.action.BoardUpdateFormAction;
@@ -37,9 +36,9 @@ public class ActionFactory {
 			action = new BoardUpdateFormAction();
 		} else if (command.equals("board_update")) {
 			action = new BoardUpdateAction();
-		} else if (command.equals("board_delete")) {
-			action = new BoardDeleteAction();
-		}
+		} // else if (command.equals("board_delete")) {
+//			action = new BoardDeleteAction();
+//		}
 		return action;
 	}
 	

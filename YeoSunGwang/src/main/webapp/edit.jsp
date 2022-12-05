@@ -1,3 +1,4 @@
+<%@page import="com.dto.ComuVO"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
@@ -6,7 +7,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <% 
-   Member loginMember = (Member)session.getAttribute("loginMember");
+	   Member loginMember = (Member)session.getAttribute("loginMember");
+		ComuVO cVo = (ComuVO) session.getAttribute("cVo");
 %>
 
 <html>
@@ -14,7 +16,7 @@
 
 <head>
 <title>여기가 여순광?</title>
-<meta charset="EUC-KR" />
+<meta charset="UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -81,8 +83,9 @@
 	<!-- 상단바 끝 -->
 
 	<form action="BoardServlet" method="post" name="editwrite">
+		<input type="hidden" name="like_total" value="0">
 		<input type="hidden" name="command" value="board_update">
-		<input type="hidden" name="comu_num" value="${comu.comu_num}">		
+				
 	<div id="wrap">
 		<div id="High_nav">
 			<h1 id="High_nav_1">Edit Write</h1>
@@ -93,17 +96,20 @@
 				<div class="title">
 					<dl>
 						<dt style="margin-top: 2%; width: 4%;">제목</dt>
-						<dd>
-							<input type="text" name="comu_title" value="${comu.comu_title}" maxlength="100"
-								style="margin-left: 5%; background-color: white; width: 97%;">
+						<dd style="margin-left: 1.5em;">
+							<input type="text" name="comu_title" placeholder="${comu.comu_content}" maxlength="100"
+								style="background-color: white; width: 103%;">
 						</dd>
 					</dl>
 				</div>
 				<div class="info">
-					<dl style="display: flex; align-items: center;">
-							<dt style="margin-top: 2%;">말머리</dt>
+					<dl style="display: flex; align-items: center; width: 68%;" >
+							<dt style="margin-top: 2%;">번호</dt>
+							<input type="text" value="${comu.comu_num}" readonly
+									style="background-color: white; width: 12%" name="comu_num">
+							<dt style="margin-top: 2%; margin-left: 5%; margin-right: 5%;">말머리</dt>
 							<dd>
-								<select name="local_num" style="background-color: white;" value="${comu.local_num}">
+								<select name="local_num" style="background-color: white;">
 									<option value="1">여수</option>
 									<option value="2">순천</option>
 									<option value="3">광양</option>
@@ -112,12 +118,12 @@
 							<dt style="margin-top: 2%; margin-left: 10%;">작성자</dt>
 							<dd>
 								<input type="text" value="<%=loginMember.getMem_nick()%>" readonly
-									style="background-color: white; width: 60%" name="mem_nick">
+									style="background-color: white; width: 60%; text-align: center;" name="mem_nick">
 							</dd>
-						</dl>
-					</div>
-					<div class="cont">
-						<textarea style="background-color: white;" name="comu_content" maxlength="3000">${comu.comu_content}</textarea>
+					</dl>
+				</div>
+				<div class="cont">
+					<textarea style="background-color: white;" name="comu_content" maxlength="3000">${comu.comu_content}</textarea>
 				</div>
 			</div>
 			<div class="bt_wrap">

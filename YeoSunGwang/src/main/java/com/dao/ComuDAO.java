@@ -102,7 +102,7 @@ public class ComuDAO {
 		
 
 	
-	// 게시판 글 상세 내용 보기 -> 글 번호로 찾아온다. 실패 null?
+	// 게시판 글 상세 내용 보기 -> 글 번호로 찾아온다.
 	public ComuVO selectOneBoardByNum(String comu_num) {
 		ComuVO comuview = null;
 		try {
@@ -126,17 +126,33 @@ public class ComuDAO {
 			sqlSession.close();
 		}
 		return comuview;
-	}
+	}// 게시글 상세 보기 끝
 	
 	// 게시글 수정
-	public void updateBoard(ComuVO cVo) {
+	public int updateBoard(ComuVO cVo) {
+		int cnt = 0;
 		
+		try {
+			cnt = sqlSession.update("updateComu", cVo);
+			
+			if(cnt > 0) {
+				System.out.println("ComuDAO : 게시글 수정 성공");
+				sqlSession.commit();
+			}else {
+				System.out.println("ComuDAO : 게시글 수정 실패");
+				sqlSession.rollback();				
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			sqlSession.close();
+		}
+		return cnt;		
 	}
 	
-	// 게시글 삭제
-	public void deleteBoard(String comu_num) {
-		
-	}
+	
+	
+
 	
 	
 	

@@ -14,7 +14,7 @@ Member loginMember = (Member) session.getAttribute("loginMember");
 
 <head>
 <title>여기가 여순광?</title>
-<meta charset="EUC-KR" />
+<meta charset="UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />

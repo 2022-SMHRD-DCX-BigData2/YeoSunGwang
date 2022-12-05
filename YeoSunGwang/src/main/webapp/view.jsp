@@ -15,7 +15,7 @@
 
 <head>
 <title>여기가 여순광?</title>
-<meta charset="EUC-KR" />
+<meta charset="UTF-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
 <link rel="stylesheet" href="assets/css/main.css" />
@@ -115,7 +115,7 @@
 				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: white; color: black; margin-right: 1%;"
 				onclick="location.href='BoardServlet?command=board_list'">
 				<% if(loginMember != null){ %>
-				<input type="submit" value="수정" onclick="location.href='edit.jsp'" 
+				<input type="submit" value="수정" onclick="location.href='BoardServlet?command=board_update_form&comu_num=${comu.comu_num}'" 
 				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: #000; color: white; margin-left: 1%;">
 				<%} else { %>
 				<%} %>
