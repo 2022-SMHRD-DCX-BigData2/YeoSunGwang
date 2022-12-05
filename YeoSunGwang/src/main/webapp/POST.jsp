@@ -137,12 +137,12 @@
 				<div class="like_com">
 					<ul>
 						<li><a onclick="clickCOM()" style="cursor: pointer;"><span
-								class="tooltip"><i class="fa-solid fa-comment"><%=ViewPost.getComments_total()%></i><span
-									class="tooltip-text">댓글 보기</span></span></a></li>
+								class="tooltip"><i class="fa-solid fa-comment"></i><span
+									class="tooltip-text">댓글 보기</span></span></a><%=ViewPost.getComments_total()%></li>
 						<% if(loginMember != null){ %>
-						<li><a href="#"><i class="fa-regular fa-heart"> 11</i></a></li>
+						<li><a style="cursor: pointer;"><i class="fa-solid fa-heart" style="color: red;"></i></a><%=ViewPost.getLike_total()%></li>
 						<%}else {  %>
-						<li><a><i class="fa-regular fa-heart">11</i></a></li>
+						<li><a onclick="needlogin()"><i class="fa-solid fa-heart"></i></a><%=ViewPost.getLike_total()%></li>
 						<%} %>
 
 					</ul>
@@ -151,7 +151,7 @@
 									<i class="fa-solid fa-arrow-up-right-from-square"></i><span
 									class="tooltip-text">링크 복사</span>
 							</span></a></li>
-						<li><a href="#"><span class="tooltip"><i
+						<li><a href="<%= ViewPost.getMap_link()%>"><span class="tooltip"><i
 									class="fa-solid fa-map-location-dot"></i><span
 									class="tooltip-text">지도로 이동</span></span></a></li>
 					</div>
@@ -191,7 +191,7 @@
 							<td><%= vo.getComments() %></td>
 						</tr>
 					</tbody>
-					<%} else %>
+					<%}%>
 					<%}%>
 				</table>
 			</div>

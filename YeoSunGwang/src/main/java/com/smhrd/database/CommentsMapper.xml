@@ -9,6 +9,10 @@
 		insert into COMMENTS (comments_num, comments, mem_num, board_num, mem_nick) values(COMMENTS_SEQ.nextval,#{comments},#{mem_num},#{board_num},#{mem_nick})
 	</insert>
 	
+	<insert id="insertComuComments" parameterType="com.smhrd.domain.Comments">
+		insert into COMMENTS (comments_num, comments, comu_num, mem_nick, mem_num) values(COMMENTS_SEQ.nextval,#{comments},#{comu_num},#{mem_nick},#{mem_num})
+	</insert>
+	
 	<select id="ViewComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">
 		select * from comments
 	</select> 

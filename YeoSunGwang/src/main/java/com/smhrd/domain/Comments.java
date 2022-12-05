@@ -8,8 +8,17 @@ public class Comments {
 	private int board_num;
 	private String comments;
 	private String mem_nick;
+	private int comu_num;
 	
 	// getter , setter
+	
+	public int getComu_num() {
+		return comu_num;
+	}
+	public void setComu_num(int comu_num) {
+		this.comu_num = comu_num;
+	}
+	
 	public int getMem_num() {
 		return mem_num;
 	}
@@ -52,6 +61,15 @@ public class Comments {
 		this.board_num = board_num;
 	}
 	
+	
+	// 3개짜리 생성자
+	public Comments(String comments, String mem_nick, int comu_num) {
+		super();
+		this.comments = comments;
+		this.mem_nick = mem_nick;
+		this.comu_num = comu_num;
+	}
+	
 	// 4개짜리 생성자
 	public Comments(int mem_num, int board_num, String comments, String mem_nick) {
 		super();
@@ -60,6 +78,18 @@ public class Comments {
 		this.comments = comments;
 		this.mem_nick = mem_nick;
 	}
+	
+	// 5개짜리 생성자
+	public Comments(int mem_num, int board_num, String comments, String mem_nick, int comu_num) {
+		super();
+		this.mem_num = mem_num;
+		this.board_num = board_num;
+		this.comments = comments;
+		this.mem_nick = mem_nick;
+		this.comu_num = comu_num;
+	}
+	
+	
 
 	
 	

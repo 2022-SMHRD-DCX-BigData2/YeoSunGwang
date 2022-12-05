@@ -112,7 +112,7 @@
 		<div id="MAIN11">
 			<div class="posts11">
 
-								<%for(BoardVO vo: boardList) { %>
+				<%for(BoardVO vo: boardList) { %>
 				
 				<article>
 
@@ -139,12 +139,18 @@
 						</p>
 						<ul style="margin-top: -0.67em;">
 							<li><i class="fa-solid fa-comment">&nbsp; <%= vo.getComments_total()%> </i></li>
-							<li><button class="likeButton"><i class="fa-regular fa-heart"></i></button><%= vo.getLike_total()%></li>
+
 						</ul>
 					</div>
 
 					<div id="com_like1">
-						<ul style="font-size: 1.3em; margin-top: -3.25em;">
+						<ul style="font-size: 1.1em; margin-top: -3.25em;">
+							<%if (loginMember == null){ %>
+							<li><button class="likeButton" onclick="needlogin()"><i class="fa-solid fa-heart"></i></button></li>
+							<%} else if(loginMember != null){%>
+							<li><button type="submit" class="likeButton" onclick="ClickLike()" id="LikeButton" style="color:#666;"><i class="fa-solid fa-heart"></i></button></li>
+							<%}%>
+							
 							<li><span class="tooltip" style="color: #EA2027;"><i class="fa-solid fa-fire"></i> <span class="tooltip-text">핫플레이스</span></span></li>
 							<!-- 사진스팟 표시 -->
 							<li><a href="<%= vo.getMap_link()%>"><span class="tooltip"><i
@@ -182,12 +188,25 @@
 		</footer>
 	</div>
 	
-	<script>
+		<script>
 		function needlogin() {
 			Swal.fire({
 				icon: 'error',
 				title: '로그인 후 \n 이용할 수 있습니다!',
 			})
+		}
+		
+		
+		function postsubmit() {
+			document.getElementById('postsubmit').submit();
+			}
+		
+		function ClickLike() {
+			if ($("#LikeButton").css("color") != "red") {
+				$("#LikeButton").css("color", "red")
+			} else if($("#LikeButton").css("color") == "red"){
+				$("#LikeButton").css("color", "black")
+			}
 		}
 	</script>
 	

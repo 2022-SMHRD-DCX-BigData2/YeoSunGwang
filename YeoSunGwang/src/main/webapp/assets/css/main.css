@@ -5192,3 +5192,23 @@ gtr
 .likeButton:hover{
 	color:red !important;
 }
+
+.ComuComments {
+	list-style: none;
+	display:flex;	
+	margin-top:1em;
+}
+
+.ComuComments > li:nth-child(1){
+	width:100%;
+}
+
+
+.ComuComments > li:nth-child(2){
+	padding:0 0 0 0;
+	height:100%;
+}
+
+.ComuComments > li:nth-child(2) > input {
+	height: 5.65em;
+}

@@ -1,3 +1,7 @@
+<%@page import="com.smhrd.domain.CommentsDAO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.smhrd.domain.Comments"%>
+<%@page import="java.util.List"%>
 <%@page import="com.smhrd.domain.Member"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" isELIgnored="false"%>
@@ -7,7 +11,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
 <% 
-   Member loginMember = (Member)session.getAttribute("loginMember");
+    Member loginMember = (Member)session.getAttribute("loginMember");
+	
+	List<Comments> CommentsList = new ArrayList<Comments>();
+	CommentsDAO dao = new CommentsDAO();
+	CommentsList =dao.C_ALL(); 
 %>
 
 <html>
@@ -123,6 +131,42 @@
 				<%} %>
 			</div>
 		</div>
+		
+			
+	<div id="COMMENTS" style="display: flex; margin-left:10em; margin-right:10em;">
+		<%if(loginMember != null) {%>
+		<form action="ComuCommentsCon" method="GET" style="margin: 0 0 0 0; width: 103%;">
+			<ul class="ComuComments">
+				<li><input type="text" placeholder="  댓글을 입력하세요." name="comments"></li>
+				<li><input type="submit" value="등록" style="font-size: 0.599em;"></li>
+				<li><input type="hidden" name="comu_num" value=${comu.comu_num}></li>
+				<li><input type="hidden" name="mem_nick" value=<%=loginMember.getMem_nick()%>></li>
+				<li><input type="hidden" name="mem_num" value=<%=loginMember.getMem_num()%>></li>
+				<li><input type="hidden" name="board_num" value='0'></li>
+			</ul>
+			<br>
+		</form>
+		<%} else{ %>
+		<%} %>
+
+				<table style="margin-top:1em;">
+						<tr style="border: 2px solid black; text-align: center;">
+						<td style="font-weight: bold;">인터넷은 우리가 함께 만들어 가는 소중한 공간입니다. &nbsp; 댓글 작성 시 타인에 대한 배려와 책임을 담아주세요.</td>
+						</tr>
+					<% for(Comments vo: CommentsList){ %>
+					<tbody>
+						<tr>
+							<td><i class="fa-solid fa-user"></i> &nbsp;<%= vo.getMem_nick() %></td>
+						</tr>
+
+						<tr>
+							<td><%=vo.getComments() %></td>
+						</tr>
+					</tbody>
+					<%} %>
+
+				</table>
+			</div>
 
 	</div>
 

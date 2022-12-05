@@ -32,6 +32,7 @@ public class CommentsCon extends HttpServlet {
 		Comments insertComments = new Comments(mem_num, board_num, comments, mem_nick);
 		
 		Comments updateComments = new Comments(board_num);
+		
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(insertComments.toString());
 
@@ -41,6 +42,7 @@ public class CommentsCon extends HttpServlet {
 		
 		CommentsDAO dao1 = new CommentsDAO();
 		int cnt1 = dao1.CommentsTOTAL(updateComments);
+		
 
 		if (cnt > 0) {
 			System.out.println("CommentsCon : 등록 성공!");

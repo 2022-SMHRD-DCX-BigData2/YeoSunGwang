@@ -50,6 +50,34 @@ public class CommentsDAO {
 		return cnt;
 	}
 	
+	public int insertComuComments(Comments insertComuComments) {
+		int cnt = 0;
+
+		try {
+			// mapper.xml의 id값
+			// ↓
+			cnt = sqlSession.insert("insertComuComments", insertComuComments);
+
+			// 만약에 내가 원하는 일을 했으면
+			if (cnt > 0) {
+				System.out.println("DAO : 등록 성공!");
+				sqlSession.commit();
+			} else {
+				// 만약에 원하는 일을 못하면 다시 원래대로 돌려주기
+				System.out.println("DAO : 등록 실패!");
+				sqlSession.rollback();
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			// 빌렸던 Connection 객체를 반납
+			sqlSession.close();
+		}
+
+		return cnt;
+	}
+	
 	public int CommentsTOTAL(Comments updateComments) {
 		int cnt = 0;
 
