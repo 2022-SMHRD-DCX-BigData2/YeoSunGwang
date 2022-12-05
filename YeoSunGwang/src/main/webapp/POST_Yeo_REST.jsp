@@ -113,7 +113,7 @@
 		<div id="MAIN11">
 			<div class="posts11">
 
-				<%for(BoardVO vo: boardList) { %>
+								<%for(BoardVO vo: boardList) { %>
 				
 				<article>
 
@@ -140,12 +140,12 @@
 						</p>
 						<ul style="margin-top: -0.67em;">
 							<li><i class="fa-solid fa-comment">&nbsp; <%= vo.getComments_total()%> </i></li>
-							<li><a href=""><i class="fa-regular fa-heart">&nbsp; </i></a><%= vo.getLike_total()%></li>
+							<li><button class="likeButton"><i class="fa-regular fa-heart"></i></button><%= vo.getLike_total()%></li>
 						</ul>
 					</div>
 
 					<div id="com_like1">
-						<ul style="font-size: 1.3em;">
+						<ul style="font-size: 1.3em; margin-top: -3.25em;">
 							<li><span class="tooltip" style="color: #EA2027;"><i class="fa-solid fa-fire"></i> <span class="tooltip-text">핫플레이스</span></span></li>
 							<!-- 사진스팟 표시 -->
 							<li><a href="<%= vo.getMap_link()%>"><span class="tooltip"><i
@@ -157,6 +157,7 @@
 				</div>
 				</article>
 				<%}%>
+
 				
 			</div>
 		</div>
