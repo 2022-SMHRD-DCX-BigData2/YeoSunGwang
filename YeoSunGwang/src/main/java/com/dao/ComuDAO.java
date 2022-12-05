@@ -134,7 +134,7 @@ public class ComuDAO {
 		
 		try {
 			cnt = sqlSession.update("updateComu", cVo);
-			
+		
 			if(cnt > 0) {
 				System.out.println("ComuDAO : 게시글 수정 성공");
 				sqlSession.commit();

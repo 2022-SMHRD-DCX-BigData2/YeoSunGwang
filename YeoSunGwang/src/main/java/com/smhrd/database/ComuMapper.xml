@@ -37,7 +37,7 @@
 		
 	<!-- 커뮤니티 글 수정하기 -->	
 	<update id="updateComu" parameterType="com.dto.ComuVO">
-      	update comu set local_num=#{local_num},comu_title=#{comu_title},comu_content=#{comu_content} where mem_nick=#{mem_nick}
+      	update comu set local_num=#{local_num},comu_title=#{comu_title},comu_content=#{comu_content} where comu_num=#{comu_num} and mem_nick=#{mem_nick}
     </update>
 
 </mapper>

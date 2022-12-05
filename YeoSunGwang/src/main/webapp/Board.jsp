@@ -152,15 +152,13 @@
 
 
 	<div class="ourfooter">
-		<footer>
 
-			<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-
-			<p>
-				<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-					2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+		<div sytle="margin-top: 1em;">
+			<p style="background-color: whitesomke; text-align: center; margin-top: 1em;">
+				<span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
 			</p>
-		</footer>
+		</div>
+
 	</div>
 
 	<script>

@@ -17,6 +17,7 @@ public class BoardUpdateAction implements Action {
 			throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		ComuVO cVo = new ComuVO();
+		cVo.setComu_num(Integer.parseInt(request.getParameter("comu_num")));
 		cVo.setLocal_num(Integer.parseInt(request.getParameter("local_num")));
 		cVo.setMem_nick(request.getParameter("mem_nick"));
 		cVo.setComu_title(request.getParameter("comu_title"));

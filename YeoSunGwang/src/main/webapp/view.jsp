@@ -114,7 +114,8 @@
 				<input type="button" value="목록" 
 				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: white; color: black; margin-right: 1%;"
 				onclick="location.href='BoardServlet?command=board_list'">
-				<% if(loginMember != null){ %>
+				<% if(loginMember != null){%>
+				<if test=${comu.mem_nick} == ${comu.mem_nick}></if>
 				<input type="submit" value="수정" onclick="location.href='BoardServlet?command=board_update_form&comu_num=${comu.comu_num}'" 
 				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: #000; color: white; margin-left: 1%;">
 				<%} else { %>
@@ -125,15 +126,13 @@
 	</div>
 
 	<div class="ourfooter">
-		<footer>
 
-			<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-
-			<p>
-				<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-					2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+		<div sytle="margin-top: 1em;">
+			<p style="background-color: whitesomke; text-align: center; margin-top: 1em;">
+				<span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
 			</p>
-		</footer>
+		</div>
+
 	</div>
 
 	<script>
