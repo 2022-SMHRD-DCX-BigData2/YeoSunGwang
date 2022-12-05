@@ -1,5 +1,5 @@
 @import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css");
-
+@import url("https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css"); 
 /*
 	Future Imperfect by HTML5 UP
 	html5up.net | @ajlkn
@@ -3574,7 +3574,7 @@ gtr
 	}
 	
 	#High_nav>h1 {
-		font-family: "NanumSquareRound";
+		font-family: 'NanumSquareExtraBold';
 		font-weight: bold;
 		font-size: 3em;
 		text-align: center;
