@@ -112,7 +112,7 @@
 		<div id="MAIN11">
 			<div class="posts11">
 
-			<%for(BoardVO vo: boardList) { %>
+				<%for(BoardVO vo: boardList) { %>
 				
 				<article>
 
@@ -137,18 +137,17 @@
 							</p>
 							</form> 
 						</p>
-						<ul>
-							<li><i class="fa-solid fa-comment">5</i></li>
-							<li><a href=""><i class="fa-regular fa-heart"></i></a><%= vo.getLike_total()%></li>
+						<ul style="margin-top: -0.67em;">
+							<li><i class="fa-solid fa-comment">&nbsp; <%= vo.getComments_total()%> </i></li>
+							<li><a href=""><i class="fa-regular fa-heart">&nbsp; </i></a><%= vo.getLike_total()%></li>
 						</ul>
 					</div>
 
 					<div id="com_like1">
-						<ul style="font-size: 1.3em">
-							<li><span class="tooltip" style="color: #EA2027;"><i
-									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
+						<ul style="font-size: 1.3em;">
+							<li><span class="tooltip" style="color: #EA2027;"><i class="fa-solid fa-fire"></i> <span class="tooltip-text">핫플레이스</span></span></li>
 							<!-- 사진스팟 표시 -->
-							<li><a href="<%= vo.getMap_link() %>"><span class="tooltip"><i
+							<li><a href="<%= vo.getMap_link()%>"><span class="tooltip"><i
 										class="fa-solid fa-map-location-dot"></i> <span
 										class="tooltip-text">지도로 이동합니다</span></span></a></li>
 							<!-- 지도로고 -->

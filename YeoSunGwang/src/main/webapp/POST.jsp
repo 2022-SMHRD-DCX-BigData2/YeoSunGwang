@@ -13,12 +13,18 @@
 
 <% 
 	Member loginMember = (Member)session.getAttribute("loginMember");
-   	Comments Comments = (Comments)session.getAttribute("insertComments");
+   	Comments Comments = (Comments)session.getAttribute("CommentsUpdate");
    	BoardVO ViewPost = (BoardVO)session.getAttribute("ViewPost");
    	
  	List<Comments> CommentsList = new ArrayList<Comments>();
 	CommentsDAO dao = new CommentsDAO();
 	CommentsList =dao.C_ALL(); 
+	
+/*  	List<Comments> CommentsLength = new ArrayList<Comments>();
+	CommentsDAO dao2 = new CommentsDAO();
+	CommentsLength = dao2.
+	ArrayList<CommentBean> commentList = commentDAO.getCommentList(boardNum); */
+	
 	
 %>
 
@@ -112,7 +118,7 @@
 			<div class="info_title">
 				<span><%= ViewPost.getBoard_title() %> &nbsp;</span> 
 				<span class="tooltip" style="display: list-item; color: #EA2027; list-style: none;">
-					<i class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span>
+					<i class="fa-solid fa-fire"></i> <span class="tooltip-text">핫플레이스</span>
 				</span>
 			</div>
 
@@ -123,7 +129,7 @@
 
 			<div class="info_text">
 				<span>
-				<%= ViewPost.getBoard_content() %>
+				<%= ViewPost.getBoard_content()%>
 				</span>
 			</div>
 
@@ -131,7 +137,7 @@
 				<div class="like_com">
 					<ul>
 						<li><a onclick="clickCOM()" style="cursor: pointer;"><span
-								class="tooltip"><i class="fa-solid fa-comment"> 11</i><span
+								class="tooltip"><i class="fa-solid fa-comment"><%=ViewPost.getComments_total()%></i><span
 									class="tooltip-text">댓글 보기</span></span></a></li>
 						<% if(loginMember != null){ %>
 						<li><a href="#"><i class="fa-regular fa-heart"> 11</i></a></li>

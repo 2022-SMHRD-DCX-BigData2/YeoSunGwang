@@ -12,9 +12,20 @@ public class BoardVO {
 	private int category_admin;
 	private String map_link;
 	private String img_link;
-
+	private int comments_total;
 	
+	
+
+
+
 	// getter, setter
+	public int getComments_total() {
+		return comments_total;
+	}
+	
+	public void setComments_total(int comments_total) {
+		this.comments_total = comments_total;
+	}
 	public String getBoard_title() {
 		return board_title;
 	}

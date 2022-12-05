@@ -1,3 +1,4 @@
+<%@page import="com.smhrd.domain.Comments"%>
 <%@page import="com.smhrd.domain.BoardDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.smhrd.domain.BoardVO"%>
@@ -14,6 +15,8 @@
 	List<BoardVO> boardList = new ArrayList<BoardVO>();
 	BoardDAO dao = new BoardDAO();
 	boardList =dao.G_ALL();
+	
+	Comments Comments = (Comments)session.getAttribute("CommentsUpdate");
 %>
 
 <html>
@@ -138,16 +141,15 @@
 							</p>
 							</form> 
 						</p>
-						<ul>
-							<li><i class="fa-solid fa-comment">5</i></li>
-							<li><a href=""><i class="fa-regular fa-heart"></i></a><%= vo.getLike_total()%></li>
+						<ul style="margin-top: -0.67em;">
+							<li><i class="fa-solid fa-comment">&nbsp; <%= vo.getComments_total()%> </i></li>
+							<li><a href=""><i class="fa-regular fa-heart">&nbsp; </i></a><%= vo.getLike_total()%></li>
 						</ul>
 					</div>
 
 					<div id="com_like1">
-						<ul style="font-size: 1.3em">
-							<li><span class="tooltip" style="color: #EA2027;"><i
-									class="fa-solid fa-camera"></i> <span class="tooltip-text">사진스팟</span></span></li>
+						<ul style="font-size: 1.3em;">
+							<li><span class="tooltip" style="color: #EA2027;"><i class="fa-solid fa-fire"></i> <span class="tooltip-text">핫플레이스</span></span></li>
 							<!-- 사진스팟 표시 -->
 							<li><a href="<%= vo.getMap_link()%>"><span class="tooltip"><i
 										class="fa-solid fa-map-location-dot"></i> <span

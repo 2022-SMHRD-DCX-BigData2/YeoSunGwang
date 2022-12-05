@@ -46,6 +46,12 @@ public class Comments {
 		super();
 	}
 	
+	// 1개짜리 생성자
+	public Comments(int board_num) {
+		super();
+		this.board_num = board_num;
+	}
+	
 	// 4개짜리 생성자
 	public Comments(int mem_num, int board_num, String comments, String mem_nick) {
 		super();

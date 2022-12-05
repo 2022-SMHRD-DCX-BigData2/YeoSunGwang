@@ -3578,6 +3578,7 @@ gtr
 		font-weight: bold;
 		font-size: 3em;
 		text-align: center;
+		margin: 0 0 0.5em 0;
 	}
 
 	/* Middle 네비 */
@@ -4363,7 +4364,7 @@ gtr
 	}
 
 	#wrap{
-		margin-top: 2.3em;
+		margin-top: 2.75em;
 		min-height: 100vh;
 		position: static;
 		width: 100%;

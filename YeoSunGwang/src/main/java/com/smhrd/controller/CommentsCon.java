@@ -30,12 +30,17 @@ public class CommentsCon extends HttpServlet {
 		String mem_nick = request.getParameter("mem_nick");
 		// 2. 받아온 값을 Comments객체에 담아주기
 		Comments insertComments = new Comments(mem_num, board_num, comments, mem_nick);
+		
+		Comments updateComments = new Comments(board_num);
 		// 만약에 값을 확인하고 싶으면 (진짜로 객체에 잘 담겨 있는지)
 		System.out.println(insertComments.toString());
 
 		// 3. DAO 객체 생성, 일 할 메소드 만들기
 		CommentsDAO dao = new CommentsDAO();
 		int cnt = dao.insertComments(insertComments);
+		
+		CommentsDAO dao1 = new CommentsDAO();
+		int cnt1 = dao1.CommentsTOTAL(updateComments);
 
 		if (cnt > 0) {
 			System.out.println("CommentsCon : 등록 성공!");
@@ -48,6 +53,22 @@ public class CommentsCon extends HttpServlet {
 			
 		} else {
 			System.out.println("CommentsCon : 등록 실패!");
+			response.sendRedirect("POST.jsp");
+		}
+		
+		if (cnt1 > 0) {
+			System.out.println("CommentsCon : 업데이트 성공!");
+			RequestDispatcher rd1 = request.getRequestDispatcher("POST.jsp");
+			
+			
+			request.setAttribute("CommentsUpdate", board_num);
+			rd1.forward(request, response);
+			HttpSession session = request.getSession();
+			session.setAttribute("CommentsUpdate", board_num);
+	
+			
+		} else {
+			System.out.println("CommentsCon : 업데이트 실패!");
 			response.sendRedirect("POST.jsp");
 		}
 

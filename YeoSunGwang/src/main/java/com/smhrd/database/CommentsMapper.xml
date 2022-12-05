@@ -12,6 +12,14 @@
 	<select id="ViewComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">
 		select * from comments
 	</select> 
+	
+	<update id="UpdateComments" parameterType="com.smhrd.domain.Comments">
+		UPDATE BOARD A
+		SET A.COMMENTS_TOTAL = ( SELECT COUNT(*)
+                         		 FROM COMMENTS
+                         		 WHERE BOARD_NUM = #{board_num})
+		WHERE BOARD_NUM=#{board_num}
+	</update>
 
 <!-- 	<select id="ViewComments" parameterType="com.smhrd.domain.Comments" resultType="com.smhrd.domain.Comments">
 		SELECT A.MEM_NICK, A.COMMENTS, B.BOARD_NUM
