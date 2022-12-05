@@ -152,7 +152,7 @@
 							<%if (loginMember == null){ %>
 							<li><button class="likeButton" onclick="needlogin()"><i class="fa-solid fa-heart"></i></button></li>
 							<%} else if(loginMember != null){%>
-							<li><button type="submit" class="likeButton" onclick="ClickLike()" id="LikeButton" style="color:#666;"><i class="fa-solid fa-heart"></i></button></li>
+							<li><button type="submit" class="likeButton" onclick="ClickLike()" id="LikeButton" style="color:black;"><i class="fa-solid fa-heart"></i></button></li>
 							<%}%>
 							
 							<li><span class="tooltip" style="color: #EA2027;"><i class="fa-solid fa-fire"></i> <span class="tooltip-text">핫플레이스</span></span></li>

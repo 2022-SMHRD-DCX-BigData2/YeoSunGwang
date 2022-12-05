@@ -110,7 +110,7 @@
 					</dl>
 					<dl>
 						<dt>좋아요</dt>
-						<dd><button>${comu.like_total}</button></dd>
+						<dd><button class="likeButton" onclick="ClickLike()" style="color:black;" id="LikeButton"><i class="fa-solid fa-heart"></i></button></dd>
 					</dl>
 				</div>
 				<div class="cont"
@@ -186,6 +186,14 @@
 				icon: 'error',
 				title: '로그인 후 \n 이용할 수 있습니다!',
 			})
+		}
+		
+		function ClickLike() {
+			if ($("#LikeButton").css("color") != "red") {
+				$("#LikeButton").css("color", "red")
+			} else if($("#LikeButton").css("color") == "red"){
+				$("#LikeButton").css("color", "black")
+			}
 		}
 	</script>
 	
