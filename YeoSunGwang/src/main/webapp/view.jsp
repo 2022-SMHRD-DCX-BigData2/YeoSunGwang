@@ -102,7 +102,7 @@
 					</dl>
 					<dl>
 						<dt>좋아요</dt>
-						<dd>${comu.like_total}</dd>
+						<dd><button>${comu.like_total}</button></dd>
 					</dl>
 				</div>
 				<div class="cont"
@@ -115,9 +115,10 @@
 				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: white; color: black; margin-right: 1%;"
 				onclick="location.href='BoardServlet?command=board_list'">
 				<% if(loginMember != null){%>
-				<if test=${comu.mem_nick} == ${comu.mem_nick}></if>
+				<if test= "${comu.mem_nick} == ${comu.mem_nick}">
 				<input type="submit" value="수정" onclick="location.href='BoardServlet?command=board_update_form&comu_num=${comu.comu_num}'" 
 				style="font-size: 0.85rem; border: 1px solid black; padding: 0 1.8em; background: #000; color: white; margin-left: 1%;">
+				</if>
 				<%} else { %>
 				<%} %>
 			</div>

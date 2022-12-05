@@ -109,13 +109,25 @@
 				<td>글쓴이</td>
 				<td>좋아요❤️</td>
 			</tr>
-
+			
 			<c:forEach var="comu" items="${comuList}">
 				<tr align="center">
+				
 					<td>${comu.comu_num}</td>
-					<td>${comu.local_num}</td>
-					<td align="left"><a href="BoardServlet?command=board_view&comu_num=${comu.comu_num}">
-							${comu.comu_title} </a></td>
+					<c:if test="${comu.local_num eq '1'}">
+						<td>여수</td>
+					</c:if>
+					<c:if test="${comu.local_num eq '2'}">
+						<td>순천</td>
+					</c:if>
+					<c:if test="${comu.local_num eq '3'}">
+						<td>광양</td>
+					</c:if>
+					
+					<td align="left">
+						<a href="BoardServlet?command=board_view&comu_num=${comu.comu_num}">${comu.comu_title} </a>
+					</td>
+					
 					<td>${comu.mem_nick}</td>
 					<td>${comu.like_total}</td>
 				</tr>
