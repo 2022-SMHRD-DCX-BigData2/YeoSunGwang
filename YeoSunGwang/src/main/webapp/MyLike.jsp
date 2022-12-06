@@ -120,33 +120,43 @@
 			</tr>
 			
 			<tr align="center">
-				<td>1</td>
-				<td>여수</td>
+				<td>25</td>
+				<td>순천</td>
 				<td align="left">
-					<a href="#">TEST1</a>
+					<a href="#">브루웍스</a>
 				</td>
-				<td>123</td>
-				<td>❤️ 3</td>
+				<td>관리자</td>
+				<td>❤️ 9</td>
+			</tr>
+			
+			<tr align="center">
+				<td>1</td>
+				<td>순천</td>
+				<td align="left">
+					<a href="#"> 시험에 떨어지고 너무 우울해서 기분도 풀겸 순천 원조마포구이 다녀왔어요</a>
+				</td>
+				<td>잘생긴서정이</td>
+				<td>❤️ 59</td>
 			</tr>
 			
 			<tr align="center">
 				<td>2</td>
-				<td>순천</td>
+				<td>광양</td>
 				<td align="left">
-					<a href="#">TEST2</a>
+					<a href="#">저와 CAFE비제스코에서 커피한잔 즐겨보실래요?</a>
 				</td>
-				<td>123</td>
-				<td>❤️ 5</td>
+				<td>광양대부호정상민</td>
+				<td>❤️ 6</td>
 			</tr>
 			
 			<tr align="center">
 				<td>3</td>
 				<td>여수</td>
 				<td align="left">
-					<a href="#">TEST3</a>
+					<a href="#">31살이 되기 전 여수 갯벌노을마을에 다녀왔읍니다.</a>
 				</td>
-				<td>123</td>
-				<td>❤️ 7</td>
+				<td>쭈녀기는31살</td>
+				<td>❤️ 32</td>
 			</tr>
 			
 

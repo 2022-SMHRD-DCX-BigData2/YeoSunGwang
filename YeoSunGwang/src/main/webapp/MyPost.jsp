@@ -120,53 +120,13 @@
 			</tr>
 			
 			<tr align="center">
-				<td>1</td>
-				<td>여수</td>
-				<td align="left">
-					<a href="#">TEST1</a>
-				</td>
-				<td>123</td>
-				<td>❤️ 3</td>
-			</tr>
-			
-			<tr align="center">
-				<td>2</td>
-				<td>순천</td>
-				<td align="left">
-					<a href="#">TEST2</a>
-				</td>
-				<td>123</td>
-				<td>❤️ 5</td>
-			</tr>
-			
-			<tr align="center">
-				<td>3</td>
-				<td>여수</td>
-				<td align="left">
-					<a href="#">TEST3</a>
-				</td>
-				<td>123</td>
-				<td>❤️ 7</td>
-			</tr>
-			
-			<tr align="center">
 				<td>4</td>
 				<td>순천</td>
 				<td align="left">
-					<a href="#">TEST4</a>
+					<a href="#">ㅋㅋ</a>
 				</td>
-				<td>123</td>
-				<td>❤️ 2</td>
-			</tr>
-			
-			<tr align="center">
-				<td>5</td>
-				<td>여수</td>
-				<td align="left">
-					<a href="#">TEST5</a>
-				</td>
-				<td>123</td>
-				<td>❤️ 6</td>
+				<td>여리는멋쟁이</td>
+				<td>❤️ 0</td>
 			</tr>
 
 						<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->

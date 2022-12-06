@@ -98,7 +98,7 @@
 										<!-- 홈화면 -->
 										<li><a href="MyCom.jsp"
 												style="font-weight: bold; color: #2EBAAE; text-decoration: underline; text-underline-position: under;">내가
-												쓴 댓글 보기</a></li>
+												쓴 댓글 게시물 보기</a></li>
 										<!-- 포인트 교환 -->
 										<li><a href="MyLike.jsp">좋아요 누른 글 보기</a></li>
 										<!-- 마이 페이지 -->
@@ -116,24 +116,15 @@
 								</tr>
 								
 								<tr align="center">
-									<td>1</td>
+									<td>3</td>
 									<td>여수</td>
 									<td align="left">
-										<a href="#">TEST1</a>
+										<a href="#">31살이 되기 전 여수 갯벌노을마을에 다녀왔읍니다.</a>
 									</td>
-									<td>123</td>
-									<td>❤️ 3</td>
+									<td>쭈녀기는 31살</td>
+									<td>❤️ 31</td>
 								</tr>
 								
-								<tr align="center">
-									<td>2</td>
-									<td>순천</td>
-									<td align="left">
-										<a href="#">TEST2</a>
-									</td>
-									<td>123</td>
-									<td>❤️ 5</td>
-								</tr>
 
 											<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->
 			
