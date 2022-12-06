@@ -124,12 +124,9 @@
 						<td>광양</td>
 					</c:if>
 					
-					<form action="#" method="post">
 					<td align="left">
-						<input type="hidden" value="${comu.comu_num}" name="comu_num">
 						<a href="BoardServlet?command=board_view&comu_num=${comu.comu_num}">${comu.comu_title} </a>
 					</td>
-					</form>
 					
 					<td>${comu.mem_nick}</td>
 					<td>${comu.like_total}</td>
@@ -169,7 +166,7 @@
 	<div class="ourfooter">
 
 		<div sytle="margin-top: 1em;">
-			<p style="background-color: whitesomke; text-align: center; margin-top: 1em;">
+			<p style="background-color: whitesomke; text-align: center;">
 				<span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
 			</p>
 		</div>

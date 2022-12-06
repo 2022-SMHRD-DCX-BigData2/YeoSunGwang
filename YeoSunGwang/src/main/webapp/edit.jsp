@@ -142,7 +142,7 @@
 	<div class="ourfooter">
 
 		<div sytle="margin-top: 1em;">
-			<p style="background-color: whitesomke; text-align: center; margin-top: 1em;">
+			<p style="background-color: whitesomke; text-align: center;">
 				<span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
 			</p>
 		</div>

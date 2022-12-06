@@ -116,8 +116,57 @@
 				<td>말머리</td>
 				<td align="left" style="width: 60%; text-align: center;">제목</td>
 				<td>글쓴이</td>
-				<td>등록일</td>
 				<td>좋아요❤️</td>
+			</tr>
+			
+			<tr align="center">
+				<td>1</td>
+				<td>여수</td>
+				<td align="left">
+					<a href="#">활어회에 반주하고 싶다.</a>
+				</td>
+				<td>123</td>
+				<td>❤️ 3</td>
+			</tr>
+			
+			<tr align="center">
+				<td>2</td>
+				<td>순천</td>
+				<td align="left">
+					<a href="#">스테이크에 와인 마시고 싶다.</a>
+				</td>
+				<td>123</td>
+				<td>❤️ 5</td>
+			</tr>
+			
+			<tr align="center">
+				<td>3</td>
+				<td>여수</td>
+				<td align="left">
+					<a href="#">짜장면에 고량주 마시고 싶다.</a>
+				</td>
+				<td>123</td>
+				<td>❤️ 7</td>
+			</tr>
+			
+			<tr align="center">
+				<td>4</td>
+				<td>순천</td>
+				<td align="left">
+					<a href="#">쭈꾸미 삼겹살 최고</a>
+				</td>
+				<td>123</td>
+				<td>❤️ 2</td>
+			</tr>
+			
+			<tr align="center">
+				<td>5</td>
+				<td>여수</td>
+				<td align="left">
+					<a href="#">매운양푼갈비에 소맥 말고싶다.</a>
+				</td>
+				<td>123</td>
+				<td>❤️ 6</td>
 			</tr>
 
 						<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->
@@ -145,7 +194,7 @@
 			</table>
 		</div>
 
-		<footer style="display: flex; flex-direction: column; align-items: center;">
+		<footer style="display: flex; flex-direction: column; align-items: center; background-color: #f3f1ea;">
 		
 			<div class="pagination" style="border-color: black;">
 				<a href="#" class="page active">1</a>
@@ -159,15 +208,13 @@
 		</footer>
 
 	<div class="ourfooter">
-		<footer>
-			<nav>
-				<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-			</nav>
-			<p>
-				<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-					2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+
+		<div sytle="margin-top: 1em;">
+			<p style="background-color: whitesomke; text-align: center;">
+				<span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
 			</p>
-		</footer>
+		</div>
+
 	</div>
 
 	<script>

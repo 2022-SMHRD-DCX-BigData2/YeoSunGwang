@@ -112,7 +112,6 @@
 									<td>말머리</td>
 									<td align="left" style="width: 60%; text-align: center;">제목</td>
 									<td>글쓴이</td>
-									<td>등록일</td>
 									<td>좋아요❤️</td>
 								</tr>
 
@@ -141,7 +140,7 @@
 			</table>
 		</div>
 
-		<footer style="display: flex; flex-direction: column; align-items: center;">
+		<footer style="display: flex; flex-direction: column; align-items: center; background-color: #f3f1ea;">
 		
 			<div class="pagination" style="border-color: black;">
 				<a href="#" class="page active">1</a>
@@ -155,15 +154,13 @@
 		</footer>
 
 						<div class="ourfooter">
-							<footer>
-								<nav>
-									<a href='#' target='_blank'>Blog</a> | <a href='#' target='_blank'>Github</a>
-								</nav>
-								<p>
-									<span>팀장 : 이준혁</span><br /> <span>팀원 : 정지명 정상민 윤 열</span><br /> <span>Copyright
-										2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
+
+							<div sytle="margin-top: 1em;">
+								<p style="background-color: whitesomke; text-align: center;">
+									<span>Copyright 2022. TEAM 놀러가조. 여기가 여순광? All Rights Reserved.</span>
 								</p>
-							</footer>
+							</div>
+					
 						</div>
 
 						<script>
