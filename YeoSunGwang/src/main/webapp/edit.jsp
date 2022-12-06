@@ -97,7 +97,7 @@
 					<dl>
 						<dt style="margin-top: 2%; width: 4%;">제목</dt>
 						<dd style="margin-left: 1.5em;">
-							<input type="text" name="comu_title" placeholder="${comu.comu_title}" maxlength="100"
+							<input type="text" name="comu_title" value="${comu.comu_title}" maxlength="100"
 								style="background-color: white; width: 103%;">
 						</dd>
 					</dl>

@@ -140,7 +140,7 @@ public class ComuDAO {
 				sqlSession.commit();
 			}else {
 				System.out.println("ComuDAO : 게시글 수정 실패");
-				sqlSession.rollback();				
+				sqlSession.rollback();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

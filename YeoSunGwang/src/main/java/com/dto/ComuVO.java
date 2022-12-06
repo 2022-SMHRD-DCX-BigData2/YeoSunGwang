@@ -90,6 +90,12 @@ public class ComuVO {
 				+ ", like_total=" + like_total + "]";
 	}
 	
+	public String check() {
+		return "ComuVO [comu_num=" + comu_num + ", local_num=" + local_num + ", comu_title=" + comu_title
+				+ ", comu_content=" + comu_content + ", mem_nick=" + mem_nick + ", writedate=" + writedate
+				+ ", like_total=" + like_total + "]";
+	}
+	
 	
 
 }
