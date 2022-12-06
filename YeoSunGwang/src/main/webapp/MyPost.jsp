@@ -123,7 +123,7 @@
 				<td>1</td>
 				<td>여수</td>
 				<td align="left">
-					<a href="#">활어회에 반주하고 싶다.</a>
+					<a href="#">TEST1</a>
 				</td>
 				<td>123</td>
 				<td>❤️ 3</td>
@@ -133,7 +133,7 @@
 				<td>2</td>
 				<td>순천</td>
 				<td align="left">
-					<a href="#">스테이크에 와인 마시고 싶다.</a>
+					<a href="#">TEST2</a>
 				</td>
 				<td>123</td>
 				<td>❤️ 5</td>
@@ -143,7 +143,7 @@
 				<td>3</td>
 				<td>여수</td>
 				<td align="left">
-					<a href="#">짜장면에 고량주 마시고 싶다.</a>
+					<a href="#">TEST3</a>
 				</td>
 				<td>123</td>
 				<td>❤️ 7</td>
@@ -153,7 +153,7 @@
 				<td>4</td>
 				<td>순천</td>
 				<td align="left">
-					<a href="#">쭈꾸미 삼겹살 최고</a>
+					<a href="#">TEST4</a>
 				</td>
 				<td>123</td>
 				<td>❤️ 2</td>
@@ -163,7 +163,7 @@
 				<td>5</td>
 				<td>여수</td>
 				<td align="left">
-					<a href="#">매운양푼갈비에 소맥 말고싶다.</a>
+					<a href="#">TEST5</a>
 				</td>
 				<td>123</td>
 				<td>❤️ 6</td>

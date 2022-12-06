@@ -114,6 +114,26 @@
 									<td>글쓴이</td>
 									<td>좋아요❤️</td>
 								</tr>
+								
+								<tr align="center">
+									<td>1</td>
+									<td>여수</td>
+									<td align="left">
+										<a href="#">TEST1</a>
+									</td>
+									<td>123</td>
+									<td>❤️ 3</td>
+								</tr>
+								
+								<tr align="center">
+									<td>2</td>
+									<td>순천</td>
+									<td align="left">
+										<a href="#">TEST2</a>
+									</td>
+									<td>123</td>
+									<td>❤️ 5</td>
+								</tr>
 
 											<!-- 여기서부턴 FOR문 돌리고 페이징처리! -->
 			

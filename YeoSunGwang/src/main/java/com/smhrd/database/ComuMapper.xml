@@ -27,7 +27,7 @@
 
 	<!-- 커뮤니티 글 작성하기 -->
 	<insert id="insertComu" parameterType="com.dto.ComuVO">
-		insert into comu values(comu_seq.nextval,#{mem_nick},#{comu_title},#{comu_content},#{local_num}, #{like_total})
+		insert into comu(comu_num, mem_nick, comu_title, comu_content, local_num, like_total) values(comu_seq.nextval,#{mem_nick},#{comu_title},#{comu_content},#{local_num},#{like_total})
 	</insert>
 	
 	<!-- 커뮤니티 글 상세보기 -->
